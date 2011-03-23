@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.builders</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value" onload="windowTitle();">
+
+      <p id="owner"><a href="../../package.html" class="extype" name="cc">cc</a>.<a href="../package.html" class="extype" name="cc.spray">spray</a></p>
+
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <h1>builders</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">builders</span>
+        
+        
+        
+      </span>
+      </h4>
+      <div class="fullcomment" id="comment"></div>
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in">Public</li><li class="all out">All</li></ol>
+            </div>
+          <div id="impl">
+              <span class="filtertype">Impl.</span>
+              <ol><li class="concrete in">Concrete</li><li class="abstract in">Abstract</li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" data-isabs="true" name="cc.spray.builders.CacheKey">
+      <a id="CacheKey:CacheKey"></a>
+      <h4 class="signature"><a href="CacheKey.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">CacheKey</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.CacheOn">
+      <a id="CacheOn:CacheOn"></a>
+      <h4 class="signature"><a href="CacheOn.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">CacheOn</span>
+        
+        <span class="params">(<span name="key">key: Any</span>)</span>
+        <span class="result"> extends CacheKey with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.DetachedRouteActor">
+      <a id="DetachedRouteActor:DetachedRouteActor"></a>
+      <h4 class="signature"><a href="DetachedRouteActor.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">DetachedRouteActor</span>
+        
+        
+        <span class="result"> extends Actor with Logging</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.FilterRoute">
+      <a id="FilterRoute:FilterRoute[A]"></a>
+      <h4 class="signature"><a href="FilterRoute.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: abstract 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute0">
+      <a id="FilterRoute0:FilterRoute0[A]"></a>
+      <h4 class="signature"><a href="FilterRoute0.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute0</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with (Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute1">
+      <a id="FilterRoute1:FilterRoute1[A]"></a>
+      <h4 class="signature"><a href="FilterRoute1.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute1</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with ((A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute2">
+      <a id="FilterRoute2:FilterRoute2[A]"></a>
+      <h4 class="signature"><a href="FilterRoute2.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute2</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with ((A, A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute3">
+      <a id="FilterRoute3:FilterRoute3[A]"></a>
+      <h4 class="signature"><a href="FilterRoute3.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute3</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with ((A, A, A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute4">
+      <a id="FilterRoute4:FilterRoute4[A]"></a>
+      <h4 class="signature"><a href="FilterRoute4.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute4</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with ((A, A, A, A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterRoute5">
+      <a id="FilterRoute5:FilterRoute5[A]"></a>
+      <h4 class="signature"><a href="FilterRoute5.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FilterRoute5</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> extends FilterRoute[A] with ((A, A, A, A, A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.Param">
+      <a id="Param:Param"></a>
+      <h4 class="signature"><a href="Param.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Param</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher">
+      <a id="PathMatcher:PathMatcher"></a>
+      <h4 class="signature"><a href="PathMatcher.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher</span>
+        
+        
+        <span class="result"> extends (String) ⇒ Option[(String, List[String])]</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">a PathMatcher tries to match a prefix of a given string and returns
+- None if not matched
+- Some(remainingPath, captures) if matched
+</p>
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher0">
+      <a id="PathMatcher0:PathMatcher0"></a>
+      <h4 class="signature"><a href="PathMatcher0.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher0</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher1">
+      <a id="PathMatcher1:PathMatcher1"></a>
+      <h4 class="signature"><a href="PathMatcher1.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher1</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher2">
+      <a id="PathMatcher2:PathMatcher2"></a>
+      <h4 class="signature"><a href="PathMatcher2.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher2</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher3">
+      <a id="PathMatcher3:PathMatcher3"></a>
+      <h4 class="signature"><a href="PathMatcher3.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher3</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher4">
+      <a id="PathMatcher4:PathMatcher4"></a>
+      <h4 class="signature"><a href="PathMatcher4.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher4</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.builders.PathMatcher5">
+      <a id="PathMatcher5:PathMatcher5"></a>
+      <h4 class="signature"><a href="PathMatcher5.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">PathMatcher5</span>
+        
+        
+        <span class="result"> extends PathMatcher</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: sealed 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.RequiredParameter">
+      <a id="RequiredParameter:RequiredParameter"></a>
+      <h4 class="signature"><a href="RequiredParameter.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">RequiredParameter</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="cc.spray.builders.DontCache">
+      <a id="DontCache:DontCache"></a>
+      <h4 class="signature"><a href="DontCache$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">DontCache</span>
+        
+        
+        <span class="result"> extends CacheKey with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.Remaining">
+      <a id="Remaining:Remaining"></a>
+      <h4 class="signature"><a href="Remaining$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Remaining</span>
+        
+        
+        <span class="result"> extends PathMatcher1</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.Slash">
+      <a id="Slash:Slash"></a>
+      <h4 class="signature"><a href="Slash$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Slash</span>
+        
+        
+        <span class="result"> extends PathMatcher0</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>
