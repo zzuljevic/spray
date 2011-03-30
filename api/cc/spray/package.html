@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value" onload="windowTitle();">
+
+      <p id="owner"><a href="../package.html" class="extype" name="cc">cc</a></p>
+
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <h1>spray</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">spray</span>
+        
+        
+        
+      </span>
+      </h4>
+      <div class="fullcomment" id="comment"></div>
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in">Public</li><li class="all out">All</li></ol>
+            </div>
+          <div id="impl">
+              <span class="filtertype">Impl.</span>
+              <ol><li class="concrete in">Concrete</li><li class="abstract in">Abstract</li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="cc.spray.Attach">
+      <a id="Attach:Attach"></a>
+      <h4 class="signature"><a href="Attach.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Attach</span>
+        
+        <span class="params">(<span name="serviceActorRef">serviceActorRef: ActorRef</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="_root_#ContentTypeResolver">
+      <a id="ContentTypeResolver:ContentTypeResolver"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">ContentTypeResolver</span>
+        
+        
+        <span class="result"> = (<span class="extype" name="java.io.File">File</span>, <span class="extype" name="scala.Option">Option</span>[<a href="http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>]) ⇒ <a href="http/ContentType.html" class="extype" name="cc.spray.http.ContentType">ContentType</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Detach">
+      <a id="Detach:Detach"></a>
+      <h4 class="signature"><a href="Detach.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Detach</span>
+        
+        <span class="params">(<span name="serviceActorRef">serviceActorRef: ActorRef</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.FilterResult">
+      <a id="FilterResult:FilterResult[T]"></a>
+      <h4 class="signature"><a href="FilterResult.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">FilterResult</span>
+        <span class="tparams">[<span name="T">+T &lt;: Product</span>]</span>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The FilterResult represents the two different filtering outcomes of RouteFilters:
+Pass
+ or 
+Reject
+</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.HttpService">
+      <a id="HttpService:HttpService"></a>
+      <h4 class="signature"><a href="HttpService.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">HttpService</span>
+        
+        
+        <span class="result"> extends HttpServiceActor with HttpServiceLogic</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">*
+The default implementation of an HttpService.</p>
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.HttpServiceActor">
+      <a id="HttpServiceActor:HttpServiceActor"></a>
+      <h4 class="signature"><a href="HttpServiceActor.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">HttpServiceActor</span>
+        
+        
+        <span class="result"> extends Actor with Logging</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The actor path of the 
+HttpService.</p>
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.HttpServiceLogic">
+      <a id="HttpServiceLogic:HttpServiceLogic"></a>
+      <h4 class="signature"><a href="HttpServiceLogic.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">HttpServiceLogic</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The logic path of the 
+HttpService.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.MalformedRequestContentRejection">
+      <a id="MalformedRequestContentRejection:MalformedRequestContentRejection"></a>
+      <h4 class="signature"><a href="MalformedRequestContentRejection.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">MalformedRequestContentRejection</span>
+        
+        <span class="params">(<span name="message">message: String</span>)</span>
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by unmarshallers.</p>
+    </li><li visbl="pub" data-isabs="false" name="_root_#Marshaller">
+      <a id="Marshaller:Marshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Marshaller</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> = ((<a href="http/ContentType.html" class="extype" name="cc.spray.http.ContentType">ContentType</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span>) ⇒ <a href="marshalling/Marshalling.html" class="extype" name="cc.spray.marshalling.Marshalling">Marshalling</a>[A]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.MethodRejection">
+      <a id="MethodRejection:MethodRejection"></a>
+      <h4 class="signature"><a href="MethodRejection.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">MethodRejection</span>
+        
+        <span class="params">(<span name="supported">supported: HttpMethod</span>)</span>
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by method filters.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.MissingQueryParamRejection">
+      <a id="MissingQueryParamRejection:MissingQueryParamRejection"></a>
+      <h4 class="signature"><a href="MissingQueryParamRejection.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">MissingQueryParamRejection</span>
+        
+        <span class="params">(<span name="parameterName">parameterName: String</span>)</span>
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by parameter filters.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Pass">
+      <a id="Pass:Pass[T]"></a>
+      <h4 class="signature"><a href="Pass.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Pass</span>
+        <span class="tparams">[<span name="T">+T &lt;: Product</span>]</span>
+        
+        <span class="result"> extends FilterResult[T]</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Reject">
+      <a id="Reject:Reject"></a>
+      <h4 class="signature"><a href="Reject.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Reject</span>
+        
+        <span class="params">(<span name="rejections">rejections: Set[Rejection]</span>)</span>
+        <span class="result"> extends RoutingResult with FilterResult[Nothing] with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.Rejection">
+      <a id="Rejection:Rejection"></a>
+      <h4 class="signature"><a href="Rejection.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">Rejection</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">A rejection encapsulates a specific reason why a Route was not able to handle a request.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext">
+      <a id="RequestContext:RequestContext"></a>
+      <h4 class="signature"><a href="RequestContext.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">RequestContext</span>
+        
+        <span class="params">(<span name="request">request: HttpRequest</span>, <span name="responder">responder: (RoutingResult) ⇒ Unit</span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Immutable object encapsulating the context of an 
+HttpRequest
+ as it flows through a <i>spray</i> Route structure.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Respond">
+      <a id="Respond:Respond"></a>
+      <h4 class="signature"><a href="Respond.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Respond</span>
+        
+        <span class="params">(<span name="response">response: HttpResponse</span>)</span>
+        <span class="result"> extends RoutingResult with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.RootService">
+      <a id="RootService:RootService"></a>
+      <h4 class="signature"><a href="RootService.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">RootService</span>
+        
+        
+        <span class="result"> extends Actor with ServletConverter with Logging</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The RootService actor is the central entrypoint for HTTP requests entering the <i>spray</i> infrastructure.</p>
+    </li><li visbl="pub" data-isabs="false" name="_root_#Route">
+      <a id="Route:Route"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Route</span>
+        
+        
+        <span class="result"> = (<a href="RequestContext.html" class="extype" name="cc.spray.RequestContext">RequestContext</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#RouteFilter">
+      <a id="RouteFilter:RouteFilter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">RouteFilter</span>
+        <span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.Product">Product</span></span>]</span>
+        
+        <span class="result"> = (<a href="RequestContext.html" class="extype" name="cc.spray.RequestContext">RequestContext</a>) ⇒ <a href="FilterResult.html" class="extype" name="cc.spray.FilterResult">FilterResult</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.RoutingResult">
+      <a id="RoutingResult:RoutingResult"></a>
+      <h4 class="signature"><a href="RoutingResult.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">RoutingResult</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The RoutingResult represents the two different options for the way Routes can act upon a request:
+Respond
+ or 
+Reject
+</p>
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.ServiceBuilder">
+      <a id="ServiceBuilder:ServiceBuilder"></a>
+      <h4 class="signature"><a href="ServiceBuilder.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ServiceBuilder</span>
+        
+        
+        <span class="result"> extends CachingBuilders with DetachedBuilders with FileResourceDirectoryBuilders with FilterBuilders with MiscBuilders with ParameterBuilders with PathBuilders with SimpleFilterBuilders with UnMarshallingBuilders</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The ServiceBuilder is central trait you should mix in to get access to <i>sprays</i> Route building directives.</p>
+    </li><li visbl="pub" data-isabs="true" name="cc.spray.ServletConverter">
+      <a id="ServletConverter:ServletConverter"></a>
+      <h4 class="signature"><a href="ServletConverter.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ServletConverter</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The logic for converting<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html">HttpServletRequests</a>to 
+HttpRequest
+s and<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html">HttpServletResponses</a>to 
+HttpResponse
+s.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.UnacceptedResponseContentTypeRejection">
+      <a id="UnacceptedResponseContentTypeRejection:UnacceptedResponseContentTypeRejection"></a>
+      <h4 class="signature"><a href="UnacceptedResponseContentTypeRejection.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">UnacceptedResponseContentTypeRejection</span>
+        
+        <span class="params">(<span name="supported">supported: List[ContentType]</span>)</span>
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by marshallers.</p>
+    </li><li visbl="pub" data-isabs="false" name="_root_#Unmarshaller">
+      <a id="Unmarshaller:Unmarshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Unmarshaller</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        
+        <span class="result"> = (<a href="http/ContentType.html" class="extype" name="cc.spray.http.ContentType">ContentType</a>) ⇒ <a href="marshalling/Unmarshalling.html" class="extype" name="cc.spray.marshalling.Unmarshalling">Unmarshalling</a>[A]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.UnsupportedRequestContentTypeRejection">
+      <a id="UnsupportedRequestContentTypeRejection:UnsupportedRequestContentTypeRejection"></a>
+      <h4 class="signature"><a href="UnsupportedRequestContentTypeRejection.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">UnsupportedRequestContentTypeRejection</span>
+        
+        <span class="params">(<span name="supported">supported: List[ContentTypeRange]</span>)</span>
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by unmarshallers.</p>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="cc.spray.Attach">
+      <a id="Attach:Attach"></a>
+      <h4 class="signature"><a href="Attach$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Attach</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Pass">
+      <a id="Pass:Pass"></a>
+      <h4 class="signature"><a href="Pass$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Pass</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.Reject">
+      <a id="Reject:Reject"></a>
+      <h4 class="signature"><a href="Reject$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Reject</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext">
+      <a id="RequestContext:RequestContext"></a>
+      <h4 class="signature"><a href="RequestContext$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">RequestContext</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestEntityExpectedRejection">
+      <a id="RequestEntityExpectedRejection:RequestEntityExpectedRejection"></a>
+      <h4 class="signature"><a href="RequestEntityExpectedRejection$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">RequestEntityExpectedRejection</span>
+        
+        
+        <span class="result"> extends Rejection with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">Rejection created by unmarshallers.</p>
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders">
+      <a id="builders:builders"></a>
+      <h4 class="signature"><a href="builders/package.html">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">builders</span>
+        
+        
+        
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.http">
+      <a id="http:http"></a>
+      <h4 class="signature"><a href="http/package.html">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">http</span>
+        
+        
+        
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="_root_#make">
+      <a id="make[A, U](A)((A) ⇒ U):A"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">make</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span>
+        <span class="params">(<span name="a">a: A</span>)</span><span class="params">(<span name="f">f: (A) ⇒ U</span>)</span>
+        <span class="result">: A</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#marshaller">
+      <a id="marshaller[T](Marshaller[T]):Marshaller[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">marshaller</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="m">m: Marshaller[T]</span>)</span>
+        <span class="result">: Marshaller[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling">
+      <a id="marshalling:marshalling"></a>
+      <h4 class="signature"><a href="marshalling/package.html">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">marshalling</span>
+        
+        
+        
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="_root_#pimpClass">
+      <a id="pimpClass[A](Class[A]):PimpedClass[A]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpClass</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="clazz">clazz: Class[A]</span>)</span>
+        <span class="result">: <a href="utils/PimpedClass.html" class="extype" name="cc.spray.utils.PimpedClass">PimpedClass</a>[A]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#pimpFile">
+      <a id="pimpFile(File):AnyRef {...}"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpFile</span>
+        
+        <span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span>
+        <span class="result">: AnyRef {...}</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#pimpLinearSeq">
+      <a id="pimpLinearSeq[A](LinearSeq[A]):PimpedLinearSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpLinearSeq</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="seq">seq: <span class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</span>[A]</span>)</span>
+        <span class="result">: <a href="utils/PimpedLinearSeq.html" class="extype" name="cc.spray.utils.PimpedLinearSeq">PimpedLinearSeq</a>[A]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#pimpProduct">
+      <a id="pimpProduct(Product):PimpedProduct"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpProduct</span>
+        
+        <span class="params">(<span name="product">product: <span class="extype" name="scala.Product">Product</span></span>)</span>
+        <span class="result">: <a href="utils/PimpedProduct.html" class="extype" name="cc.spray.utils.PimpedProduct">PimpedProduct</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#pimpRegex">
+      <a id="pimpRegex(Regex):AnyRef {...}"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpRegex</span>
+        
+        <span class="params">(<span name="regex">regex: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>)</span>
+        <span class="result">: AnyRef {...}</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.test">
+      <a id="test:test"></a>
+      <h4 class="signature"><a href="test/package.html">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">test</span>
+        
+        
+        
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="_root_#unmangle">
+      <a id="unmangle(String):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">unmangle</span>
+        
+        <span class="params">(<span name="name">name: String</span>)</span>
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="_root_#unmarshaller">
+      <a id="unmarshaller[T](Unmarshaller[T]):Unmarshaller[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">unmarshaller</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="um">um: Unmarshaller[T]</span>)</span>
+        <span class="result">: Unmarshaller[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../package.html" class="extype" name="_root_">root</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.utils">
+      <a id="utils:utils"></a>
+      <h4 class="signature"><a href="utils/package.html">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">utils</span>
+        
+        
+        
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

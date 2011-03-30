@@ -1,0 +1,2203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.test.DontDetach</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type" onload="windowTitle();">
+
+      <p id="owner"><a href="../../package.html" class="extype" name="cc">cc</a>.<a href="../package.html" class="extype" name="cc.spray">spray</a>.<a href="package.html" class="extype" name="cc.spray.test">test</a></p>
+
+      <div id="definition">
+        <img src="../../../lib/trait_big.png" />
+        <h1>DontDetach</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">DontDetach</span>
+        
+        
+        <span class="result"> extends <a href="../ServiceBuilder.html" class="extype" name="cc.spray.ServiceBuilder">ServiceBuilder</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment" id="comment"><div class="comment cmt"><p>Trait that should be mixed into the 
+ServiceBuilder
+ instance used for testing. It disables the 'detached'
+directive, preventing &quot;No response received&quot; failures in Routes using <code>detached</code>.
+</p></div><div class="block">
+            linear super types: <a href="../ServiceBuilder.html" class="extype" name="cc.spray.ServiceBuilder">ServiceBuilder</a>, <span class="extype" name="cc.spray.builders.UnMarshallingBuilders">UnMarshallingBuilders</span>, <a href="../marshalling/DefaultUnmarshallers.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers">DefaultUnmarshallers</a>, <a href="../marshalling/DefaultMarshallers.html" class="extype" name="cc.spray.marshalling.DefaultMarshallers">DefaultMarshallers</a>, <span class="extype" name="cc.spray.builders.SimpleFilterBuilders">SimpleFilterBuilders</span>, <span class="extype" name="cc.spray.builders.PathBuilders">PathBuilders</span>, <span class="extype" name="cc.spray.builders.ParameterBuilders">ParameterBuilders</span>, <span class="extype" name="cc.spray.builders.MiscBuilders">MiscBuilders</span>, <span class="extype" name="cc.spray.builders.FilterBuilders">FilterBuilders</span>, <span class="extype" name="cc.spray.builders.FileResourceDirectoryBuilders">FileResourceDirectoryBuilders</span>, <span class="extype" name="cc.spray.builders.DetachedBuilders">DetachedBuilders</span>, <span class="extype" name="cc.spray.builders.CachingBuilders">CachingBuilders</span>, AnyRef, <span class="extype" name="scala.Any">Any</span>
+          </div>
+            
+            
+            
+          </div>
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in">Alphabetic</li><li class="inherit out">By inheritance</li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall">Hide All</li><li class="showall">Show all</li></ol>
+                <ol id="linearization"><li class="in" name="cc.spray.test.DontDetach">DontDetach</li><li class="in" name="cc.spray.ServiceBuilder">ServiceBuilder</li><li class="in" name="cc.spray.builders.UnMarshallingBuilders">UnMarshallingBuilders</li><li class="in" name="cc.spray.marshalling.DefaultUnmarshallers">DefaultUnmarshallers</li><li class="in" name="cc.spray.marshalling.DefaultMarshallers">DefaultMarshallers</li><li class="in" name="cc.spray.builders.SimpleFilterBuilders">SimpleFilterBuilders</li><li class="in" name="cc.spray.builders.PathBuilders">PathBuilders</li><li class="in" name="cc.spray.builders.ParameterBuilders">ParameterBuilders</li><li class="in" name="cc.spray.builders.MiscBuilders">MiscBuilders</li><li class="in" name="cc.spray.builders.FilterBuilders">FilterBuilders</li><li class="in" name="cc.spray.builders.FileResourceDirectoryBuilders">FileResourceDirectoryBuilders</li><li class="in" name="cc.spray.builders.DetachedBuilders">DetachedBuilders</li><li class="in" name="cc.spray.builders.CachingBuilders">CachingBuilders</li><li class="in" name="scala.AnyRef">AnyRef</li><li class="in" name="scala.Any">Any</li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in">Public</li><li class="all out">All</li></ol>
+            </div>
+          <div id="impl">
+              <span class="filtertype">Impl.</span>
+              <ol><li class="concrete in">Concrete</li><li class="abstract in">Abstract</li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor">
+      <a id="HttpContentExtractor:HttpContentExtractor"></a>
+      <h4 class="signature"><a href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">HttpContentExtractor</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="scala.AnyRef#!=">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#!=">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o != arg0</code> is the same as <code>!(o == (arg0))</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o != arg0</code> is the same as <code>!(o == (arg0))</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for dis-equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>false</code> if the receiver object is equivalent to the argument; <code>true</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef###">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef → Any
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#$asInstanceOf">
+      <a id="$asInstanceOf[T0]():T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">$asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">()</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#$isInstanceOf">
+      <a id="$isInstanceOf[T0]():Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">$isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#==">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o == arg0</code> is the same as <code>if (o eq null) arg0 eq null else o.equals(arg0)</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o == arg0</code> is the same as <code>if (o eq null) arg0 eq null else o.equals(arg0)</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#==">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o == arg0</code> is the same as <code>o.equals(arg0)</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o == arg0</code> is the same as <code>o.equals(arg0)</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultMarshallers.NodeSeqMarshaller">
+      <a id="NodeSeqMarshaller:NodeSeqMarshaller"></a>
+      <h4 class="signature"><a href="../marshalling/DefaultMarshallers$NodeSeqMarshaller$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">NodeSeqMarshaller</span>
+        
+        
+        <span class="result"> extends MarshallerBase[NodeSeq]</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultUnmarshallers.NodeSeqUnmarshaller">
+      <a id="NodeSeqUnmarshaller:NodeSeqUnmarshaller"></a>
+      <h4 class="signature"><a href="../marshalling/DefaultUnmarshallers$NodeSeqUnmarshaller$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">NodeSeqUnmarshaller</span>
+        
+        
+        <span class="result"> extends UnmarshallerBase[NodeSeq]</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultMarshallers.StringMarshaller">
+      <a id="StringMarshaller:StringMarshaller"></a>
+      <h4 class="signature"><a href="../marshalling/DefaultMarshallers$StringMarshaller$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">StringMarshaller</span>
+        
+        
+        <span class="result"> extends MarshallerBase[String]</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultUnmarshallers.StringUnmarshaller">
+      <a id="StringUnmarshaller:StringUnmarshaller"></a>
+      <h4 class="signature"><a href="../marshalling/DefaultUnmarshallers$StringUnmarshaller$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">StringUnmarshaller</span>
+        
+        
+        <span class="result"> extends UnmarshallerBase[String]</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#asInstanceOf">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to cast the receiver object to be of type <code>T0</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to cast the receiver object to be of type <code>T0</code>.</p><p>Note that the success of a cast at runtime is modulo Scala's erasure semantics.  Therefore the expression<code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at runtime, while the expression<code>List(1).asInstanceOf[List[String]]</code> will not.  In the latter example, because the type argument is erased as
+part of compilation it is not possible to check whether the contents of the list are of the requested typed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.CachingBuilders#cached">
+      <a id="cached(Route)((RequestContext) ⇒ CacheKey):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">cached</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="keyer">keyer: (<a href="../RequestContext.html" class="extype" name="cc.spray.RequestContext">RequestContext</a>) ⇒ <a href="../builders/CacheKey.html" class="extype" name="cc.spray.builders.CacheKey">CacheKey</a></span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that caches responses returned by its inner Route using the given keyer function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that caches responses returned by its inner Route using the given keyer function.
+The default keyer caches GET requests with the request URI as caching key, to all other requests it is fully
+transparent. The cache itself is implemented as a 
+collection.mutable.WeakHashMap
+.
+</p></div><div class="block">
+          definition classes: CachingBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="prt" data-isabs="false" name="scala.AnyRef#clone">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span>
+        <span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method creates and returns a copy of the receiver object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method creates and returns a copy of the receiver object.</p><p>The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.</p></dd></dl><div class="block">
+          attributes: protected 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.UnMarshallingBuilders#contentAs">
+      <a id="contentAs[A]((A) ⇒ Route)(Unmarshaller[A]):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">contentAs</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="routing">routing: (A) ⇒ Route</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Unmarshaller[A]</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that unmarshalls the requests content using the in-scope unmarshaller for the given type and
+passes it as an argument to the inner Route building function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that unmarshalls the requests content using the in-scope unmarshaller for the given type and
+passes it as an argument to the inner Route building function.
+If the unmarshaller cannot unmarshal the request content the request is rejected with the 
+Rejection
+ produced
+by the unmarshaller.
+</p></div><div class="block">
+          definition classes: UnMarshallingBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.CachingBuilders#defaultCacheKeyer">
+      <a id="defaultCacheKeyer(RequestContext):CacheKey"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">defaultCacheKeyer</span>
+        
+        <span class="params">(<span name="ctx">ctx: <a href="../RequestContext.html" class="extype" name="cc.spray.RequestContext">RequestContext</a></span>)</span>
+        <span class="result">: <a href="../builders/CacheKey.html" class="extype" name="cc.spray.builders.CacheKey">CacheKey</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: CachingBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FileResourceDirectoryBuilders#defaultContentTypeResolver">
+      <a id="defaultContentTypeResolver(File,Option[Charset]):ContentType"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">defaultContentTypeResolver</span>
+        
+        <span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="charset">charset: <span class="extype" name="scala.Option">Option</span>[<a href="../http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>]</span>)</span>
+        <span class="result">: <a href="../http/ContentType.html" class="extype" name="cc.spray.http.ContentType">ContentType</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: FileResourceDirectoryBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.DetachedBuilders#defaultDetachedActorFactory">
+      <a id="defaultDetachedActorFactory(Route):Actor"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">defaultDetachedActorFactory</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: DetachedBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#delete">
+      <a id="delete:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">delete</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-DELETE requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-DELETE requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.test.DontDetach#detached">
+      <a id="detached(Route)((Route) ⇒ Actor):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">detached</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="detachedActorFactory">detachedActorFactory: (Route) ⇒ <span class="extype" name="akka.actor.Actor">Actor</span></span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that executes its inner Route in the content of a newly spawned actor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that executes its inner Route in the content of a newly spawned actor. You can supply your own
+implicit detachedActorFactory function to take control of the actual spawning.
+</p></div><div class="block">
+          definition classes: <a href="" class="extype" name="cc.spray.test.DontDetach">DontDetach</a> → DetachedBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#eq">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to test whether the argument (<code>arg0</code>) is a reference to the
+receiver object (<code>this</code>).</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to test whether the argument (<code>arg0</code>) is a reference to the
+receiver object (<code>this</code>).</p><p>The <code>eq</code> method implements an [http://en.wikipedia.org/wiki/Equivalence_relation equivalence relation] on
+non-null instances of <code>AnyRef</code>:
+ * It is reflexive: for any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(x)</code> returns <code>true</code>.
+ * It is symmetric: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, <code>x.eq(y)</code> returns <code>true</code> if and
+   only if <code>y.eq(x)</code> returns <code>true</code>.
+ * It is transitive: for any non-null instances <code>x</code>, <code>y</code>, and <code>z</code> of type <code>AnyRef</code> if <code>x.eq(y)</code> returns <code>true</code>   and <code>y.eq(z)</code> returns <code>true</code>, then <code>x.eq(z)</code> returns <code>true</code>.</p><p>Additionally, the <code>eq</code> method has three other properties.
+ * It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+   <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.
+ * For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.
+ * <code>null.eq(null)</code> returns <code>true</code>.</p><p>When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for reference equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#equals">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to compare the receiver object (<code>this</code>) with the argument object (<code>arg0</code>) for equivalence.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to compare the receiver object (<code>this</code>) with the argument object (<code>arg0</code>) for equivalence.</p><p>The default implementations of this method is an [http://en.wikipedia.org/wiki/Equivalence_relation equivalence
+relation]:
+ * It is reflexive: for any instance <code>x</code> of type <code>Any</code>, <code>x.equals(x)</code> should return <code>true</code>.
+ * It is symmetric: for any instances <code>x</code> and <code>y</code> of type <code>Any</code>, <code>x.equals(y)</code> should return <code>true</code> if and
+   only if <code>y.equals(x)</code> returns <code>true</code>.
+ * It is transitive: for any instances <code>x</code>, <code>y</code>, and <code>z</code> of type <code>AnyRef</code> if <code>x.equals(y)</code> returns <code>true</code> and
+   <code>y.equals(z)</code> returns <code>true</code>, then <code>x.equals(z)</code> should return <code>true</code>.</p><p>If you override this method, you should verify that your implementation remains an equivalence relation.
+Additionally, when overriding this method it is often necessary to override <code>hashCode</code> to ensure that objects
+that are &quot;equal&quot; (<code>o1.equals(o2)</code> returns <code>true</code>) hash to the same 
+scala.Int
+(<code>o1.hashCode.equals(o2.hashCode)</code>).
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter">
+      <a id="filter(RouteFilter[Product0]):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter</span>
+        
+        <span class="params">(<span name="filter">filter: RouteFilter[<a href="../utils/Product0.html" class="extype" name="cc.spray.utils.Product0">Product0</a>]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute0
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute0
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter1">
+      <a id="filter1[A](RouteFilter[(A)]):FilterRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter1</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A)]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute1.html" class="extype" name="cc.spray.builders.FilterRoute1">FilterRoute1</a>[A]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute1
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute1
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter2">
+      <a id="filter2[A, B](RouteFilter[(A, B)]):FilterRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter2</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B)]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute2.html" class="extype" name="cc.spray.builders.FilterRoute2">FilterRoute2</a>[A, B]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute2
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute2
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter3">
+      <a id="filter3[A, B, C](RouteFilter[(A, B, C)]):FilterRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter3</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C)]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute3.html" class="extype" name="cc.spray.builders.FilterRoute3">FilterRoute3</a>[A, B, C]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute3
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute3
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter4">
+      <a id="filter4[A, B, C, D](RouteFilter[(A, B, C, D)]):FilterRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter4</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D)]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute4.html" class="extype" name="cc.spray.builders.FilterRoute4">FilterRoute4</a>[A, B, C, D]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute4
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute4
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FilterBuilders#filter5">
+      <a id="filter5[A, B, C, D, E](RouteFilter[(A, B, C, D, E)]):FilterRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">filter5</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E)]</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute5.html" class="extype" name="cc.spray.builders.FilterRoute5">FilterRoute5</a>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Created a 
+FilterRoute5
+ from the given RouteFilter function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Created a 
+FilterRoute5
+ from the given RouteFilter function.
+</p></div><div class="block">
+          definition classes: FilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="prt" data-isabs="false" name="scala.AnyRef#finalize">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is called by the garbage collector on the receiver object when garbage collection determines that
+there are no more references to the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is called by the garbage collector on the receiver object when garbage collection determines that
+there are no more references to the object.</p><p>The details of when and if the <code>finalize</code> method are invoked, as well as the interaction between <code>finalize</code>and non-local returns and exceptions, are all platform dependent.</p></div><div class="block">
+          attributes: protected 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#fromString">
+      <a id="fromString(String):Param"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">fromString</span>
+        
+        <span class="params">(<span name="name">name: String</span>)</span>
+        <span class="result">: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: ParameterBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#fromSymbol">
+      <a id="fromSymbol(Symbol):Param"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">fromSymbol</span>
+        
+        <span class="params">(<span name="name">name: <span class="extype" name="scala.Symbol">Symbol</span></span>)</span>
+        <span class="result">: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: ParameterBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#get">
+      <a id="get:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">get</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-GET requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-GET requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#getClass">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span>
+        <span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a representation that corresponds to the dynamic class of the receiver object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a representation that corresponds to the dynamic class of the receiver object.</p><p>The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FileResourceDirectoryBuilders#getFromDirectory">
+      <a id="getFromDirectory(String,Option[Charset],(String) ⇒ String)((Route) ⇒ Actor,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getFromDirectory</span>
+        
+        <span class="params">(<span name="directoryName">directoryName: String</span>, <span name="charset">charset: <span class="extype" name="scala.Option">Option</span>[<a href="../http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>] =<span class="symbol">None</span></span>, <span name="pathRewriter">pathRewriter: (String) ⇒ String =<span class="defval" name="identity}"> ...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="detachedActorFactory">detachedActorFactory: (Route) ⇒ <span class="extype" name="akka.actor.Actor">Actor</span></span>, <span name="resolver">resolver: ContentTypeResolver</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of a file underneath the given directory.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of a file underneath the given directory.
+The unmatchedPath of the 
+RequestContext
+ is first transformed by the given pathRewriter function before
+being appended to the given directoryName to build the final fileName.
+The actual I/O operation is running detached in the context of a newly spawned actor, so it doesn't block the
+current thread. If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><div class="block">
+          definition classes: FileResourceDirectoryBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FileResourceDirectoryBuilders#getFromFile">
+      <a id="getFromFile(String,Option[Charset])((Route) ⇒ Actor,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getFromFile</span>
+        
+        <span class="params">(<span name="fileName">fileName: String</span>, <span name="charset">charset: <span class="extype" name="scala.Option">Option</span>[<a href="../http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>] =<span class="symbol">None</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="detachedActorFactory">detachedActorFactory: (Route) ⇒ <span class="extype" name="akka.actor.Actor">Actor</span></span>, <span name="resolver">resolver: ContentTypeResolver</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of the given file.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of the given file. The actual I/O operation is
+running detached in the context of a newly spawned actor, so it doesn't block the current thread.
+If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><div class="block">
+          definition classes: FileResourceDirectoryBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FileResourceDirectoryBuilders#getFromResource">
+      <a id="getFromResource(String,Option[Charset])((Route) ⇒ Actor,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getFromResource</span>
+        
+        <span class="params">(<span name="resourceName">resourceName: String</span>, <span name="charset">charset: <span class="extype" name="scala.Option">Option</span>[<a href="../http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>] =<span class="symbol">None</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="detachedActorFactory">detachedActorFactory: (Route) ⇒ <span class="extype" name="akka.actor.Actor">Actor</span></span>, <span name="resolver">resolver: ContentTypeResolver</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of the given resource.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of the given resource. The actual I/O operation is
+running detached in the context of a newly spawned actor, so it doesn't block the current thread.
+If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><div class="block">
+          definition classes: FileResourceDirectoryBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.FileResourceDirectoryBuilders#getFromResourceDirectory">
+      <a id="getFromResourceDirectory(String,Option[Charset],(String) ⇒ String)((Route) ⇒ Actor,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getFromResourceDirectory</span>
+        
+        <span class="params">(<span name="directoryName">directoryName: String</span>, <span name="charset">charset: <span class="extype" name="scala.Option">Option</span>[<a href="../http/Charset.html" class="extype" name="cc.spray.http.Charset">Charset</a>] =<span class="symbol">None</span></span>, <span name="pathRewriter">pathRewriter: (String) ⇒ String =<span class="defval" name="identity}"> ...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="detachedActorFactory">detachedActorFactory: (Route) ⇒ <span class="extype" name="akka.actor.Actor">Actor</span></span>, <span name="resolver">resolver: ContentTypeResolver</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Same as &quot;getFromDirectory&quot; except that the file is not fetched from the file system but rather from a
+&quot;resource directory&quot;.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Same as &quot;getFromDirectory&quot; except that the file is not fetched from the file system but rather from a
+&quot;resource directory&quot;.
+</p></div><div class="block">
+          definition classes: FileResourceDirectoryBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.UnMarshallingBuilders#handledBy">
+      <a id="handledBy[A, B]((A) ⇒ B)(Unmarshaller[A],Marshaller[B]):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">handledBy</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="f">f: (A) ⇒ B</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Unmarshaller[A]</span>, <span name="arg1">arg1: Marshaller[B]</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that completes the request using the given function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes the request using the given function. The input to the function is produces with
+the in-scope unmarshaller and the result value of the function is marshalled with the in-scope marshaller.
+</p></div><div class="block">
+          definition classes: UnMarshallingBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#hardFail">
+      <a id="hardFail(HttpFailure,String):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hardFail</span>
+        
+        <span class="params">(<span name="failure">failure: <a href="../http/HttpFailure.html" class="extype" name="cc.spray.http.HttpFailure">HttpFailure</a></span>, <span name="reason">reason: String =<span class="symbol">&quot;&quot;</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Stops the current Route processing by throwing an HttpException that will be caught by the enclosing Actor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Stops the current Route processing by throwing an HttpException that will be caught by the enclosing Actor.
+Failures produced in this way circumvent all response processing logic that might be present (for example they
+cannot be cached with the 'cached' directive).
+</p></div><div class="block">
+          definition classes: MiscBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#hashCode">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a hash code value for the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a hash code value for the object.</p><p>The default hashing algorithm is platform dependent.</p><p>Note that it is allowed for two objects to have identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>) yet
+not be equal (<code>o1.equals(o2)</code> returns <code>false</code>).  A degenerate implementation could always return <code>0</code>.
+However, it is required that if two objects are equal (<code>o1.equals(o2)</code> returns <code>true</code>) that they have
+identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>).  Therefore, when overriding this method, be sure
+to verify that the behavior is consistent with the <code>equals</code> method.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for the object.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#head">
+      <a id="head:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">head</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-HEAD requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-HEAD requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#host">
+      <a id="host(Regex):FilterRoute1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="regex">regex: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute1.html" class="extype" name="cc.spray.builders.FilterRoute1">FilterRoute1</a>[String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all requests with a host name that does not have a prefix matching the given
+regular expression.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all requests with a host name that does not have a prefix matching the given
+regular expression. For all matching requests the prefix string matching the regex is extracted and passed to
+the inner Route building function. If the regex contains a capturing group only the string matched by this group
+is extracted. If the regex contains more than one capturing group an IllegalArgumentException will be thrown.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#host">
+      <a id="host((String) ⇒ Boolean):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="predicate">predicate: (String) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all requests for whose host name the given predicate function return false.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all requests for whose host name the given predicate function return false.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#host">
+      <a id="host(String):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="hostName">hostName: String</span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all requests with a host name different from the given one.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all requests with a host name different from the given one.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#isInstanceOf">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to test whether the dynamic type of the receiver object is <code>T0</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to test whether the dynamic type of the receiver object is <code>T0</code>.</p><p>Note that the test result of the test is modulo Scala's erasure semantics.  Therefore the expression<code>1.isInstanceOf[String]</code> will return <code>false</code>, while the expression <code>List(1).isInstanceOf[List[String]]</code> will
+return <code>true</code>.  In the latter example, because the type argument is erased as part of compilation it is not
+possible to check whether the contents of the list are of the requested typed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#method">
+      <a id="method(HttpMethod):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">method</span>
+        
+        <span class="params">(<span name="m">m: <a href="../http/HttpMethod.html" class="extype" name="cc.spray.http.HttpMethod">HttpMethod</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all requests whose HTTP method does not match the given one.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all requests whose HTTP method does not match the given one.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#ne">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o.ne(arg0)</code> is the same as <code>!(o.eq(arg0))</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o.ne(arg0)</code> is the same as <code>!(o.eq(arg0))</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for reference dis-equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>false</code> if the argument is not a reference to the receiver object; <code>true</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#notify">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.</p></div><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#notifyAll">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.</p></div><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.UnMarshallingBuilders#optionalContentAs">
+      <a id="optionalContentAs[A]((Option[A]) ⇒ Route)(Unmarshaller[A]):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">optionalContentAs</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="routing">routing: (<span class="extype" name="scala.Option">Option</span>[A]) ⇒ Route</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Unmarshaller[A]</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that unmarshalls the optional request content using the in-scope unmarshaller for the given type
+and passes it as an argument to the inner Route building function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that unmarshalls the optional request content using the in-scope unmarshaller for the given type
+and passes it as an argument to the inner Route building function.
+If the unmarshaller cannot unmarshal the request content the request is rejected with the 
+Rejection
+ produced
+by the unmarshaller.
+</p></div><div class="block">
+          definition classes: UnMarshallingBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#options">
+      <a id="options:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">options</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-OPTIONS requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-OPTIONS requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameter">
+      <a id="parameter(RequiredParameter):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameter</span>
+        
+        <span class="params">(<span name="p">p: <a href="../builders/RequiredParameter.html" class="extype" name="cc.spray.builders.RequiredParameter">RequiredParameter</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameter">
+      <a id="parameter(Param):FilterRoute1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameter</span>
+        
+        <span class="params">(<span name="a">a: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute1.html" class="extype" name="cc.spray.builders.FilterRoute1">FilterRoute1</a>[String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if a query parameter with the given name cannot be found.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if a query parameter with the given name cannot be found.
+If it can be found the parameters value is extracted and passed as argument to the inner Route building function.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameters">
+      <a id="parameters(Param,Param,Param,Param,Param):FilterRoute5[String, String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameters</span>
+        
+        <span class="params">(<span name="a">a: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="b">b: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="c">c: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="d">d: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="e">e: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute5.html" class="extype" name="cc.spray.builders.FilterRoute5">FilterRoute5</a>[String, String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameters">
+      <a id="parameters(Param,Param,Param,Param):FilterRoute4[String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameters</span>
+        
+        <span class="params">(<span name="a">a: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="b">b: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="c">c: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="d">d: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute4.html" class="extype" name="cc.spray.builders.FilterRoute4">FilterRoute4</a>[String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameters">
+      <a id="parameters(Param,Param,Param):FilterRoute3[String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameters</span>
+        
+        <span class="params">(<span name="a">a: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="b">b: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="c">c: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute3.html" class="extype" name="cc.spray.builders.FilterRoute3">FilterRoute3</a>[String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.ParameterBuilders#parameters">
+      <a id="parameters(Param,Param):FilterRoute2[String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parameters</span>
+        
+        <span class="params">(<span name="a">a: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>, <span name="b">b: <a href="../builders/Param.html" class="extype" name="cc.spray.builders.Param">Param</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute2.html" class="extype" name="cc.spray.builders.FilterRoute2">FilterRoute2</a>[String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><div class="block">
+          definition classes: ParameterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher5):FilterRoute5[String, String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher5.html" class="extype" name="cc.spray.builders.PathMatcher5">PathMatcher5</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute5.html" class="extype" name="cc.spray.builders.FilterRoute5">FilterRoute5</a>[String, String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher4):FilterRoute4[String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher4.html" class="extype" name="cc.spray.builders.PathMatcher4">PathMatcher4</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute4.html" class="extype" name="cc.spray.builders.FilterRoute4">FilterRoute4</a>[String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher3):FilterRoute3[String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher3.html" class="extype" name="cc.spray.builders.PathMatcher3">PathMatcher3</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute3.html" class="extype" name="cc.spray.builders.FilterRoute3">FilterRoute3</a>[String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher2):FilterRoute2[String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher2.html" class="extype" name="cc.spray.builders.PathMatcher2">PathMatcher2</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute2.html" class="extype" name="cc.spray.builders.FilterRoute2">FilterRoute2</a>[String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher1):FilterRoute1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher1.html" class="extype" name="cc.spray.builders.PathMatcher1">PathMatcher1</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute1.html" class="extype" name="cc.spray.builders.FilterRoute1">FilterRoute1</a>[String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher. If it does match the value extracted by the matcher is passed to the inner Route building
+function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#path">
+      <a id="path(PathMatcher0):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher0.html" class="extype" name="cc.spray.builders.PathMatcher0">PathMatcher0</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does not match
+the given PathMatcher.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher5):FilterRoute5[String, String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher5.html" class="extype" name="cc.spray.builders.PathMatcher5">PathMatcher5</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute5.html" class="extype" name="cc.spray.builders.FilterRoute5">FilterRoute5</a>[String, String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher4):FilterRoute4[String, String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher4.html" class="extype" name="cc.spray.builders.PathMatcher4">PathMatcher4</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute4.html" class="extype" name="cc.spray.builders.FilterRoute4">FilterRoute4</a>[String, String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher3):FilterRoute3[String, String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher3.html" class="extype" name="cc.spray.builders.PathMatcher3">PathMatcher3</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute3.html" class="extype" name="cc.spray.builders.FilterRoute3">FilterRoute3</a>[String, String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher2):FilterRoute2[String, String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher2.html" class="extype" name="cc.spray.builders.PathMatcher2">PathMatcher2</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute2.html" class="extype" name="cc.spray.builders.FilterRoute2">FilterRoute2</a>[String, String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher1):FilterRoute1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher1.html" class="extype" name="cc.spray.builders.PathMatcher1">PathMatcher1</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute1.html" class="extype" name="cc.spray.builders.FilterRoute1">FilterRoute1</a>[String]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher. If it does match the value extracted by the matcher is passed to the inner
+Route building function.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#pathPrefix">
+      <a id="pathPrefix(PathMatcher0):FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a href="../builders/PathMatcher0.html" class="extype" name="cc.spray.builders.PathMatcher0">PathMatcher0</a></span>)</span>
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the 
+RequestContext
+ does have a prefix
+that matches the given PathMatcher.
+</p></div><div class="block">
+          definition classes: PathBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultUnmarshallers#pimpHttpContentWithAs1">
+      <a id="pimpHttpContentWithAs1(HttpContent):HttpContentExtractor"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpHttpContentWithAs1</span>
+        
+        <span class="params">(<span name="c">c: <a href="../http/HttpContent.html" class="extype" name="cc.spray.http.HttpContent">HttpContent</a></span>)</span>
+        <span class="result">: <a href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor">HttpContentExtractor</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../marshalling/DefaultUnmarshallers.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers">DefaultUnmarshallers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.marshalling.DefaultUnmarshallers#pimpHttpContentWithAs2">
+      <a id="pimpHttpContentWithAs2(Option[HttpContent]):HttpContentExtractor"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpHttpContentWithAs2</span>
+        
+        <span class="params">(<span name="c">c: <span class="extype" name="scala.Option">Option</span>[<a href="../http/HttpContent.html" class="extype" name="cc.spray.http.HttpContent">HttpContent</a>]</span>)</span>
+        <span class="result">: <a href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor">HttpContentExtractor</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../marshalling/DefaultUnmarshallers.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers">DefaultUnmarshallers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#pimpRouteWithConcatenation">
+      <a id="pimpRouteWithConcatenation(Route):AnyRef {...}"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">pimpRouteWithConcatenation</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: AnyRef {...}</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: MiscBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#post">
+      <a id="post:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">post</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-POST requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-POST requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.UnMarshallingBuilders#produces">
+      <a id="produces[A](((A) ⇒ Unit) ⇒ Route)(Marshaller[A]):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">produces</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="routing">routing: ((A) ⇒ <span class="extype" name="scala.Unit">Unit</span>) ⇒ Route</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="marshaller">marshaller: Marshaller[A]</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that uses the in-scope marshaller for the given type to produce a completion function that is
+passed to the inner route building function.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that uses the in-scope marshaller for the given type to produce a completion function that is
+passed to the inner route building function. You can use it do decouple marshaller resolution from the call
+site of the RequestContexts 'complete' function.
+</p></div><div class="block">
+          definition classes: UnMarshallingBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#put">
+      <a id="put:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">put</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-PUT requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-PUT requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#regex2Matcher">
+      <a id="regex2Matcher(Regex):PathMatcher1"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">regex2Matcher</span>
+        
+        <span class="params">(<span name="regex">regex: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>)</span>
+        <span class="result">: <a href="../builders/PathMatcher1.html" class="extype" name="cc.spray.builders.PathMatcher1">PathMatcher1</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: PathBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#requestTransformedBy">
+      <a id="requestTransformedBy((HttpRequest) ⇒ HttpRequest)(Route):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">requestTransformedBy</span>
+        
+        <span class="params">(<span name="f">f: (<a href="../http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a>) ⇒ <a href="../http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a></span>)</span><span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route which applies the given 
+HttpRequest
+ transformation function before passing on the
+RequestContext
+ to its inner Route.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route which applies the given 
+HttpRequest
+ transformation function before passing on the
+RequestContext
+ to its inner Route.
+</p></div><div class="block">
+          definition classes: MiscBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#respondsWithHeader">
+      <a id="respondsWithHeader(HttpHeader):(Route) ⇒ Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">respondsWithHeader</span>
+        
+        <span class="params">(<span name="responseHeader">responseHeader: <a href="../http/HttpHeader.html" class="extype" name="cc.spray.http.HttpHeader">HttpHeader</a></span>)</span>
+        <span class="result">: (Route) ⇒ Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that adds the given response headers to all not-rejected responses of its inner Route.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that adds the given response headers to all not-rejected responses of its inner Route.
+</p></div><div class="block">
+          definition classes: MiscBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#respondsWithStatus">
+      <a id="respondsWithStatus(HttpStatusCode):(Route) ⇒ Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">respondsWithStatus</span>
+        
+        <span class="params">(<span name="responseStatus">responseStatus: <a href="../http/HttpStatusCode.html" class="extype" name="cc.spray.http.HttpStatusCode">HttpStatusCode</a></span>)</span>
+        <span class="result">: (Route) ⇒ Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route that sets the given response status on all not-rejected responses of its inner Route.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route that sets the given response status on all not-rejected responses of its inner Route.
+</p></div><div class="block">
+          definition classes: MiscBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#responseTransformedBy">
+      <a id="responseTransformedBy((HttpResponse) ⇒ HttpResponse)(Route):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">responseTransformedBy</span>
+        
+        <span class="params">(<span name="f">f: (<a href="../http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a>) ⇒ <a href="../http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a></span>)</span><span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route which applies the given 
+HttpResponse
+ transformation function to all not-rejected
+responses of its inner Route.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route which applies the given 
+HttpResponse
+ transformation function to all not-rejected
+responses of its inner Route.
+</p></div><div class="block">
+          definition classes: MiscBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.MiscBuilders#routingResultTransformedBy">
+      <a id="routingResultTransformedBy((RoutingResult) ⇒ RoutingResult)(Route):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">routingResultTransformedBy</span>
+        
+        <span class="params">(<span name="f">f: (<a href="../RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <a href="../RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a></span>)</span><span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: Route</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: MiscBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.PathBuilders#string2Matcher">
+      <a id="string2Matcher(String):PathMatcher0"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">string2Matcher</span>
+        
+        <span class="params">(<span name="s">s: String</span>)</span>
+        <span class="result">: <a href="../builders/PathMatcher0.html" class="extype" name="cc.spray.builders.PathMatcher0">PathMatcher0</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: PathBuilders
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#synchronized">
+      <a id="synchronized[T0](T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: T0</span>)</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#toString">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a string representation of the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a string representation of the object.</p><p>The default representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a string representation of the object.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.builders.SimpleFilterBuilders#trace">
+      <a id="trace:FilterRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">trace</span>
+        
+        
+        <span class="result">: <a href="../builders/FilterRoute0.html" class="extype" name="cc.spray.builders.FilterRoute0">FilterRoute0</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a Route filter that rejects all non-TRACE requests.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a Route filter that rejects all non-TRACE requests.
+</p></div><div class="block">
+          definition classes: SimpleFilterBuilders
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li></ol>
+            </div>
+
+        <div class="parent" name="cc.spray.ServiceBuilder">
+              <h3>Inherited from <a href="../ServiceBuilder.html" class="extype" name="cc.spray.ServiceBuilder">ServiceBuilder</a></h3>
+            </div><div class="parent" name="cc.spray.builders.UnMarshallingBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.UnMarshallingBuilders">UnMarshallingBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.marshalling.DefaultUnmarshallers">
+              <h3>Inherited from <a href="../marshalling/DefaultUnmarshallers.html" class="extype" name="cc.spray.marshalling.DefaultUnmarshallers">DefaultUnmarshallers</a></h3>
+            </div><div class="parent" name="cc.spray.marshalling.DefaultMarshallers">
+              <h3>Inherited from <a href="../marshalling/DefaultMarshallers.html" class="extype" name="cc.spray.marshalling.DefaultMarshallers">DefaultMarshallers</a></h3>
+            </div><div class="parent" name="cc.spray.builders.SimpleFilterBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.SimpleFilterBuilders">SimpleFilterBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.PathBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.PathBuilders">PathBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.ParameterBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.ParameterBuilders">ParameterBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.MiscBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.MiscBuilders">MiscBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.FilterBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.FilterBuilders">FilterBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.FileResourceDirectoryBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.FileResourceDirectoryBuilders">FileResourceDirectoryBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.DetachedBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.DetachedBuilders">DetachedBuilders</span></h3>
+            </div><div class="parent" name="cc.spray.builders.CachingBuilders">
+              <h3>Inherited from <span class="extype" name="cc.spray.builders.CachingBuilders">CachingBuilders</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from AnyRef</h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>
