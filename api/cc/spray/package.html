@@ -105,10 +105,7 @@
       </span>
       </a></h4>
       <p class="comment cmt">The FilterResult represents the two different filtering outcomes of RouteFilters:
-Pass
- or 
-Reject
-</p>
+ <a href="Pass.html" class="extype" name="cc.spray.Pass">Pass</a> or <a href="Reject.html" class="extype" name="cc.spray.Reject">Reject</a></p>
     </li><li visbl="pub" data-isabs="false" name="cc.spray.HttpService">
       <a id="HttpService:HttpService"></a>
       <h4 class="signature"><a href="HttpService.html">
@@ -120,8 +117,7 @@ Reject
         <span class="result"> extends HttpServiceActor with HttpServiceLogic</span>
       </span>
       </a></h4>
-      <p class="comment cmt">*
-The default implementation of an HttpService.</p>
+      <p class="comment cmt">The default implementation of an HttpService.</p>
     </li><li visbl="pub" data-isabs="true" name="cc.spray.HttpServiceActor">
       <a id="HttpServiceActor:HttpServiceActor"></a>
       <h4 class="signature"><a href="HttpServiceActor.html">
@@ -133,8 +129,7 @@ The default implementation of an HttpService.</p>
         <span class="result"> extends Actor with Logging</span>
       </span>
       </a></h4>
-      <p class="comment cmt">The actor path of the 
-HttpService.</p>
+      <p class="comment cmt">The actor path of the <a href="HttpService.html" class="extype" name="cc.spray.HttpService">HttpService</a>.</p>
     </li><li visbl="pub" data-isabs="true" name="cc.spray.HttpServiceLogic">
       <a id="HttpServiceLogic:HttpServiceLogic"></a>
       <h4 class="signature"><a href="HttpServiceLogic.html">
@@ -146,8 +141,7 @@ HttpService.</p>
         <span class="result"> extends AnyRef</span>
       </span>
       </a></h4>
-      <p class="comment cmt">The logic path of the 
-HttpService.</p>
+      <p class="comment cmt">The logic part of the <a href="HttpService.html" class="extype" name="cc.spray.HttpService">HttpService</a>.</p>
     </li><li visbl="pub" data-isabs="false" name="cc.spray.MalformedRequestContentRejection">
       <a id="MalformedRequestContentRejection:MalformedRequestContentRejection"></a>
       <h4 class="signature"><a href="MalformedRequestContentRejection.html">
@@ -248,9 +242,7 @@ HttpService.</p>
         <span class="result"> extends Product</span>
       </span>
       </a></h4>
-      <p class="comment cmt">Immutable object encapsulating the context of an 
-HttpRequest
- as it flows through a <i>spray</i> Route structure.</p>
+      <p class="comment cmt">Immutable object encapsulating the context of an <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a>as it flows through a <i>spray</i> Route structure.</p>
     </li><li visbl="pub" data-isabs="false" name="cc.spray.Respond">
       <a id="Respond:Respond"></a>
       <h4 class="signature"><a href="Respond.html">
@@ -320,11 +312,8 @@ HttpRequest
         <span class="result"> extends AnyRef</span>
       </span>
       </a></h4>
-      <p class="comment cmt">The RoutingResult represents the two different options for the way Routes can act upon a request:
-Respond
- or 
-Reject
-</p>
+      <p class="comment cmt">The RoutingResult represents the two different options for the way Routes
+can act upon a request <a href="Respond.html" class="extype" name="cc.spray.Respond">Respond</a> or <a href="Reject.html" class="extype" name="cc.spray.Reject">Reject</a></p>
     </li><li visbl="pub" data-isabs="true" name="cc.spray.ServiceBuilder">
       <a id="ServiceBuilder:ServiceBuilder"></a>
       <h4 class="signature"><a href="ServiceBuilder.html">
@@ -336,7 +325,7 @@ Reject
         <span class="result"> extends CachingBuilders with DetachedBuilders with FileResourceDirectoryBuilders with FilterBuilders with MiscBuilders with ParameterBuilders with PathBuilders with SimpleFilterBuilders with UnMarshallingBuilders</span>
       </span>
       </a></h4>
-      <p class="comment cmt">The ServiceBuilder is central trait you should mix in to get access to <i>sprays</i> Route building directives.</p>
+      <p class="comment cmt">The ServiceBuilder is the central trait you should mix in to get access to <i>sprays</i> Route building directives.</p>
     </li><li visbl="pub" data-isabs="true" name="cc.spray.ServletConverter">
       <a id="ServletConverter:ServletConverter"></a>
       <h4 class="signature"><a href="ServletConverter.html">
@@ -348,11 +337,9 @@ Reject
         <span class="result"> extends AnyRef</span>
       </span>
       </a></h4>
-      <p class="comment cmt">The logic for converting<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html">HttpServletRequests</a>to 
-HttpRequest
-s and<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html">HttpServletResponses</a>to 
-HttpResponse
-s.</p>
+      <p class="comment cmt">The logic for converting
+ <a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html">HttpServletRequests</a> to <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a>s and
+ <a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html">HttpServletResponses</a> to <a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a>s.</p>
     </li><li visbl="pub" data-isabs="false" name="cc.spray.UnacceptedResponseContentTypeRejection">
       <a id="UnacceptedResponseContentTypeRejection:UnacceptedResponseContentTypeRejection"></a>
       <h4 class="signature"><a href="UnacceptedResponseContentTypeRejection.html">
@@ -405,6 +392,18 @@ s.</p>
       <span class="kind">object</span>
       <span class="symbol">
         <span class="name">Attach</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.HttpService">
+      <a id="HttpService:HttpService"></a>
+      <h4 class="signature"><a href="HttpService$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">HttpService</span>
         
         
         <span class="result"> extends AnyRef</span>

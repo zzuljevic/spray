@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>cc.spray.RequestContext</title>
+          <title>cc.spray.HttpService</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
@@ -12,34 +12,29 @@
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="type" onload="windowTitle();">
+        <body class="value" onload="windowTitle();">
 
       <p id="owner"><a href="../package.html" class="extype" name="cc">cc</a>.<a href="package.html" class="extype" name="cc.spray">spray</a></p>
 
       <div id="definition">
-        <img src="../../lib/class_big.png" />
-        <h1>RequestContext</h1>
+        <img src="../../lib/object_big.png" />
+        <h1>HttpService</h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">case class</span>
+      <span class="kind">object</span>
       <span class="symbol">
-        <span class="name">RequestContext</span>
+        <span class="name">HttpService</span>
         
-        <span class="params">(<span name="request">request: <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a></span>, <span name="responder">responder: (<a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span>
-        <span class="result"> extends <span class="extype" name="scala.Product">Product</span></span>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment" id="comment"><div class="comment cmt"><p>Immutable object encapsulating the context of an <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a>as it flows through a <i>spray</i> Route structure.
-</p></div><div class="block">
-            go to: <a href="RequestContext$.html">companion</a>
+      <div class="fullcomment" id="comment"><div class="block">
+            go to: <a href="HttpService.html">companion</a>
           </div><div class="block">
-            linear super types: <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, AnyRef, <span class="extype" name="scala.Any">Any</span>
-          </div>
-            
-            
-            
-          </div>
+            linear super types: AnyRef, <span class="extype" name="scala.Any">Any</span>
+          </div></div>
 
       <div id="template">
 
@@ -52,7 +47,7 @@
           <div id="ancestors">
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall">Hide All</li><li class="showall">Show all</li></ol>
-                <ol id="linearization"><li class="in" name="cc.spray.RequestContext">RequestContext</li><li class="in" name="scala.Product">Product</li><li class="in" name="scala.Equals">Equals</li><li class="in" name="scala.AnyRef">AnyRef</li><li class="in" name="scala.Any">Any</li></ol>
+                <ol id="linearization"><li class="in" name="cc.spray.HttpService">HttpService</li><li class="in" name="scala.AnyRef">AnyRef</li><li class="in" name="scala.Any">Any</li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -64,22 +59,7 @@
             </div>
         </div>
 
-        <div class="members" id="constructors">
-              <h3>Instance constructors</h3>
-              <ol><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#this">
-      <a id="this:RequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">new</span>
-      <span class="symbol">
-        <span class="name">RequestContext</span>
         
-        <span class="params">(<span name="request">request: <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a></span>, <span name="responder">responder: (<a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span>
-        
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
 
         
 
@@ -233,6 +213,18 @@
             
           </div>
           
+    </li><li visbl="pub" data-isabs="false" name="cc.spray.HttpService#apply">
+      <a id="apply(Route):HttpService"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">apply</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span>
+        <span class="result">: <a href="HttpService.html" class="extype" name="cc.spray.HttpService">HttpService</a></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" data-isabs="false" name="scala.Any#asInstanceOf">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -258,23 +250,6 @@ part of compilation it is not possible to check whether the contents of the list
             
           </div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#canEqual">
-      <a id="canEqual(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">canEqual</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → Equals
-        </div></div>
-          
     </li><li visbl="prt" data-isabs="false" name="scala.AnyRef#clone">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -294,68 +269,6 @@ part of compilation it is not possible to check whether the contents of the list
         </div><div class="block">
           definition classes: AnyRef
         </div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#complete">
-      <a id="complete(HttpResponse):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">complete</span>
-        
-        <span class="params">(<span name="response">response: <a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Completes the request with the given <a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a>.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Completes the request with the given <a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a>.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#complete">
-      <a id="complete(HttpContent):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">complete</span>
-        
-        <span class="params">(<span name="content">content: <a href="http/HttpContent.html" class="extype" name="cc.spray.http.HttpContent">HttpContent</a></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Completes the request with status &quot;200 Ok&quot; and the given response content.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Completes the request with status &quot;200 Ok&quot; and the given response content.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#complete">
-      <a id="complete[A](A)(Marshaller[A]):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">complete</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Completes the request with status &quot;200 Ok&quot; and response content created by marshalling the given object using
-the in-scope marshaller for the type.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Completes the request with status &quot;200 Ok&quot; and response content created by marshalling the given object using
-the in-scope marshaller for the type.
-</p></div>
             
             
             
@@ -398,7 +311,7 @@ should be equal to each other (<code>o1 == o2</code>) and they should hash to th
             
           </div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#equals">
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#equals">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -423,48 +336,8 @@ that are &quot;equal&quot; (<code>o1.equals(o2)</code> returns <code>true</code>
 scala.Int
 (<code>o1.hashCode.equals(o2.hashCode)</code>).
 </p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → Equals → AnyRef → Any
+          definition classes: AnyRef → Any
         </div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#fail">
-      <a id="fail(HttpStatus):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">fail</span>
-        
-        <span class="params">(<span name="failure">failure: <a href="http/HttpStatus.html" class="extype" name="cc.spray.http.HttpStatus">HttpStatus</a></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Completes the request with the given <a href="http/HttpStatus.html" class="extype" name="cc.spray.http.HttpStatus">HttpStatus</a>.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Completes the request with the given <a href="http/HttpStatus.html" class="extype" name="cc.spray.http.HttpStatus">HttpStatus</a>.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#fail">
-      <a id="fail(HttpFailure,String):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">fail</span>
-        
-        <span class="params">(<span name="failure">failure: <a href="http/HttpFailure.html" class="extype" name="cc.spray.http.HttpFailure">HttpFailure</a></span>, <span name="reason">reason: String =<span class="symbol">&quot;&quot;</span></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Completes the request with the given <a href="http/HttpFailure.html" class="extype" name="cc.spray.http.HttpFailure">HttpFailure</a>.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Completes the request with the given <a href="http/HttpFailure.html" class="extype" name="cc.spray.http.HttpFailure">HttpFailure</a>.
-</p></div>
             
             
             
@@ -519,7 +392,7 @@ there are no more references to the object.</p><p>The details of when and if the
             
           </div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#hashCode">
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#hashCode">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -538,7 +411,7 @@ However, it is required that if two objects are equal (<code>o1.equals(o2)</code
 identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>).  Therefore, when overriding this method, be sure
 to verify that the behavior is consistent with the <code>equals</code> method.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for the object.</p></dd></dl><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → AnyRef → Any
+          definition classes: AnyRef → Any
         </div>
             
             
@@ -641,157 +514,6 @@ possible to check whether the contents of the list are of the requested typed.
             
           </div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#productArity">
-      <a id="productArity:Int"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">productArity</span>
-        
-        
-        <span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → Product
-        </div></div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#productElement">
-      <a id="productElement(Int):Any"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">productElement</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span>
-        <span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → Product
-        </div></div>
-          
-    </li><li visbl="pub" data-isabs="false" name="scala.Product#productElements">
-      <a id="productElements:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name deprecated">productElements</span>
-        
-        
-        <span class="result">: Iterator[<span class="extype" name="scala.Any">Any</span>]</span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: Product
-        </div><div class="block"><ol>deprecated:
-          <li><p>use productIterator instead</p></li>
-        </ol></div></div>
-          
-    </li><li visbl="pub" data-isabs="false" name="scala.Product#productIterator">
-      <a id="productIterator:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">productIterator</span>
-        
-        
-        <span class="result">: Iterator[<span class="extype" name="scala.Any">Any</span>]</span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: Product
-        </div></div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#productPrefix">
-      <a id="productPrefix:String"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">productPrefix</span>
-        
-        
-        <span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-            
-            <div class="fullcomment"><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → Product
-        </div></div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#reject">
-      <a id="reject(Set[Rejection]):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">reject</span>
-        
-        <span class="params">(<span name="rejections">rejections: Set[<a href="Rejection.html" class="extype" name="cc.spray.Rejection">Rejection</a>]</span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Rejects the request with the given rejections.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Rejects the request with the given rejections.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#reject">
-      <a id="reject(Rejection*):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">reject</span>
-        
-        <span class="params">(<span name="rejections">rejections: <a href="Rejection.html" class="extype" name="cc.spray.Rejection">Rejection</a>*</span>)</span>
-        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Rejects the request with the given rejections.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Rejects the request with the given rejections.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#request">
-      <a id="request:HttpRequest"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol">
-        <span class="name">request</span>
-        
-        
-        <span class="result">: <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#responder">
-      <a id="responder:(RoutingResult) ⇒ Unit"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol">
-        <span class="name">responder</span>
-        
-        
-        <span class="result">: (<a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#synchronized">
       <a id="synchronized[T0](T0):T0"></a>
       <h4 class="signature">
@@ -811,7 +533,7 @@ possible to check whether the contents of the list are of the requested typed.
           definition classes: AnyRef
         </div></div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#toString">
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#toString">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -819,32 +541,20 @@ possible to check whether the contents of the list are of the requested typed.
         <span class="name">toString</span>
         
         <span class="params">()</span>
-        <span class="result">: String</span>
+        <span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
       
             <p class="shortcomment cmt">Returns a string representation of the object.</p>
             <div class="fullcomment"><div class="comment cmt"><p>Returns a string representation of the object.</p><p>The default representation is platform dependent.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a string representation of the object.</p></dd></dl><div class="block">
-          definition classes: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a> → AnyRef → Any
+          definition classes: AnyRef → Any
         </div>
             
             
             
           </div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#unmatchedPath">
-      <a id="unmatchedPath:String"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol">
-        <span class="name">unmatchedPath</span>
-        
-        
-        <span class="result">: String</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -902,94 +612,10 @@ possible to check whether the contents of the list are of the requested typed.
           definition classes: AnyRef
         </div></div>
           
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#withHttpResponseTransformed">
-      <a id="withHttpResponseTransformed((HttpResponse) ⇒ HttpResponse):RequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">withHttpResponseTransformed</span>
-        
-        <span class="params">(<span name="f">f: (<a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a>) ⇒ <a href="http/HttpResponse.html" class="extype" name="cc.spray.http.HttpResponse">HttpResponse</a></span>)</span>
-        <span class="result">: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Returns a copy of this context with the the given response transformation function chained into the responder.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Returns a copy of this context with the the given response transformation function chained into the responder.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#withRequestTransformed">
-      <a id="withRequestTransformed((HttpRequest) ⇒ HttpRequest):RequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">withRequestTransformed</span>
-        
-        <span class="params">(<span name="f">f: (<a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a>) ⇒ <a href="http/HttpRequest.html" class="extype" name="cc.spray.http.HttpRequest">HttpRequest</a></span>)</span>
-        <span class="result">: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Returns a copy of this context with the HttpRequest transformed by the given function.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Returns a copy of this context with the HttpRequest transformed by the given function.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#withResponder">
-      <a id="withResponder((RoutingResult) ⇒ Unit):RequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">withResponder</span>
-        
-        <span class="params">(<span name="newResponder">newResponder: (<a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span>
-        <span class="result">: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Returns a copy of this context with the responder replaced by the given responder.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Returns a copy of this context with the responder replaced by the given responder.
-</p></div>
-            
-            
-            
-          </div>
-          
-    </li><li visbl="pub" data-isabs="false" name="cc.spray.RequestContext#withRoutingResultTransformed">
-      <a id="withRoutingResultTransformed((RoutingResult) ⇒ RoutingResult):RequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol">
-        <span class="name">withRoutingResultTransformed</span>
-        
-        <span class="params">(<span name="f">f: (<a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a>) ⇒ <a href="RoutingResult.html" class="extype" name="cc.spray.RoutingResult">RoutingResult</a></span>)</span>
-        <span class="result">: <a href="" class="extype" name="cc.spray.RequestContext">RequestContext</a></span>
-      </span>
-      </h4>
-      
-            <p class="shortcomment cmt">Returns a copy of this context with the the given RoutingResult transformation function chained into the responder.</p>
-            <div class="fullcomment"><div class="comment cmt"><p>Returns a copy of this context with the the given RoutingResult transformation function chained into the responder.
-</p></div>
-            
-            
-            
-          </div>
-          
     </li></ol>
             </div>
 
-        <div class="parent" name="scala.Product">
-              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
-            </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from AnyRef</h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

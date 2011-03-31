@@ -30,23 +30,15 @@
         <span class="result"> extends <a href="HttpServiceActor.html" class="extype" name="cc.spray.HttpServiceActor">HttpServiceActor</a> with <a href="HttpServiceLogic.html" class="extype" name="cc.spray.HttpServiceLogic">HttpServiceLogic</a></span>
       </span>
       </h4>
-      <div class="fullcomment" id="comment"><div class="comment cmt"><p>*
-The default implementation of an HttpService. It combines the 
-HttpServiceActor
- with the 
-HttpServiceLogic
-.
-If you'd like to use a custom 
-HttpServiceLogic
- you should generate a sub trait of 
-HttpServiceLogic
- (e.g.
-CustomServiceLogic) and create your CustomHttpService with</p><pre>
+      <div class="fullcomment" id="comment"><div class="comment cmt"><p>The default implementation of an HttpService. It combines the <a href="HttpServiceActor.html" class="extype" name="cc.spray.HttpServiceActor">HttpServiceActor</a> with
+the <a href="HttpServiceLogic.html" class="extype" name="cc.spray.HttpServiceLogic">HttpServiceLogic</a>. If you'd like to use a custom <a href="HttpServiceLogic.html" class="extype" name="cc.spray.HttpServiceLogic">HttpServiceLogic</a> you should generate
+a sub trait of <a href="HttpServiceLogic.html" class="extype" name="cc.spray.HttpServiceLogic">HttpServiceLogic</a> (e.g. CustomServiceLogic) and create your CustomHttpService with</p><pre>
  case class CustomHttpService(route: Route) extends HttpServiceActor with CustomServiceLogic 
-</pre><p>In this way you can test your CustomServiceLogic with 
-SprayTest
- without the need to fire up actual actors.
+</pre><p>In this way you can test your CustomServiceLogic with <a href="test/SprayTest.html" class="extype" name="cc.spray.test.SprayTest">SprayTest</a> without the need to fire up
+actual actors.
 </p></div><div class="block">
+            go to: <a href="HttpService$.html">companion</a>
+          </div><div class="block">
             linear super types: <a href="HttpServiceLogic.html" class="extype" name="cc.spray.HttpServiceLogic">HttpServiceLogic</a>, <a href="HttpServiceActor.html" class="extype" name="cc.spray.HttpServiceActor">HttpServiceActor</a>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="akka.util.Logging">Logging</span>, AnyRef, <span class="extype" name="scala.Any">Any</span>
           </div>
             
