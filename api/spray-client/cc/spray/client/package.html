@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.client</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a></p>
+        <h1>client</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol"> 
+        <span class="name">client</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="cc.spray.client.ClientConfig" data-isabs="false">
+      <a id="ClientConfig:ClientConfig"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="ClientConfig.html"><span class="name">ClientConfig</span></a>
+        
+        <span class="params">(<span name="limits">limits: Limits</span>, <span name="connectionTimeOutInMs">connectionTimeOutInMs: Integer</span>, <span name="idleConnectionInPoolTimeoutInMs">idleConnectionInPoolTimeoutInMs: Integer</span>, <span name="requestTimeoutInMs">requestTimeoutInMs: Integer</span>, <span name="redirectEnabled">redirectEnabled: Boolean</span>, <span name="compressionEnabled">compressionEnabled: Boolean</span>, <span name="userAgent">userAgent: String</span>, <span name="allowConnectionPooling">allowConnectionPooling: Boolean</span>, <span name="reaper">reaper: ScheduledExecutorService</span>, <span name="applicationThreadPool">applicationThreadPool: ExecutorService</span>, <span name="proxyServer">proxyServer: ProxyServer</span>, <span name="sslConfig">sslConfig: SslConfig</span>, <span name="providerConfig">providerConfig: com.ning.http.client.AsyncHttpProviderConfig[_, _]</span>, <span name="connectionsPool">connectionsPool: com.ning.http.client.ConnectionsPool[_, _]</span>, <span name="realm">realm: Realm</span>, <span name="requestFilters">requestFilters: List[RequestFilter]</span>, <span name="responseFilters">responseFilters: List[ResponseFilter]</span>, <span name="ioExceptionFilters">ioExceptionFilters: List[IOExceptionFilter]</span>, <span name="requestCompressionLevel">requestCompressionLevel: Integer</span>, <span name="useRawUrl">useRawUrl: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.HttpClient" data-isabs="false">
+      <a id="HttpClient:HttpClient"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="HttpClient.html"><span class="name">HttpClient</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The central class encapsulating the Ning <a href="https://github.com/sonatype/async-http-client">AsyncHttpClient</a> as a scala wrapper.</p>
+    </li><li visbl="pub" name="cc.spray.client.Limits" data-isabs="false">
+      <a id="Limits:Limits"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="Limits.html"><span class="name">Limits</span></a>
+        
+        <span class="params">(<span name="maxTotalConnections">maxTotalConnections: Integer</span>, <span name="maxConnectionsPerHost">maxConnectionsPerHost: Integer</span>, <span name="maxRedirects">maxRedirects: Integer</span>, <span name="maxRequestRetries">maxRequestRetries: Integer</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Realm" data-isabs="false">
+      <a id="Realm:Realm"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="Realm.html"><span class="name">Realm</span></a>
+        
+        <span class="params">(<span name="principal">principal: String</span>, <span name="password">password: String</span>, <span name="scheme">scheme: AuthScheme</span>, <span name="realmName">realmName: String</span>, <span name="nonce">nonce: String</span>, <span name="algorithm">algorithm: String</span>, <span name="response">response: String</span>, <span name="qop">qop: String</span>, <span name="nc">nc: String</span>, <span name="uri">uri: String</span>, <span name="methodName">methodName: String</span>, <span name="usePreemptive">usePreemptive: Boolean</span>, <span name="ntlmDomain">ntlmDomain: String</span>, <span name="enc">enc: String</span>, <span name="ntlmHost">ntlmHost: String</span>, <span name="ntlmMessageType2Received">ntlmMessageType2Received: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.RequestConfig" data-isabs="false">
+      <a id="RequestConfig:RequestConfig"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="RequestConfig.html"><span class="name">RequestConfig</span></a>
+        
+        <span class="params">(<span name="proxyServer">proxyServer: ProxyServer</span>, <span name="requestTimeoutInMs">requestTimeoutInMs: Integer</span>, <span name="followRedirects">followRedirects: Boolean</span>, <span name="realm">realm: Realm</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.SslConfig" data-isabs="false">
+      <a id="SslConfig:SslConfig"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="SslConfig.html"><span class="name">SslConfig</span></a>
+        
+        <span class="params">(<span name="context">context: SSLContext</span>, <span name="engineFactory">engineFactory: SSLEngineFactory</span>, <span name="allowConnectionPooling">allowConnectionPooling: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+        
+        
+
+        
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

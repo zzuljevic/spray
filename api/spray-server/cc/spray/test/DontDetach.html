@@ -1,0 +1,1924 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.test.DontDetach</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/trait_big.png" />
+        <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a>.<a name="cc.spray.test" class="extype" href="package.html">test</a></p>
+        <h1>DontDetach</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <span class="name">DontDetach</span>
+        
+        <span class="result"> extends <a name="cc.spray.Directives" class="extype" href="../Directives.html">Directives</a></span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Trait that should be mixed into the <a name="cc.spray.Directives" class="extype" href="../Directives.html">Directives</a> instance used for testing. It disables the 'detach'
+directive, preventing &quot;No response received&quot; failures in Routes using <code>detach</code>.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="cc.spray.Directives" class="extype" href="../Directives.html">Directives</a>, <a name="cc.spray.SimpleParsers" class="extype" href="../SimpleParsers.html">SimpleParsers</a>, <span name="cc.spray.directives.SimpleDirectives" class="extype">SimpleDirectives</span>, <span name="cc.spray.directives.SecurityDirectives" class="extype">SecurityDirectives</span>, <span name="cc.spray.directives.PathDirectives" class="extype">PathDirectives</span>, <span name="cc.spray.directives.CaseClassExtractionDirectives" class="extype">CaseClassExtractionDirectives</span>, <span name="cc.spray.directives.ParameterDirectives" class="extype">ParameterDirectives</span>, <span name="cc.spray.directives.MiscDirectives" class="extype">MiscDirectives</span>, <span name="cc.spray.directives.MarshallingDirectives" class="extype">MarshallingDirectives</span>, <a name="cc.spray.marshalling.DefaultUnmarshallers" class="extype" href="../marshalling/DefaultUnmarshallers.html">DefaultUnmarshallers</a>, <a name="cc.spray.marshalling.DefaultMarshallers" class="extype" href="../marshalling/DefaultMarshallers.html">DefaultMarshallers</a>, <span name="cc.spray.directives.FileAndResourceDirectives" class="extype">FileAndResourceDirectives</span>, <span name="cc.spray.directives.DetachDirectives" class="extype">DetachDirectives</span>, <span name="cc.spray.directives.CodecDirectives" class="extype">CodecDirectives</span>, <span name="cc.spray.directives.CacheDirectives" class="extype">CacheDirectives</span>, <span name="cc.spray.directives.BasicDirectives" class="extype">BasicDirectives</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="cc.spray.test.DontDetach" class="in"><span>DontDetach</span></li><li name="cc.spray.Directives" class="in"><span>Directives</span></li><li name="cc.spray.SimpleParsers" class="in"><span>SimpleParsers</span></li><li name="cc.spray.directives.SimpleDirectives" class="in"><span>SimpleDirectives</span></li><li name="cc.spray.directives.SecurityDirectives" class="in"><span>SecurityDirectives</span></li><li name="cc.spray.directives.PathDirectives" class="in"><span>PathDirectives</span></li><li name="cc.spray.directives.CaseClassExtractionDirectives" class="in"><span>CaseClassExtractionDirectives</span></li><li name="cc.spray.directives.ParameterDirectives" class="in"><span>ParameterDirectives</span></li><li name="cc.spray.directives.MiscDirectives" class="in"><span>MiscDirectives</span></li><li name="cc.spray.directives.MarshallingDirectives" class="in"><span>MarshallingDirectives</span></li><li name="cc.spray.marshalling.DefaultUnmarshallers" class="in"><span>DefaultUnmarshallers</span></li><li name="cc.spray.marshalling.DefaultMarshallers" class="in"><span>DefaultMarshallers</span></li><li name="cc.spray.directives.FileAndResourceDirectives" class="in"><span>FileAndResourceDirectives</span></li><li name="cc.spray.directives.DetachDirectives" class="in"><span>DetachDirectives</span></li><li name="cc.spray.directives.CodecDirectives" class="in"><span>CodecDirectives</span></li><li name="cc.spray.directives.CacheDirectives" class="in"><span>CacheDirectives</span></li><li name="cc.spray.directives.BasicDirectives" class="in"><span>BasicDirectives</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor" data-isabs="false">
+      <a id="HttpContentExtractor:HttpContentExtractor"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html"><span class="name">HttpContentExtractor</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+        
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultMarshallers.CharArrayMarshaller" data-isabs="false">
+      <a id="CharArrayMarshaller:CharArrayMarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultMarshallers$CharArrayMarshaller$.html"><span class="name">CharArrayMarshaller</span></a>
+        
+        <span class="result"> extends MarshallerBase[Array[Char]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers.CharArrayUnmarshaller" data-isabs="false">
+      <a id="CharArrayUnmarshaller:CharArrayUnmarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultUnmarshallers$CharArrayUnmarshaller$.html"><span class="name">CharArrayUnmarshaller</span></a>
+        
+        <span class="result"> extends UnmarshallerBase[Array[Char]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.HexInt" data-isabs="false">
+      <a id="HexInt:HexInt"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$HexInt$.html"><span class="name">HexInt</span></a>
+        
+        <span class="result"> extends SimpleParser[Int]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.HexLong" data-isabs="false">
+      <a id="HexLong:HexLong"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$HexLong$.html"><span class="name">HexLong</span></a>
+        
+        <span class="result"> extends SimpleParser[Long]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultMarshallers.NodeSeqMarshaller" data-isabs="false">
+      <a id="NodeSeqMarshaller:NodeSeqMarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultMarshallers$NodeSeqMarshaller$.html"><span class="name">NodeSeqMarshaller</span></a>
+        
+        <span class="result"> extends MarshallerBase[NodeSeq]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers.NodeSeqUnmarshaller" data-isabs="false">
+      <a id="NodeSeqUnmarshaller:NodeSeqUnmarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultUnmarshallers$NodeSeqUnmarshaller$.html"><span class="name">NodeSeqUnmarshaller</span></a>
+        
+        <span class="result"> extends UnmarshallerBase[NodeSeq]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleBooleanParser" data-isabs="false">
+      <a id="SimpleBooleanParser:SimpleBooleanParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleBooleanParser$.html"><span class="name">SimpleBooleanParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Boolean]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleByteParser" data-isabs="false">
+      <a id="SimpleByteParser:SimpleByteParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleByteParser$.html"><span class="name">SimpleByteParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Byte]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleDoubleParser" data-isabs="false">
+      <a id="SimpleDoubleParser:SimpleDoubleParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleDoubleParser$.html"><span class="name">SimpleDoubleParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Double]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleFloatParser" data-isabs="false">
+      <a id="SimpleFloatParser:SimpleFloatParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleFloatParser$.html"><span class="name">SimpleFloatParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Float]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleIntParser" data-isabs="false">
+      <a id="SimpleIntParser:SimpleIntParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleIntParser$.html"><span class="name">SimpleIntParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Int]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleLongParser" data-isabs="false">
+      <a id="SimpleLongParser:SimpleLongParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleLongParser$.html"><span class="name">SimpleLongParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Long]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleShortParser" data-isabs="false">
+      <a id="SimpleShortParser:SimpleShortParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleShortParser$.html"><span class="name">SimpleShortParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Short]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleStringParser" data-isabs="false">
+      <a id="SimpleStringParser:SimpleStringParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleStringParser$.html"><span class="name">SimpleStringParser</span></a>
+        
+        <span class="result"> extends SimpleParser[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.SimpleParsers.SimpleSymbolParser" data-isabs="false">
+      <a id="SimpleSymbolParser:SimpleSymbolParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../SimpleParsers$SimpleSymbolParser$.html"><span class="name">SimpleSymbolParser</span></a>
+        
+        <span class="result"> extends SimpleParser[Symbol]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultMarshallers.StringMarshaller" data-isabs="false">
+      <a id="StringMarshaller:StringMarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultMarshallers$StringMarshaller$.html"><span class="name">StringMarshaller</span></a>
+        
+        <span class="result"> extends MarshallerBase[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers.StringUnmarshaller" data-isabs="false">
+      <a id="StringUnmarshaller:StringUnmarshaller"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="../marshalling/DefaultUnmarshallers$StringUnmarshaller$.html"><span class="name">StringUnmarshaller</span></a>
+        
+        <span class="result"> extends UnmarshallerBase[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#as" data-isabs="false">
+      <a id="as[A](Unmarshaller[A]):Unmarshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">as</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Unmarshaller[A]</span>)</span><span class="result">: Unmarshaller[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the in-scope Unmarshaller for the given type.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the in-scope Unmarshaller for the given type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SecurityDirectives#authenticate" data-isabs="false">
+      <a id="authenticate[U](GeneralAuthenticator[U]):SprayRoute1[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">authenticate</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="authenticator">authenticator: GeneralAuthenticator[U]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps its inner Route with authentication support.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps its inner Route with authentication support.
+Uses the given authenticator to authenticate the user and extract an object representing the users identity.
+It's up to the given authenticator how to deal with authentication failures of any kind.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SecurityDirectives#authorize" data-isabs="false">
+      <a id="authorize((RequestContext) ⇒ Boolean):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">authorize</span>
+        
+        <span class="params">(<span name="check">check: (<a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies the given authorization check to the request.</p><div class="fullcomment"><div class="comment cmt"><p>Applies the given authorization check to the request.
+If the check fails the route is rejected with an cc.spray.AuthorizationFailedRejection.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SecurityDirectives#authorize" data-isabs="false">
+      <a id="authorize(⇒ Boolean):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">authorize</span>
+        
+        <span class="params">(<span name="check">check: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies the given authorization check to the request.</p><div class="fullcomment"><div class="comment cmt"><p>Applies the given authorization check to the request.
+If the check fails the route is rejected with an cc.spray.AuthorizationFailedRejection.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CacheDirectives#cache" data-isabs="false">
+      <a id="cache:TransformRoute"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">cache</span>
+        
+        <span class="result">: <a name="cc.spray.directives.TransformRoute" class="extype" href="../directives/TransformRoute.html">TransformRoute</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps its inner Route with caching support using a default <a name="cc.spray.caching.LruCache" class="extype" href="../caching/LruCache.html">LruCache</a> instance
+(max-entries = 500, dropFraction = 20%, time-to-live: 5 minutes) and the {{UriGetCacheKeyer}} which
+only caches GET requests and uses the request URI as cache key.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps its inner Route with caching support using a default <a name="cc.spray.caching.LruCache" class="extype" href="../caching/LruCache.html">LruCache</a> instance
+(max-entries = 500, dropFraction = 20%, time-to-live: 5 minutes) and the {{UriGetCacheKeyer}} which
+only caches GET requests and uses the request URI as cache key.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>CacheDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CacheDirectives#cacheResults" data-isabs="false">
+      <a id="cacheResults(Cache[RoutingResult],CacheKeyer):TransformRoute"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">cacheResults</span>
+        
+        <span class="params">(<span name="cache">cache: <a name="cc.spray.caching.Cache" class="extype" href="../caching/Cache.html">Cache</a>[<a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a>]</span>, <span name="keyer">keyer: CacheKeyer = <span class="symbol"><span class="name"><a href="../caching/package.html">CacheKeyers.UriGetCacheKeyer</a></span></span></span>)</span><span class="result">: <a name="cc.spray.directives.TransformRoute" class="extype" href="../directives/TransformRoute.html">TransformRoute</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps its inner Route with caching support using the given <a name="cc.spray.caching.Cache" class="extype" href="../caching/Cache.html">Cache</a> implementation and
+keyer function.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps its inner Route with caching support using the given <a name="cc.spray.caching.Cache" class="extype" href="../caching/Cache.html">Cache</a> implementation and
+keyer function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>CacheDirectives</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#content" data-isabs="false">
+      <a id="content[A](Unmarshaller[A]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">content</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="unmarshaller">unmarshaller: Unmarshaller[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that unmarshalls the requests content using the given unmarshaller and
+passes it as an argument to the inner Route building function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that unmarshalls the requests content using the given unmarshaller and
+passes it as an argument to the inner Route building function.
+If the unmarshaller cannot unmarshal the request content the request is rejected with the <a name="cc.spray.Rejection" class="extype" href="../Rejection.html">Rejection</a>
+produced by the unmarshaller.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CodecDirectives#decodeRequest" data-isabs="false">
+      <a id="decodeRequest(Decoder):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">decodeRequest</span>
+        
+        <span class="params">(<span name="decoder">decoder: <a name="cc.spray.directives.Decoder" class="extype" href="../directives/Decoder.html">Decoder</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps its inner Route with decoding support using the given Decoder.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps its inner Route with decoding support using the given Decoder.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>CodecDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#delete" data-isabs="false">
+      <a id="delete:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">delete</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-DELETE requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-DELETE requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.test.DontDetach#detach" data-isabs="false">
+      <a id="detach:TransformRoute"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">detach</span>
+        
+        <span class="result">: <a name="cc.spray.directives.TransformRoute" class="extype" href="../directives/TransformRoute.html">TransformRoute</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that executes its inner Route in the content of a newly spawned actor.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that executes its inner Route in the content of a newly spawned actor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.test.DontDetach" class="extype" href="">DontDetach</a> → DetachDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.DetachDirectives#detachDispatcher" data-isabs="false">
+      <a id="detachDispatcher:MessageDispatcher"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">detachDispatcher</span>
+        
+        <span class="result">: <span name="akka.dispatch.MessageDispatcher" class="extype">MessageDispatcher</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DetachDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CodecDirectives#encodeResponse" data-isabs="false">
+      <a id="encodeResponse(Encoder):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">encodeResponse</span>
+        
+        <span class="params">(<span name="encoder">encoder: <a name="cc.spray.directives.Encoder" class="extype" href="../directives/Encoder.html">Encoder</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps its inner Route with encoding support using the given Encoder.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps its inner Route with encoding support using the given Encoder.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>CodecDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter" data-isabs="false">
+      <a id="filter(RouteFilter[Product0]):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter</span>
+        
+        <span class="params">(<span name="filter">filter: RouteFilter[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute0 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute0 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter1" data-isabs="false">
+      <a id="filter1[A](RouteFilter[(A)]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter1</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Created a cc.spray.SprayRoute1 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Created a cc.spray.SprayRoute1 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter2" data-isabs="false">
+      <a id="filter2[A, B](RouteFilter[(A, B)]):SprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter2</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute2" class="extype" href="../directives/SprayRoute2.html">SprayRoute2</a>[A, B]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute2 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute2 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter3" data-isabs="false">
+      <a id="filter3[A, B, C](RouteFilter[(A, B, C)]):SprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter3</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute3" class="extype" href="../directives/SprayRoute3.html">SprayRoute3</a>[A, B, C]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute3 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute3 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter4" data-isabs="false">
+      <a id="filter4[A, B, C, D](RouteFilter[(A, B, C, D)]):SprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter4</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute4" class="extype" href="../directives/SprayRoute4.html">SprayRoute4</a>[A, B, C, D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute4 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute4 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter5" data-isabs="false">
+      <a id="filter5[A, B, C, D, E](RouteFilter[(A, B, C, D, E)]):SprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter5</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute5" class="extype" href="../directives/SprayRoute5.html">SprayRoute5</a>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute5 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute5 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter6" data-isabs="false">
+      <a id="filter6[A, B, C, D, E, F](RouteFilter[(A, B, C, D, E, F)]):SprayRoute6[A, B, C, D, E, F]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter6</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E, F)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute6" class="extype" href="../directives/SprayRoute6.html">SprayRoute6</a>[A, B, C, D, E, F]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute6 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute6 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter7" data-isabs="false">
+      <a id="filter7[A, B, C, D, E, F, G](RouteFilter[(A, B, C, D, E, F, G)]):SprayRoute7[A, B, C, D, E, F, G]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter7</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E, F, G)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute7" class="extype" href="../directives/SprayRoute7.html">SprayRoute7</a>[A, B, C, D, E, F, G]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute7 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute7 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter8" data-isabs="false">
+      <a id="filter8[A, B, C, D, E, F, G, H](RouteFilter[(A, B, C, D, E, F, G, H)]):SprayRoute8[A, B, C, D, E, F, G, H]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter8</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E, F, G, H)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute8" class="extype" href="../directives/SprayRoute8.html">SprayRoute8</a>[A, B, C, D, E, F, G, H]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute8 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute8 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#filter9" data-isabs="false">
+      <a id="filter9[A, B, C, D, E, F, G, H, I](RouteFilter[(A, B, C, D, E, F, G, H, I)]):SprayRoute9[A, B, C, D, E, F, G, H, I]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">filter9</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>]</span>
+        <span class="params">(<span name="filter">filter: RouteFilter[(A, B, C, D, E, F, G, H, I)]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute9" class="extype" href="../directives/SprayRoute9.html">SprayRoute9</a>[A, B, C, D, E, F, G, H, I]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute9 from the given RouteFilter function.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute9 from the given RouteFilter function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#fromString" data-isabs="false">
+      <a id="fromString(String):ParameterMatcher[String]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">fromString</span>
+        
+        <span class="params">(<span name="name">name: String</span>)</span><span class="result">: <a name="cc.spray.directives.ParameterMatcher" class="extype" href="../directives/ParameterMatcher.html">ParameterMatcher</a>[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#fromSymbol" data-isabs="false">
+      <a id="fromSymbol(Symbol):ParameterMatcher[String]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">fromSymbol</span>
+        
+        <span class="params">(<span name="name">name: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="cc.spray.directives.ParameterMatcher" class="extype" href="../directives/ParameterMatcher.html">ParameterMatcher</a>[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#get" data-isabs="false">
+      <a id="get:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">get</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-GET requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-GET requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#getFromDirectory" data-isabs="false">
+      <a id="getFromDirectory(String,Option[HttpCharset],(String) ⇒ String,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getFromDirectory</span>
+        
+        <span class="params">(<span name="directoryName">directoryName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="pathRewriter">pathRewriter: (String) ⇒ String = <span class="symbol">identity</span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of a file underneath the given directory.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of a file underneath the given directory.
+The unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> is first transformed by the given pathRewriter function before
+being appended to the given directoryName to build the final fileName.
+The actual I/O operation is running detached in the context of a newly spawned actor, so it doesn't block the
+current thread. If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#getFromFile" data-isabs="false">
+      <a id="getFromFile(File,Option[HttpCharset],ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getFromFile</span>
+        
+        <span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of the given file.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of the given file. The actual I/O operation is
+running detached in the context of a newly spawned actor, so it doesn't block the current thread.
+If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#getFromFileName" data-isabs="false">
+      <a id="getFromFileName(String,Option[HttpCharset],ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getFromFileName</span>
+        
+        <span class="params">(<span name="fileName">fileName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of the given file.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of the given file. The actual I/O operation is
+running detached in the context of a newly spawned actor, so it doesn't block the current thread.
+If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#getFromResource" data-isabs="false">
+      <a id="getFromResource(String,Option[HttpCharset],ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getFromResource</span>
+        
+        <span class="params">(<span name="resourceName">resourceName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that completes GET requests with the content of the given resource.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes GET requests with the content of the given resource. The actual I/O operation is
+running detached in the context of a newly spawned actor, so it doesn't block the current thread.
+If the file cannot be read the Route completes the request with a &quot;404 NotFound&quot; error.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#getFromResourceDirectory" data-isabs="false">
+      <a id="getFromResourceDirectory(String,Option[HttpCharset],(String) ⇒ String,ContentTypeResolver):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getFromResourceDirectory</span>
+        
+        <span class="params">(<span name="directoryName">directoryName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="pathRewriter">pathRewriter: (String) ⇒ String = <span class="symbol">identity</span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Same as &quot;getFromDirectory&quot; except that the file is not fetched from the file system but rather from a
+&quot;resource directory&quot;.</p><div class="fullcomment"><div class="comment cmt"><p>Same as &quot;getFromDirectory&quot; except that the file is not fetched from the file system but rather from a
+&quot;resource directory&quot;.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#handleWith" data-isabs="false">
+      <a id="handleWith[A, B]((A) ⇒ B)(Unmarshaller[A],Marshaller[B]):Route"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">handleWith</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="f">f: (A) ⇒ B</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Unmarshaller[A]</span>, <span name="arg1">arg1: Marshaller[B]</span>)</span><span class="result">: Route</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that completes the request using the given function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that completes the request using the given function. The input to the function is produced with
+the in-scope unmarshaller and the result value of the function is marshalled with the in-scope marshaller.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#hardFail" data-isabs="false">
+      <a id="hardFail(HttpFailure,String):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">hardFail</span>
+        
+        <span class="params">(<span name="failure">failure: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>, <span name="reason">reason: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Stops the current Route processing by throwing an HttpException that will be caught by the enclosing Actor.</p><div class="fullcomment"><div class="comment cmt"><p>Stops the current Route processing by throwing an HttpException that will be caught by the enclosing Actor.
+Failures produced in this way circumvent all response processing logic that might be present (for example they
+cannot be cached with the 'cache' directive).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#head" data-isabs="false">
+      <a id="head:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">head</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-HEAD requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-HEAD requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#host" data-isabs="false">
+      <a id="host(Regex):SprayRoute1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="regex">regex: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a route filter that rejects all requests with a host name that does not have a prefix matching the given
+regular expression.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a route filter that rejects all requests with a host name that does not have a prefix matching the given
+regular expression. For all matching requests the prefix string matching the regex is extracted and passed to
+the inner Route building function. If the regex contains a capturing group only the string matched by this group
+is extracted. If the regex contains more than one capturing group an IllegalArgumentException will be thrown.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#host" data-isabs="false">
+      <a id="host((String) ⇒ Boolean):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="predicate">predicate: (String) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a route filter that rejects all requests for whose host name the given predicate function return false.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a route filter that rejects all requests for whose host name the given predicate function return false.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#host" data-isabs="false">
+      <a id="host(String):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">host</span>
+        
+        <span class="params">(<span name="hostName">hostName: String</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a route filter that rejects all requests with a host name different from the given one.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a route filter that rejects all requests with a host name different from the given one.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SecurityDirectives#httpBasic" data-isabs="false">
+      <a id="httpBasic[U](String,UserPassAuthenticator[U]):BasicHttpAuthenticator[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">httpBasic</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="realm">realm: String</span>, <span name="authenticator">authenticator: UserPassAuthenticator[U]</span>)</span><span class="result">: <a name="cc.spray.BasicHttpAuthenticator" class="extype" href="../BasicHttpAuthenticator.html">BasicHttpAuthenticator</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Convenience method for the creation of a BasicHttpAuthenticator instance.</p><div class="fullcomment"><div class="comment cmt"><p>Convenience method for the creation of a BasicHttpAuthenticator instance.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD, E, EE, F, FF, G, GG, H, HH, I, II]((A, B, C, D, E, F, G, H, I) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D],SC[EE, E],SC[FF, F],SC[GG, G],SC[HH, H],SC[II, I]):(AA, BB, CC, DD, EE, FF, GG, HH, II) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>, <span name="E">E</span>, <span name="EE">EE</span>, <span name="F">F</span>, <span name="FF">FF</span>, <span name="G">G</span>, <span name="GG">GG</span>, <span name="H">H</span>, <span name="HH">HH</span>, <span name="I">I</span>, <span name="II">II</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>, <span name="qe">qe: SC[EE, E]</span>, <span name="qf">qf: SC[FF, F]</span>, <span name="qg">qg: SC[GG, G]</span>, <span name="qh">qh: SC[HH, H]</span>, <span name="qi">qi: SC[II, I]</span>)</span><span class="result">: (AA, BB, CC, DD, EE, FF, GG, HH, II) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD, E, EE, F, FF, G, GG, H, HH]((A, B, C, D, E, F, G, H) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D],SC[EE, E],SC[FF, F],SC[GG, G],SC[HH, H]):(AA, BB, CC, DD, EE, FF, GG, HH) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>, <span name="E">E</span>, <span name="EE">EE</span>, <span name="F">F</span>, <span name="FF">FF</span>, <span name="G">G</span>, <span name="GG">GG</span>, <span name="H">H</span>, <span name="HH">HH</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>, <span name="qe">qe: SC[EE, E]</span>, <span name="qf">qf: SC[FF, F]</span>, <span name="qg">qg: SC[GG, G]</span>, <span name="qh">qh: SC[HH, H]</span>)</span><span class="result">: (AA, BB, CC, DD, EE, FF, GG, HH) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD, E, EE, F, FF, G, GG]((A, B, C, D, E, F, G) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D],SC[EE, E],SC[FF, F],SC[GG, G]):(AA, BB, CC, DD, EE, FF, GG) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>, <span name="E">E</span>, <span name="EE">EE</span>, <span name="F">F</span>, <span name="FF">FF</span>, <span name="G">G</span>, <span name="GG">GG</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>, <span name="qe">qe: SC[EE, E]</span>, <span name="qf">qf: SC[FF, F]</span>, <span name="qg">qg: SC[GG, G]</span>)</span><span class="result">: (AA, BB, CC, DD, EE, FF, GG) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD, E, EE, F, FF]((A, B, C, D, E, F) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D],SC[EE, E],SC[FF, F]):(AA, BB, CC, DD, EE, FF) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>, <span name="E">E</span>, <span name="EE">EE</span>, <span name="F">F</span>, <span name="FF">FF</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>, <span name="qe">qe: SC[EE, E]</span>, <span name="qf">qf: SC[FF, F]</span>)</span><span class="result">: (AA, BB, CC, DD, EE, FF) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD, E, EE]((A, B, C, D, E) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D],SC[EE, E]):(AA, BB, CC, DD, EE) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>, <span name="E">E</span>, <span name="EE">EE</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>, <span name="qe">qe: SC[EE, E]</span>)</span><span class="result">: (AA, BB, CC, DD, EE) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC, D, DD]((A, B, C, D) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C],SC[DD, D]):(AA, BB, CC, DD) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>, <span name="D">D</span>, <span name="DD">DD</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>, <span name="qd">qd: SC[DD, D]</span>)</span><span class="result">: (AA, BB, CC, DD) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB, C, CC]((A, B, C) ⇒ T)(SC[AA, A],SC[BB, B],SC[CC, C]):(AA, BB, CC) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>, <span name="C">C</span>, <span name="CC">CC</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>, <span name="qc">qc: SC[CC, C]</span>)</span><span class="result">: (AA, BB, CC) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA, B, BB]((A, B) ⇒ T)(SC[AA, A],SC[BB, B]):(AA, BB) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>, <span name="B">B</span>, <span name="BB">BB</span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>, <span name="qb">qb: SC[BB, B]</span>)</span><span class="result">: (AA, BB) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[T&lt;:Product, A, AA]((A) ⇒ T)(SC[AA, A]):(AA) ⇒ Either[String, T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>, <span name="A">A</span>, <span name="AA">AA</span>]</span>
+        <span class="params">(<span name="construct">construct: (A) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="qa">qa: SC[AA, A]</span>)</span><span class="result">: (AA) ⇒ <span name="scala.Either" class="extype">Either</span>[String, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#instanceOf" data-isabs="false">
+      <a id="instanceOf[A](Marshaller[A]):Marshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">instanceOf</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: Marshaller[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the in-scope Marshaller for the given type.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the in-scope Marshaller for the given type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#jsonpWithParameter" data-isabs="false">
+      <a id="jsonpWithParameter(String):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonpWithParameter</span>
+        
+        <span class="params">(<span name="parameterName">parameterName: String</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps the inner Route with JSONP support.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps the inner Route with JSONP support. If a query parameter with the given name is present in the request and
+the inner Route returns content with content-type <code>application/json</code> the response content is wrapped with a call
+to a Javascript function having the name of query parameters value. Additionally the content-type is changed from
+<code>application/json</code> to <code>application/javascript</code> in these cases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#method" data-isabs="false">
+      <a id="method(HttpMethod):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">method</span>
+        
+        <span class="params">(<span name="m">m: <span name="cc.spray.http.HttpMethod" class="extype">HttpMethod</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a route filter that rejects all requests whose HTTP method does not match the given one.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a route filter that rejects all requests whose HTTP method does not match the given one.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#optionalContent" data-isabs="false">
+      <a id="optionalContent[A](Unmarshaller[A]):SprayRoute1[Option[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">optionalContent</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="unmarshaller">unmarshaller: Unmarshaller[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[<span name="scala.Option" class="extype">Option</span>[A]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that unmarshalls the optional request content using the given unmarshaller
+and passes it as an argument to the inner Route building function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that unmarshalls the optional request content using the given unmarshaller
+and passes it as an argument to the inner Route building function.
+If the unmarshaller cannot unmarshal the request content the request is rejected with the <a name="cc.spray.Rejection" class="extype" href="../Rejection.html">Rejection</a>
+produced by the unmarshaller.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#options" data-isabs="false">
+      <a id="options:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">options</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-OPTIONS requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-OPTIONS requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameter" data-isabs="false">
+      <a id="parameter(RequiredParameterMatcher):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameter</span>
+        
+        <span class="params">(<span name="p">p: RequiredParameterMatcher</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameter" data-isabs="false">
+      <a id="parameter[A](PM[A]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameter</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="pm">pm: PM[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if a query parameter with the given name cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if a query parameter with the given name cannot be found.
+If it can be found the parameters value is extracted and passed as argument to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters(RequiredParameterMatcher,RequiredParameterMatcher*):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        
+        <span class="params">(<span name="p">p: RequiredParameterMatcher</span>, <span name="more">more: RequiredParameterMatcher*</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameter with the given name cannot be found or does not
+have the required value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D, E, F, G, H, I](PM[A],PM[B],PM[C],PM[D],PM[E],PM[F],PM[G],PM[H],PM[I]):SprayRoute9[A, B, C, D, E, F, G, H, I]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>, <span name="e">e: PM[E]</span>, <span name="f">f: PM[F]</span>, <span name="g">g: PM[G]</span>, <span name="h">h: PM[H]</span>, <span name="i">i: PM[I]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute9" class="extype" href="../directives/SprayRoute9.html">SprayRoute9</a>[A, B, C, D, E, F, G, H, I]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D, E, F, G, H](PM[A],PM[B],PM[C],PM[D],PM[E],PM[F],PM[G],PM[H]):SprayRoute8[A, B, C, D, E, F, G, H]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>, <span name="e">e: PM[E]</span>, <span name="f">f: PM[F]</span>, <span name="g">g: PM[G]</span>, <span name="h">h: PM[H]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute8" class="extype" href="../directives/SprayRoute8.html">SprayRoute8</a>[A, B, C, D, E, F, G, H]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D, E, F, G](PM[A],PM[B],PM[C],PM[D],PM[E],PM[F],PM[G]):SprayRoute7[A, B, C, D, E, F, G]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>, <span name="e">e: PM[E]</span>, <span name="f">f: PM[F]</span>, <span name="g">g: PM[G]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute7" class="extype" href="../directives/SprayRoute7.html">SprayRoute7</a>[A, B, C, D, E, F, G]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D, E, F](PM[A],PM[B],PM[C],PM[D],PM[E],PM[F]):SprayRoute6[A, B, C, D, E, F]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>, <span name="e">e: PM[E]</span>, <span name="f">f: PM[F]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute6" class="extype" href="../directives/SprayRoute6.html">SprayRoute6</a>[A, B, C, D, E, F]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D, E](PM[A],PM[B],PM[C],PM[D],PM[E]):SprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>, <span name="e">e: PM[E]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute5" class="extype" href="../directives/SprayRoute5.html">SprayRoute5</a>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C, D](PM[A],PM[B],PM[C],PM[D]):SprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>, <span name="d">d: PM[D]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute4" class="extype" href="../directives/SprayRoute4.html">SprayRoute4</a>[A, B, C, D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B, C](PM[A],PM[B],PM[C]):SprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>, <span name="c">c: PM[C]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute3" class="extype" href="../directives/SprayRoute3.html">SprayRoute3</a>[A, B, C]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A, B](PM[A],PM[B]):SprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>, <span name="b">b: PM[B]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute2" class="extype" href="../directives/SprayRoute2.html">SprayRoute2</a>[A, B]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the query parameters with the given names cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the query parameters with the given names cannot be found.
+If it can be found the parameter values are extracted and passed as arguments to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterDirectives#parameters" data-isabs="false">
+      <a id="parameters[A](PM[A]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parameters</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="a">a: PM[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if a query parameter with the given name cannot be found.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if a query parameter with the given name cannot be found.
+If it can be found the parameters value is extracted and passed as argument to the inner Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path[A, B, C, D, E](PathMatcher5[A, B, C, D, E]):SprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher5" class="extype" href="../directives/PathMatcher5.html">PathMatcher5</a>[A, B, C, D, E]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute5" class="extype" href="../directives/SprayRoute5.html">SprayRoute5</a>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path[A, B, C, D](PathMatcher4[A, B, C, D]):SprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher4" class="extype" href="../directives/PathMatcher4.html">PathMatcher4</a>[A, B, C, D]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute4" class="extype" href="../directives/SprayRoute4.html">SprayRoute4</a>[A, B, C, D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path[A, B, C](PathMatcher3[A, B, C]):SprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher3" class="extype" href="../directives/PathMatcher3.html">PathMatcher3</a>[A, B, C]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute3" class="extype" href="../directives/SprayRoute3.html">SprayRoute3</a>[A, B, C]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path[A, B](PathMatcher2[A, B]):SprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher2" class="extype" href="../directives/PathMatcher2.html">PathMatcher2</a>[A, B]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute2" class="extype" href="../directives/SprayRoute2.html">SprayRoute2</a>[A, B]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner Route building
+function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path[A](PathMatcher1[A]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher1" class="extype" href="../directives/PathMatcher1.html">PathMatcher1</a>[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher. If it does match the value extracted by the matcher is passed to the inner Route building
+function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#path" data-isabs="false">
+      <a id="path(PathMatcher0):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">path</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher0" class="extype" href="../directives/PathMatcher0.html">PathMatcher0</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does not match
+the given PathMatcher.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix[A, B, C, D, E](PathMatcher5[A, B, C, D, E]):SprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher5" class="extype" href="../directives/PathMatcher5.html">PathMatcher5</a>[A, B, C, D, E]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute5" class="extype" href="../directives/SprayRoute5.html">SprayRoute5</a>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix[A, B, C, D](PathMatcher4[A, B, C, D]):SprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher4" class="extype" href="../directives/PathMatcher4.html">PathMatcher4</a>[A, B, C, D]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute4" class="extype" href="../directives/SprayRoute4.html">SprayRoute4</a>[A, B, C, D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix[A, B, C](PathMatcher3[A, B, C]):SprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher3" class="extype" href="../directives/PathMatcher3.html">PathMatcher3</a>[A, B, C]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute3" class="extype" href="../directives/SprayRoute3.html">SprayRoute3</a>[A, B, C]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix[A, B](PathMatcher2[A, B]):SprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher2" class="extype" href="../directives/PathMatcher2.html">PathMatcher2</a>[A, B]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute2" class="extype" href="../directives/SprayRoute2.html">SprayRoute2</a>[A, B]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher. If it does match the values extracted by the matcher are passed to the inner
+Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix[A](PathMatcher1[A]):SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher1" class="extype" href="../directives/PathMatcher1.html">PathMatcher1</a>[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher. If it does match the value extracted by the matcher is passed to the inner
+Route building function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#pathPrefix" data-isabs="false">
+      <a id="pathPrefix(PathMatcher0):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">pathPrefix</span>
+        
+        <span class="params">(<span name="pattern">pattern: <a name="cc.spray.directives.PathMatcher0" class="extype" href="../directives/PathMatcher0.html">PathMatcher0</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that rejects the request if the unmatchedPath of the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> does have a prefix
+that matches the given PathMatcher.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers#pimpHttpContentWithAs1" data-isabs="false">
+      <a id="pimpHttpContentWithAs1(HttpContent):HttpContentExtractor"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpHttpContentWithAs1</span>
+        
+        <span class="params">(<span name="c">c: <span name="cc.spray.http.HttpContent" class="extype">HttpContent</span></span>)</span><span class="result">: <a name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor" class="extype" href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html">HttpContentExtractor</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.marshalling.DefaultUnmarshallers" class="extype" href="../marshalling/DefaultUnmarshallers.html">DefaultUnmarshallers</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.marshalling.DefaultUnmarshallers#pimpHttpContentWithAs2" data-isabs="false">
+      <a id="pimpHttpContentWithAs2(Option[HttpContent]):HttpContentExtractor"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpHttpContentWithAs2</span>
+        
+        <span class="params">(<span name="c">c: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpContent" class="extype">HttpContent</span>]</span>)</span><span class="result">: <a name="cc.spray.marshalling.DefaultUnmarshallers.HttpContentExtractor" class="extype" href="../marshalling/DefaultUnmarshallers$HttpContentExtractor.html">HttpContentExtractor</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.marshalling.DefaultUnmarshallers" class="extype" href="../marshalling/DefaultUnmarshallers.html">DefaultUnmarshallers</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#pimpRouteWithConcatenation" data-isabs="false">
+      <a id="pimpRouteWithConcatenation(Route):RouteConcatenation"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpRouteWithConcatenation</span>
+        
+        <span class="params">(<span name="route">route: Route</span>)</span><span class="result">: <span name="cc.spray.directives.MiscDirectives.RouteConcatenation" class="extype">RouteConcatenation</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute1" data-isabs="false">
+      <a id="pimpSprayRoute1[A](SprayRoute1[A]):PimpedSprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute1</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[A]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute1" class="extype">PimpedSprayRoute1</span>[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute2" data-isabs="false">
+      <a id="pimpSprayRoute2[A, B](SprayRoute2[A, B]):PimpedSprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute2</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute2" class="extype" href="../directives/SprayRoute2.html">SprayRoute2</a>[A, B]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute2" class="extype">PimpedSprayRoute2</span>[A, B]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute3" data-isabs="false">
+      <a id="pimpSprayRoute3[A, B, C](SprayRoute3[A, B, C]):PimpedSprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute3</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute3" class="extype" href="../directives/SprayRoute3.html">SprayRoute3</a>[A, B, C]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute3" class="extype">PimpedSprayRoute3</span>[A, B, C]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute4" data-isabs="false">
+      <a id="pimpSprayRoute4[A, B, C, D](SprayRoute4[A, B, C, D]):PimpedSprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute4</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute4" class="extype" href="../directives/SprayRoute4.html">SprayRoute4</a>[A, B, C, D]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute4" class="extype">PimpedSprayRoute4</span>[A, B, C, D]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute5" data-isabs="false">
+      <a id="pimpSprayRoute5[A, B, C, D, E](SprayRoute5[A, B, C, D, E]):PimpedSprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute5</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute5" class="extype" href="../directives/SprayRoute5.html">SprayRoute5</a>[A, B, C, D, E]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute5" class="extype">PimpedSprayRoute5</span>[A, B, C, D, E]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute6" data-isabs="false">
+      <a id="pimpSprayRoute6[A, B, C, D, E, F](SprayRoute6[A, B, C, D, E, F]):PimpedSprayRoute6[A, B, C, D, E, F]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute6</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute6" class="extype" href="../directives/SprayRoute6.html">SprayRoute6</a>[A, B, C, D, E, F]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute6" class="extype">PimpedSprayRoute6</span>[A, B, C, D, E, F]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute7" data-isabs="false">
+      <a id="pimpSprayRoute7[A, B, C, D, E, F, G](SprayRoute7[A, B, C, D, E, F, G]):PimpedSprayRoute7[A, B, C, D, E, F, G]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute7</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute7" class="extype" href="../directives/SprayRoute7.html">SprayRoute7</a>[A, B, C, D, E, F, G]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute7" class="extype">PimpedSprayRoute7</span>[A, B, C, D, E, F, G]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute8" data-isabs="false">
+      <a id="pimpSprayRoute8[A, B, C, D, E, F, G, H](SprayRoute8[A, B, C, D, E, F, G, H]):PimpedSprayRoute8[A, B, C, D, E, F, G, H]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute8</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute8" class="extype" href="../directives/SprayRoute8.html">SprayRoute8</a>[A, B, C, D, E, F, G, H]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute8" class="extype">PimpedSprayRoute8</span>[A, B, C, D, E, F, G, H]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.CaseClassExtractionDirectives#pimpSprayRoute9" data-isabs="false">
+      <a id="pimpSprayRoute9[A, B, C, D, E, F, G, H, I](SprayRoute9[A, B, C, D, E, F, G, H, I]):PimpedSprayRoute9[A, B, C, D, E, F, G, H, I]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpSprayRoute9</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>]</span>
+        <span class="params">(<span name="route">route: <a name="cc.spray.directives.SprayRoute9" class="extype" href="../directives/SprayRoute9.html">SprayRoute9</a>[A, B, C, D, E, F, G, H, I]</span>)</span><span class="result">: <span name="cc.spray.directives.CaseClassExtractionDirectives.PimpedSprayRoute9" class="extype">PimpedSprayRoute9</span>[A, B, C, D, E, F, G, H, I]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>CaseClassExtractionDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#post" data-isabs="false">
+      <a id="post:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">post</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-POST requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-POST requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MarshallingDirectives#produce" data-isabs="false">
+      <a id="produce[A](Marshaller[A]):SprayRoute1[(A) ⇒ Unit]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">produce</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="marshaller">marshaller: Marshaller[A]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="../directives/SprayRoute1.html">SprayRoute1</a>[(A) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that uses the given marshaller to produce a completion function that is
+passed to the inner route building function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that uses the given marshaller to produce a completion function that is
+passed to the inner route building function. You can use it do decouple marshaller resolution from the call
+site of the RequestContexts {{complete}} function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#put" data-isabs="false">
+      <a id="put:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">put</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-PUT requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-PUT requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#regex2Matcher" data-isabs="false">
+      <a id="regex2Matcher(Regex):PathMatcher1[String]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">regex2Matcher</span>
+        
+        <span class="params">(<span name="regex">regex: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>)</span><span class="result">: <a name="cc.spray.directives.PathMatcher1" class="extype" href="../directives/PathMatcher1.html">PathMatcher1</a>[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#respondWithContentType" data-isabs="false">
+      <a id="respondWithContentType(ContentType):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respondWithContentType</span>
+        
+        <span class="params">(<span name="contentType">contentType: <span name="cc.spray.http.ContentType" class="extype">ContentType</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that sets the content-type of non-empty, non-rejected responses of its inner Route to the given
+ContentType.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that sets the content-type of non-empty, non-rejected responses of its inner Route to the given
+ContentType.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#respondWithHeader" data-isabs="false">
+      <a id="respondWithHeader(HttpHeader):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respondWithHeader</span>
+        
+        <span class="params">(<span name="responseHeader">responseHeader: <span name="cc.spray.http.HttpHeader" class="extype">HttpHeader</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that adds the given response header to all not-rejected responses of its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that adds the given response header to all not-rejected responses of its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#respondWithHeaders" data-isabs="false">
+      <a id="respondWithHeaders(HttpHeader*):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respondWithHeaders</span>
+        
+        <span class="params">(<span name="responseHeaders">responseHeaders: <span name="cc.spray.http.HttpHeader" class="extype">HttpHeader</span>*</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that adds the given response headers to all not-rejected responses of its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that adds the given response headers to all not-rejected responses of its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#respondWithMediaType" data-isabs="false">
+      <a id="respondWithMediaType(MediaType):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respondWithMediaType</span>
+        
+        <span class="params">(<span name="mediaType">mediaType: <span name="cc.spray.http.MediaType" class="extype">MediaType</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that sets the media-type of non-empty, non-rejected responses of its inner Route to the given
+one.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that sets the media-type of non-empty, non-rejected responses of its inner Route to the given
+one.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#respondWithStatus" data-isabs="false">
+      <a id="respondWithStatus(StatusCode):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respondWithStatus</span>
+        
+        <span class="params">(<span name="responseStatus">responseStatus: <span name="cc.spray.http.StatusCode" class="extype">StatusCode</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route that sets the given response status on all not-rejected responses of its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route that sets the given response status on all not-rejected responses of its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#responseFromFile" data-isabs="false">
+      <a id="responseFromFile(File,Option[HttpCharset],ContentTypeResolver):HttpResponse"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responseFromFile</span>
+        
+        <span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Builds an HttpResponse from the content of the given file.</p><div class="fullcomment"><div class="comment cmt"><p>Builds an HttpResponse from the content of the given file. If the file cannot be read a &quot;404 NotFound&quot;
+response is returned. Note that this method is using disk IO which may block the current thread.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#responseFromFileName" data-isabs="false">
+      <a id="responseFromFileName(String,Option[HttpCharset],ContentTypeResolver):HttpResponse"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responseFromFileName</span>
+        
+        <span class="params">(<span name="fileName">fileName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Builds an HttpResponse from the content of the given file.</p><div class="fullcomment"><div class="comment cmt"><p>Builds an HttpResponse from the content of the given file. If the file cannot be read a &quot;404 NotFound&quot;
+response is returned. Note that this method is using disk IO which may block the current thread.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.FileAndResourceDirectives#responseFromResource" data-isabs="false">
+      <a id="responseFromResource(String,Option[HttpCharset],ContentTypeResolver):HttpResponse"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responseFromResource</span>
+        
+        <span class="params">(<span name="resourceName">resourceName: String</span>, <span name="charset">charset: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpCharset" class="extype">HttpCharset</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="resolver">resolver: ContentTypeResolver = <span class="symbol"><span class="name"><a href="../directives/DefaultContentTypeResolver$.html">DefaultContentTypeResolver</a></span></span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Builds an HttpResponse from the content of the given classpath resource.</p><div class="fullcomment"><div class="comment cmt"><p>Builds an HttpResponse from the content of the given classpath resource. If the resource cannot be read a
+&quot;404 NotFound&quot; response is returned. Note that this method is using disk IO which may block the current thread.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.PathDirectives#string2Matcher" data-isabs="false">
+      <a id="string2Matcher(String):PathMatcher0"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">string2Matcher</span>
+        
+        <span class="params">(<span name="s">s: String</span>)</span><span class="result">: <a name="cc.spray.directives.PathMatcher0" class="extype" href="../directives/PathMatcher0.html">PathMatcher0</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleDirectives#trace" data-isabs="false">
+      <a id="trace:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">trace</span>
+        
+        <span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A route filter that rejects all non-TRACE requests.</p><div class="fullcomment"><div class="comment cmt"><p>A route filter that rejects all non-TRACE requests.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#transformRequest" data-isabs="false">
+      <a id="transformRequest((HttpRequest) ⇒ HttpRequest):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">transformRequest</span>
+        
+        <span class="params">(<span name="f">f: (<span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span>) ⇒ <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route which applies the given cc.spray.http.HttpRequest transformation function before passing on the
+ <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> to its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route which applies the given cc.spray.http.HttpRequest transformation function before passing on the
+ <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> to its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#transformRequestContext" data-isabs="false">
+      <a id="transformRequestContext((RequestContext) ⇒ RequestContext):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">transformRequestContext</span>
+        
+        <span class="params">(<span name="f">f: (<a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a>) ⇒ <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.SprayRoute0 that accepts all requests but applies the given transformation function to
+the RequestContext.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.SprayRoute0 that accepts all requests but applies the given transformation function to
+the RequestContext.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#transformResponse" data-isabs="false">
+      <a id="transformResponse((HttpResponse) ⇒ HttpResponse):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">transformResponse</span>
+        
+        <span class="params">(<span name="f">f: (<span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span>) ⇒ <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route which applies the given cc.spray.http.HttpResponse transformation function to all not-rejected
+responses of its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route which applies the given cc.spray.http.HttpResponse transformation function to all not-rejected
+responses of its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.BasicDirectives#transformRoute" data-isabs="false">
+      <a id="transformRoute((Route) ⇒ Route):TransformRoute"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">transformRoute</span>
+        
+        <span class="params">(<span name="f">f: (Route) ⇒ Route</span>)</span><span class="result">: <a name="cc.spray.directives.TransformRoute" class="extype" href="../directives/TransformRoute.html">TransformRoute</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a cc.spray.TransformRoute that applies the given transformation function to its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a cc.spray.TransformRoute that applies the given transformation function to its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#transformRoutingResult" data-isabs="false">
+      <a id="transformRoutingResult((RoutingResult) ⇒ RoutingResult):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">transformRoutingResult</span>
+        
+        <span class="params">(<span name="f">f: (<a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a>) ⇒ <a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a></span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route which applies the given transformation function to the RoutingResult of its inner Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route which applies the given transformation function to the RoutingResult of its inner Route.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.MiscDirectives#validate" data-isabs="false">
+      <a id="validate(⇒ Boolean,String):SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">validate</span>
+        
+        <span class="params">(<span name="check">check: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="errorMsg">errorMsg: String</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute0" class="extype" href="../directives/SprayRoute0.html">SprayRoute0</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a Route which checks the given condition before passing on the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> to its inner
+Route.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Route which checks the given condition before passing on the <a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a> to its inner
+Route. If the condition failes the route is rejected with a <a name="cc.spray.ValidationRejection" class="extype" href="../ValidationRejection.html">ValidationRejection</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div name="cc.spray.Directives" class="parent">
+              <h3>Inherited from <a name="cc.spray.Directives" class="extype" href="../Directives.html">Directives</a></h3>
+            </div><div name="cc.spray.SimpleParsers" class="parent">
+              <h3>Inherited from <a name="cc.spray.SimpleParsers" class="extype" href="../SimpleParsers.html">SimpleParsers</a></h3>
+            </div><div name="cc.spray.directives.SimpleDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.SimpleDirectives" class="extype">SimpleDirectives</span></h3>
+            </div><div name="cc.spray.directives.SecurityDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.SecurityDirectives" class="extype">SecurityDirectives</span></h3>
+            </div><div name="cc.spray.directives.PathDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.PathDirectives" class="extype">PathDirectives</span></h3>
+            </div><div name="cc.spray.directives.CaseClassExtractionDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.CaseClassExtractionDirectives" class="extype">CaseClassExtractionDirectives</span></h3>
+            </div><div name="cc.spray.directives.ParameterDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.ParameterDirectives" class="extype">ParameterDirectives</span></h3>
+            </div><div name="cc.spray.directives.MiscDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.MiscDirectives" class="extype">MiscDirectives</span></h3>
+            </div><div name="cc.spray.directives.MarshallingDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.MarshallingDirectives" class="extype">MarshallingDirectives</span></h3>
+            </div><div name="cc.spray.marshalling.DefaultUnmarshallers" class="parent">
+              <h3>Inherited from <a name="cc.spray.marshalling.DefaultUnmarshallers" class="extype" href="../marshalling/DefaultUnmarshallers.html">DefaultUnmarshallers</a></h3>
+            </div><div name="cc.spray.marshalling.DefaultMarshallers" class="parent">
+              <h3>Inherited from <a name="cc.spray.marshalling.DefaultMarshallers" class="extype" href="../marshalling/DefaultMarshallers.html">DefaultMarshallers</a></h3>
+            </div><div name="cc.spray.directives.FileAndResourceDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.FileAndResourceDirectives" class="extype">FileAndResourceDirectives</span></h3>
+            </div><div name="cc.spray.directives.DetachDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.DetachDirectives" class="extype">DetachDirectives</span></h3>
+            </div><div name="cc.spray.directives.CodecDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.CodecDirectives" class="extype">CodecDirectives</span></h3>
+            </div><div name="cc.spray.directives.CacheDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.CacheDirectives" class="extype">CacheDirectives</span></h3>
+            </div><div name="cc.spray.directives.BasicDirectives" class="parent">
+              <h3>Inherited from <span name="cc.spray.directives.BasicDirectives" class="extype">BasicDirectives</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+            </div>
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

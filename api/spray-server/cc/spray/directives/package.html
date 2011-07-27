@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.directives</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a></p>
+        <h1>directives</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol"> 
+        <span class="name">directives</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="cc.spray.directives.Decoder" data-isabs="true">
+      <a id="Decoder:Decoder"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="Decoder.html"><span class="name">Decoder</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.Deflate" data-isabs="true">
+      <a id="Deflate:Deflate"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Deflate.html"><span class="name">Deflate</span></a>
+        
+        <span class="result"> extends Decoder with Encoder</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.Encoder" data-isabs="true">
+      <a id="Encoder:Encoder"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="Encoder.html"><span class="name">Encoder</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.GroupRegexMatcher" data-isabs="false">
+      <a id="GroupRegexMatcher:GroupRegexMatcher"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="GroupRegexMatcher.html"><span class="name">GroupRegexMatcher</span></a>
+        
+        <span class="result"> extends PathMatcher1[String]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches the given regular expression and extracts the first match group.</p>
+    </li><li visbl="pub" name="cc.spray.directives.Gzip" data-isabs="true">
+      <a id="Gzip:Gzip"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Gzip.html"><span class="name">Gzip</span></a>
+        
+        <span class="result"> extends Decoder with Encoder</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.ParameterMatcher" data-isabs="false">
+      <a id="ParameterMatcher:ParameterMatcher[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="ParameterMatcher.html"><span class="name">ParameterMatcher</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher" data-isabs="true">
+      <a id="PathMatcher:PathMatcher[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher.html"><span class="name">PathMatcher</span></a>
+        <span class="tparams">[<span name="T">T &lt;: Product</span>]</span>
+        <span class="result"> extends (String) ⇒ Option[(String, T)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher tries to match a prefix of a given string and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher0" data-isabs="true">
+      <a id="PathMatcher0:PathMatcher0"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher0.html"><span class="name">PathMatcher0</span></a>
+        
+        <span class="result"> extends PathMatcher[Product0]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher0 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher1" data-isabs="true">
+      <a id="PathMatcher1:PathMatcher1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher1.html"><span class="name">PathMatcher1</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends PathMatcher[(A)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher1 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher2" data-isabs="true">
+      <a id="PathMatcher2:PathMatcher2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher2.html"><span class="name">PathMatcher2</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher2 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher3" data-isabs="true">
+      <a id="PathMatcher3:PathMatcher3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher3.html"><span class="name">PathMatcher3</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B, C)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher3 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher4" data-isabs="true">
+      <a id="PathMatcher4:PathMatcher4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher4.html"><span class="name">PathMatcher4</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B, C, D)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher4 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher5" data-isabs="true">
+      <a id="PathMatcher5:PathMatcher5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher5.html"><span class="name">PathMatcher5</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B, C, D, E)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher5 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher6" data-isabs="true">
+      <a id="PathMatcher6:PathMatcher6[A, B, C, D, E, F]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher6.html"><span class="name">PathMatcher6</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B, C, D, E, F)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher6 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathMatcher7" data-isabs="true">
+      <a id="PathMatcher7:PathMatcher7[A, B, C, D, E, F, G]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PathMatcher7.html"><span class="name">PathMatcher7</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>]</span>
+        <span class="result"> extends PathMatcher[(A, B, C, D, E, F, G)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher7 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.SimpleRegexMatcher" data-isabs="false">
+      <a id="SimpleRegexMatcher:SimpleRegexMatcher"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SimpleRegexMatcher.html"><span class="name">SimpleRegexMatcher</span></a>
+        
+        <span class="result"> extends PathMatcher1[String]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches and extracts the given regular expression.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute" data-isabs="true">
+      <a id="SprayRoute:SprayRoute[T]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute.html"><span class="name">SprayRoute</span></a>
+        <span class="tparams">[<span name="T">T &lt;: Product</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>sealed abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute0" data-isabs="false">
+      <a id="SprayRoute0:SprayRoute0"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute0.html"><span class="name">SprayRoute0</span></a>
+        
+        <span class="result"> extends SprayRoute[Product0] with (Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute1" data-isabs="false">
+      <a id="SprayRoute1:SprayRoute1[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute1.html"><span class="name">SprayRoute1</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends SprayRoute[(A)] with ((A) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 1 value) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute2" data-isabs="false">
+      <a id="SprayRoute2:SprayRoute2[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute2.html"><span class="name">SprayRoute2</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B)] with ((A, B) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 2 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute3" data-isabs="false">
+      <a id="SprayRoute3:SprayRoute3[A, B, C]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute3.html"><span class="name">SprayRoute3</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C)] with ((A, B, C) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 3 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute4" data-isabs="false">
+      <a id="SprayRoute4:SprayRoute4[A, B, C, D]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute4.html"><span class="name">SprayRoute4</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D)] with ((A, B, C, D) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 4 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute5" data-isabs="false">
+      <a id="SprayRoute5:SprayRoute5[A, B, C, D, E]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute5.html"><span class="name">SprayRoute5</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D, E)] with ((A, B, C, D, E) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 5 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute6" data-isabs="false">
+      <a id="SprayRoute6:SprayRoute6[A, B, C, D, E, F]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute6.html"><span class="name">SprayRoute6</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D, E, F)] with ((A, B, C, D, E, F) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 6 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute7" data-isabs="false">
+      <a id="SprayRoute7:SprayRoute7[A, B, C, D, E, F, G]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute7.html"><span class="name">SprayRoute7</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D, E, F, G)] with ((A, B, C, D, E, F, G) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 7 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute8" data-isabs="false">
+      <a id="SprayRoute8:SprayRoute8[A, B, C, D, E, F, G, H]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute8.html"><span class="name">SprayRoute8</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D, E, F, G, H)] with ((A, B, C, D, E, F, G, H) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 8 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.SprayRoute9" data-isabs="false">
+      <a id="SprayRoute9:SprayRoute9[A, B, C, D, E, F, G, H, I]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SprayRoute9.html"><span class="name">SprayRoute9</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>]</span>
+        <span class="result"> extends SprayRoute[(A, B, C, D, E, F, G, H, I)] with ((A, B, C, D, E, F, G, H, I) ⇒ Route) ⇒ Route</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route using the given RouteFilter function (which extracts 9 values) on all inner Routes it is applied to.</p>
+    </li><li visbl="pub" name="cc.spray.directives.StringMatcher" data-isabs="false">
+      <a id="StringMatcher:StringMatcher"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="StringMatcher.html"><span class="name">StringMatcher</span></a>
+        
+        <span class="result"> extends PathMatcher0</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches the given string.</p>
+    </li><li visbl="pub" name="cc.spray.directives.TransformRoute" data-isabs="false">
+      <a id="TransformRoute:TransformRoute"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="TransformRoute.html"><span class="name">TransformRoute</span></a>
+        
+        <span class="result"> extends SprayRoute0</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Route that transforms another route.</p>
+    </li></ol>
+            </div>
+        
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.directives.DefaultContentTypeResolver" data-isabs="false">
+      <a id="DefaultContentTypeResolver:DefaultContentTypeResolver"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DefaultContentTypeResolver$.html"><span class="name">DefaultContentTypeResolver</span></a>
+        
+        <span class="result"> extends (String, Option[HttpCharset]) ⇒ ContentType</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.Deflate" data-isabs="false">
+      <a id="Deflate:Deflate"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Deflate$.html"><span class="name">Deflate</span></a>
+        
+        <span class="result"> extends Deflate</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An encoder and decoder for the HTTP 'deflate' encoding.</p>
+    </li><li visbl="pub" name="cc.spray.directives.DoubleNumber" data-isabs="false">
+      <a id="DoubleNumber:DoubleNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DoubleNumber$.html"><span class="name">DoubleNumber</span></a>
+        
+        <span class="result"> extends PathMatcher1[Double]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches and extracts a Double value.</p>
+    </li><li visbl="pub" name="cc.spray.directives.Gzip" data-isabs="false">
+      <a id="Gzip:Gzip"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Gzip$.html"><span class="name">Gzip</span></a>
+        
+        <span class="result"> extends Gzip</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An encoder and decoder for the HTTP 'gzip' encoding.</p>
+    </li><li visbl="pub" name="cc.spray.directives.HexIntNumber" data-isabs="false">
+      <a id="HexIntNumber:HexIntNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="HexIntNumber$.html"><span class="name">HexIntNumber</span></a>
+        
+        <span class="result"> extends NumberMatcher[Int]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that efficiently matches a number of hex-digits and extracts their (non-negative) Int value.</p>
+    </li><li visbl="pub" name="cc.spray.directives.HexLongNumber" data-isabs="false">
+      <a id="HexLongNumber:HexLongNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="HexLongNumber$.html"><span class="name">HexLongNumber</span></a>
+        
+        <span class="result"> extends NumberMatcher[Long]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that efficiently matches a number of hex-digits and extracts their (non-negative) Long value.</p>
+    </li><li visbl="pub" name="cc.spray.directives.IntNumber" data-isabs="false">
+      <a id="IntNumber:IntNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="IntNumber$.html"><span class="name">IntNumber</span></a>
+        
+        <span class="result"> extends NumberMatcher[Int]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that efficiently matches a number of digits and extracts their (non-negative) Int value.</p>
+    </li><li visbl="pub" name="cc.spray.directives.JavaUUID" data-isabs="false">
+      <a id="JavaUUID:JavaUUID"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JavaUUID$.html"><span class="name">JavaUUID</span></a>
+        
+        <span class="result"> extends PathMatcher1[UUID]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches and extracts a java.</p>
+    </li><li visbl="pub" name="cc.spray.directives.LongNumber" data-isabs="false">
+      <a id="LongNumber:LongNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="LongNumber$.html"><span class="name">LongNumber</span></a>
+        
+        <span class="result"> extends NumberMatcher[Long]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that efficiently matches a number of digits and extracts their (non-negative) Long value.</p>
+    </li><li visbl="pub" name="cc.spray.directives.NoEncoding" data-isabs="false">
+      <a id="NoEncoding:NoEncoding"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="NoEncoding$.html"><span class="name">NoEncoding</span></a>
+        
+        <span class="result"> extends Decoder with Encoder</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An encoder and decoder for the HTTP 'identity' encoding.</p>
+    </li><li visbl="pub" name="cc.spray.directives.PathEnd" data-isabs="false">
+      <a id="PathEnd:PathEnd"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="PathEnd$.html"><span class="name">PathEnd</span></a>
+        
+        <span class="result"> extends PathMatcher0</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches the very end of the requests URI path.</p>
+    </li><li visbl="pub" name="cc.spray.directives.Remaining" data-isabs="false">
+      <a id="Remaining:Remaining"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Remaining$.html"><span class="name">Remaining</span></a>
+        
+        <span class="result"> extends PathMatcher1[String]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches and extracts the complete remaining, unmatched part of the requests URI path.</p>
+    </li><li visbl="pub" name="cc.spray.directives.Slash" data-isabs="false">
+      <a id="Slash:Slash"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Slash$.html"><span class="name">Slash</span></a>
+        
+        <span class="result"> extends PathMatcher0</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A PathMatcher that matches a single slash character ('/').</p>
+    </li></ol>
+            </div>
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>
