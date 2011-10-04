@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.json</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a></p>
+        <h1>json</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol"> 
+        <span class="name">json</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="cc.spray.json.AdditionalFormats" data-isabs="true">
+      <a id="AdditionalFormats:AdditionalFormats"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="AdditionalFormats.html"><span class="name">AdditionalFormats</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides additional JsonFormats and helpers
+</p>
+    </li><li visbl="pub" name="cc.spray.json.BasicFormats" data-isabs="true">
+      <a id="BasicFormats:BasicFormats"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="BasicFormats.html"><span class="name">BasicFormats</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the JsonFormats for the most important Scala types.</p>
+    </li><li visbl="pub" name="cc.spray.json.CollectionFormats" data-isabs="true">
+      <a id="CollectionFormats:CollectionFormats"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="CollectionFormats.html"><span class="name">CollectionFormats</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.CompactPrinter" data-isabs="true">
+      <a id="CompactPrinter:CompactPrinter"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="CompactPrinter.html"><span class="name">CompactPrinter</span></a>
+        
+        <span class="result"> extends JsonPrinter</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JsonPrinter that produces compact JSON source without any superfluous whitespace.</p>
+    </li><li visbl="pub" name="cc.spray.json.DefaultJsonProtocol" data-isabs="true">
+      <a id="DefaultJsonProtocol:DefaultJsonProtocol"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="DefaultJsonProtocol.html"><span class="name">DefaultJsonProtocol</span></a>
+        
+        <span class="result"> extends BasicFormats with StandardFormats with CollectionFormats with ProductFormats with AdditionalFormats</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides all the predefined JsonFormats.</p>
+    </li><li visbl="pub" name="cc.spray.json.DeserializationException" data-isabs="false">
+      <a id="DeserializationException:DeserializationException"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="DeserializationException.html"><span class="name">DeserializationException</span></a>
+        
+        <span class="result"> extends RuntimeException</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsArray" data-isabs="false">
+      <a id="JsArray:JsArray"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="JsArray.html"><span class="name">JsArray</span></a>
+        
+        <span class="params">(<span name="elements">elements: List[JsValue]</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JSON array.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsBoolean" data-isabs="true">
+      <a id="JsBoolean:JsBoolean"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsBoolean.html"><span class="name">JsBoolean</span></a>
+        
+        <span class="result"> extends JsValue</span>
+      </span>
+      </h4>
+      <p class="comment cmt">JSON Booleans.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsField" data-isabs="false">
+      <a id="JsField:JsField"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="JsField.html"><span class="name">JsField</span></a>
+        
+        <span class="params">(<span name="name">name: String</span>, <span name="value">value: JsValue</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The members/fields of a JSON object.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsNumber" data-isabs="false">
+      <a id="JsNumber:JsNumber"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="JsNumber.html"><span class="name">JsNumber</span></a>
+        
+        <span class="params">(<span name="value">value: BigDecimal</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JSON number.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsObject" data-isabs="false">
+      <a id="JsObject:JsObject"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="JsObject.html"><span class="name">JsObject</span></a>
+        
+        <span class="params">(<span name="fields">fields: List[JsField]</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JSON object.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsString" data-isabs="false">
+      <a id="JsString:JsString"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="JsString.html"><span class="name">JsString</span></a>
+        
+        <span class="params">(<span name="value">value: String</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JSON string.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsValue" data-isabs="true">
+      <a id="JsValue:JsValue"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsValue.html"><span class="name">JsValue</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The general type of a JSON AST node.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsonFormat" data-isabs="true">
+      <a id="JsonFormat:JsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsonFormat.html"><span class="name">JsonFormat</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends JsonReader[T] with JsonWriter[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the JSON deserialization and serialization for type T.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsonPrinter" data-isabs="true">
+      <a id="JsonPrinter:JsonPrinter"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsonPrinter.html"><span class="name">JsonPrinter</span></a>
+        
+        <span class="result"> extends (JsValue) ⇒ String</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JsonPrinter serializes a JSON AST to a String.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsonReader" data-isabs="true">
+      <a id="JsonReader:JsonReader[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsonReader.html"><span class="name">JsonReader</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the JSON deserialization for type T.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsonWriter" data-isabs="true">
+      <a id="JsonWriter:JsonWriter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="JsonWriter.html"><span class="name">JsonWriter</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the JSON serialization for type T.</p>
+    </li><li visbl="pub" name="cc.spray.json.NullOptions" data-isabs="true">
+      <a id="NullOptions:NullOptions"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="NullOptions.html"><span class="name">NullOptions</span></a>
+        
+        <span class="result"> extends ProductFormats</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait supplies an alternative rendering mode for optional case class members.</p>
+    </li><li visbl="pub" name="cc.spray.json.PrettyPrinter" data-isabs="true">
+      <a id="PrettyPrinter:PrettyPrinter"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="PrettyPrinter.html"><span class="name">PrettyPrinter</span></a>
+        
+        <span class="result"> extends JsonPrinter</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A JsonPrinter that produces a nicely readable JSON source.</p>
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats" data-isabs="true">
+      <a id="ProductFormats:ProductFormats"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="ProductFormats.html"><span class="name">ProductFormats</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the helpers for constructing custom JsonFormat implementations for types implementing the Product trait
+(especially case classes)
+</p>
+    </li><li visbl="pub" name="cc.spray.json.SerializationException" data-isabs="false">
+      <a id="SerializationException:SerializationException"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="SerializationException.html"><span class="name">SerializationException</span></a>
+        
+        <span class="result"> extends RuntimeException</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.StandardFormats" data-isabs="true">
+      <a id="StandardFormats:StandardFormats"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="StandardFormats.html"><span class="name">StandardFormats</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the JsonFormats for the non-collection standard types.</p>
+    </li></ol>
+            </div>
+        
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.json.CompactPrinter" data-isabs="false">
+      <a id="CompactPrinter:CompactPrinter"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="CompactPrinter$.html"><span class="name">CompactPrinter</span></a>
+        
+        <span class="result"> extends CompactPrinter</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.DefaultJsonProtocol" data-isabs="false">
+      <a id="DefaultJsonProtocol:DefaultJsonProtocol"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DefaultJsonProtocol$.html"><span class="name">DefaultJsonProtocol</span></a>
+        
+        <span class="result"> extends DefaultJsonProtocol</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsArray" data-isabs="false">
+      <a id="JsArray:JsArray"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsArray$.html"><span class="name">JsArray</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsBoolean" data-isabs="false">
+      <a id="JsBoolean:JsBoolean"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsBoolean$.html"><span class="name">JsBoolean</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsFalse" data-isabs="false">
+      <a id="JsFalse:JsFalse"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsFalse$.html"><span class="name">JsFalse</span></a>
+        
+        <span class="result"> extends JsBoolean with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsField" data-isabs="false">
+      <a id="JsField:JsField"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsField$.html"><span class="name">JsField</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsNull" data-isabs="false">
+      <a id="JsNull:JsNull"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsNull$.html"><span class="name">JsNull</span></a>
+        
+        <span class="result"> extends JsValue with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The representation for JSON null.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsNumber" data-isabs="false">
+      <a id="JsNumber:JsNumber"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsNumber$.html"><span class="name">JsNumber</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsObject" data-isabs="false">
+      <a id="JsObject:JsObject"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsObject$.html"><span class="name">JsObject</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsTrue" data-isabs="false">
+      <a id="JsTrue:JsTrue"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsTrue$.html"><span class="name">JsTrue</span></a>
+        
+        <span class="result"> extends JsBoolean with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsValue" data-isabs="false">
+      <a id="JsValue:JsValue"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsValue$.html"><span class="name">JsValue</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsonParser" data-isabs="false">
+      <a id="JsonParser:JsonParser"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsonParser$.html"><span class="name">JsonParser</span></a>
+        
+        <span class="result"> extends Parser</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This JSON parser is the almost direct implementation of the JSON grammar
+presented at http://www.</p>
+    </li><li visbl="pub" name="cc.spray.json.JsonReader" data-isabs="false">
+      <a id="JsonReader:JsonReader"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsonReader$.html"><span class="name">JsonReader</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.JsonWriter" data-isabs="false">
+      <a id="JsonWriter:JsonWriter"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsonWriter$.html"><span class="name">JsonWriter</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.PrettyPrinter" data-isabs="false">
+      <a id="PrettyPrinter:PrettyPrinter"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="PrettyPrinter$.html"><span class="name">PrettyPrinter</span></a>
+        
+        <span class="result"> extends PrettyPrinter</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.package#jsonReader" data-isabs="false">
+      <a id="jsonReader[T](JsonReader[T]):JsonReader[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonReader</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="reader">reader: <a name="cc.spray.json.JsonReader" class="extype" href="JsonReader.html">JsonReader</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonReader" class="extype" href="JsonReader.html">JsonReader</a>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.package#jsonWriter" data-isabs="false">
+      <a id="jsonWriter[T](JsonWriter[T]):JsonWriter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonWriter</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="writer">writer: <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.package#pimpAny" data-isabs="false">
+      <a id="pimpAny[T](T):PimpedAny[T]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpAny</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="any">any: T</span>)</span><span class="result">: <span name="cc.spray.json.PimpedAny" class="extype">PimpedAny</span>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>
