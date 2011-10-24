@@ -168,7 +168,7 @@ instance.</p>
     </li><li visbl="pub" name="cc.spray.can.DateTime" data-isabs="true">
       <a id="DateTime:DateTime"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
         <a href="DateTime.html"><span class="name">DateTime</span></a>
         
@@ -189,17 +189,6 @@ instance.</p>
       <p class="comment cmt">A new instance of the <code>DefaultReceiverActor</code> is used as the receiver actor for <code>send</code> calls on an
 <a name="cc.spray.can.HttpConnection" class="extype" href="HttpConnection.html">HttpConnection</a>, that return a <code>Future[HttpResponse].
 </code></p>
-    </li><li visbl="pub" name="cc.spray.can.HighLevelHttpClient" data-isabs="true">
-      <a id="HighLevelHttpClient:HighLevelHttpClient"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="HighLevelHttpClient.html"><span class="name">HighLevelHttpClient</span></a>
-        
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="cc.spray.can.HttpClient" data-isabs="false">
       <a id="HttpClient:HttpClient"></a>
       <h4 class="signature">
@@ -233,6 +222,17 @@ instance.</p>
       </span>
       </h4>
       <p class="comment cmt">An instance of this trait represents an HTTP connection to a specific host and port.</p>
+    </li><li visbl="pub" name="cc.spray.can.HttpDialogComponent" data-isabs="true">
+      <a id="HttpDialogComponent:HttpDialogComponent"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="HttpDialogComponent.html"><span class="name">HttpDialogComponent</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.can.HttpHeader" data-isabs="false">
       <a id="HttpHeader:HttpHeader"></a>
       <h4 class="signature">
@@ -483,7 +483,7 @@ by replying with an instance of <a name="cc.spray.can.Stats" class="extype" href
       <span class="symbol"> 
         <a href="HttpClient$.html"><span class="name">HttpClient</span></a>
         
-        <span class="result"> extends HighLevelHttpClient</span>
+        <span class="result"> extends HttpDialogComponent</span>
       </span>
       </h4>
       
