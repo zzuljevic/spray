@@ -24,14 +24,14 @@
       <span class="symbol"> 
         <span class="name">Servlet30ConnectorServlet</span>
         
-        <span class="result"> extends <span name="javax.servlet.http.HttpServlet" class="extype">HttpServlet</span> with <span name="cc.spray.connectors.ConnectorServlet" class="extype">ConnectorServlet</span> with <span name="javax.servlet.AsyncListener" class="extype">AsyncListener</span></span>
+        <span class="result"> extends <span name="cc.spray.connectors.ConnectorServlet" class="extype">ConnectorServlet</span></span>
       </span>
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The spray connector servlet for all servlet 3.0 containers.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="javax.servlet.AsyncListener" class="extype">AsyncListener</span>, <span name="java.util.EventListener" class="extype">EventListener</span>, <span name="cc.spray.connectors.ConnectorServlet" class="extype">ConnectorServlet</span>, <a name="cc.spray.utils.Logging" class="extype" href="../utils/Logging.html">Logging</a>, <span name="javax.servlet.http.HttpServlet" class="extype">HttpServlet</span>, <span name="javax.servlet.GenericServlet" class="extype">GenericServlet</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="javax.servlet.ServletConfig" class="extype">ServletConfig</span>, <span name="javax.servlet.Servlet" class="extype">Servlet</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="cc.spray.connectors.ConnectorServlet" class="extype">ConnectorServlet</span>, <span name="cc.spray.utils.Logging" class="extype">Logging</span>, <span name="javax.servlet.http.HttpServlet" class="extype">HttpServlet</span>, <span name="javax.servlet.GenericServlet" class="extype">GenericServlet</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="javax.servlet.ServletConfig" class="extype">ServletConfig</span>, <span name="javax.servlet.Servlet" class="extype">Servlet</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -47,7 +47,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="cc.spray.connectors.Servlet30ConnectorServlet" class="in"><span>Servlet30ConnectorServlet</span></li><li name="javax.servlet.AsyncListener" class="in"><span>AsyncListener</span></li><li name="java.util.EventListener" class="in"><span>EventListener</span></li><li name="cc.spray.connectors.ConnectorServlet" class="in"><span>ConnectorServlet</span></li><li name="cc.spray.utils.Logging" class="in"><span>Logging</span></li><li name="javax.servlet.http.HttpServlet" class="in"><span>HttpServlet</span></li><li name="javax.servlet.GenericServlet" class="in"><span>GenericServlet</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="javax.servlet.ServletConfig" class="in"><span>ServletConfig</span></li><li name="javax.servlet.Servlet" class="in"><span>Servlet</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="cc.spray.connectors.Servlet30ConnectorServlet" class="in"><span>Servlet30ConnectorServlet</span></li><li name="cc.spray.connectors.ConnectorServlet" class="in"><span>ConnectorServlet</span></li><li name="cc.spray.utils.Logging" class="in"><span>Logging</span></li><li name="javax.servlet.http.HttpServlet" class="in"><span>HttpServlet</span></li><li name="javax.servlet.GenericServlet" class="in"><span>GenericServlet</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="javax.servlet.ServletConfig" class="in"><span>ServletConfig</span></li><li name="javax.servlet.Servlet" class="in"><span>Servlet</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -132,6 +132,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#EmptyByteArray" data-isabs="false">
+      <a id="EmptyByteArray:Array[Byte]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">EmptyByteArray</span>
+        
+        <span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Byte" class="extype">Byte</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -157,28 +168,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#completer" data-isabs="false">
-      <a id="completer(HttpServletResponse)(⇒ Unit):((RawResponse) ⇒ Unit) ⇒ Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">completer</span>
-        
-        <span class="params">(<span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>)</span><span class="params">(<span name="close">close: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: ((<a name="cc.spray.RawResponse" class="extype" href="../RawResponse.html">RawResponse</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#containerName" data-isabs="false">
-      <a id="containerName:String"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">containerName</span>
-        
-        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.connectors.Servlet30ConnectorServlet" class="extype" href="">Servlet30ConnectorServlet</a> → ConnectorServlet</dd></dl></div>
     </li><li visbl="pub" name="javax.servlet.GenericServlet#destroy" data-isabs="false">
       <a id="destroy():Unit"></a>
       <h4 class="signature">
@@ -348,7 +337,7 @@
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="javax.servlet.GenericServlet#getInitParameter" data-isabs="false">
       <a id="getInitParameter(String):String"></a>
       <h4 class="signature">
@@ -426,6 +415,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GenericServlet → ServletConfig</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#handleTimeout" data-isabs="false">
+      <a id="handleTimeout(HttpServletRequest,HttpServletResponse)(⇒ Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">handleTimeout</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>, <span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>)</span><span class="params">(<span name="complete">complete: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -437,6 +437,28 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#httpContent" data-isabs="false">
+      <a id="httpContent(InputStream,Option[Content-Type],Option[Content-Length]):Option[HttpContent]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">httpContent</span>
+        
+        <span class="params">(<span name="inputStream">inputStream: <span name="java.io.InputStream" class="extype">InputStream</span></span>, <span name="contentTypeHeader">contentTypeHeader: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Type" class="extype">Content-Type</span>]</span>, <span name="contentLengthHeader">contentLengthHeader: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Length" class="extype">Content-Length</span>]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpContent" class="extype">HttpContent</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#httpRequest" data-isabs="false">
+      <a id="httpRequest(HttpServletRequest):HttpRequest"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">httpRequest</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>)</span><span class="result">: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#init" data-isabs="false">
       <a id="init():Unit"></a>
       <h4 class="signature">
@@ -502,10 +524,10 @@
       <span class="symbol"> 
         <span class="name">log</span>
         
-        <span class="result">: <a name="cc.spray.utils.Log" class="extype" href="../utils/Log.html">Log</a></span>
+        <span class="result">: <span name="cc.spray.utils.Log" class="extype">Log</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.utils.Logging" class="extype" href="../utils/Logging.html">Logging</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -539,76 +561,76 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#onComplete" data-isabs="false">
-      <a id="onComplete(AsyncEvent):Unit"></a>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#rebuildUri" data-isabs="false">
+      <a id="rebuildUri(HttpServletRequest):String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">onComplete</span>
+        <span class="name">rebuildUri</span>
         
-        <span class="params">(<span name="ev">ev: <span name="javax.servlet.AsyncEvent" class="extype">AsyncEvent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.connectors.Servlet30ConnectorServlet" class="extype" href="">Servlet30ConnectorServlet</a> → AsyncListener</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#onError" data-isabs="false">
-      <a id="onError(AsyncEvent):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">onError</span>
-        
-        <span class="params">(<span name="ev">ev: <span name="javax.servlet.AsyncEvent" class="extype">AsyncEvent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.connectors.Servlet30ConnectorServlet" class="extype" href="">Servlet30ConnectorServlet</a> → AsyncListener</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#onStartAsync" data-isabs="false">
-      <a id="onStartAsync(AsyncEvent):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">onStartAsync</span>
-        
-        <span class="params">(<span name="ev">ev: <span name="javax.servlet.AsyncEvent" class="extype">AsyncEvent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.connectors.Servlet30ConnectorServlet" class="extype" href="">Servlet30ConnectorServlet</a> → AsyncListener</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#onTimeout" data-isabs="false">
-      <a id="onTimeout(AsyncEvent):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">onTimeout</span>
-        
-        <span class="params">(<span name="ev">ev: <span name="javax.servlet.AsyncEvent" class="extype">AsyncEvent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.connectors.Servlet30ConnectorServlet" class="extype" href="">Servlet30ConnectorServlet</a> → AsyncListener</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#rawRequest" data-isabs="false">
-      <a id="rawRequest(HttpServletRequest):RawRequest { ... /* 2 definitions in type refinement */ }"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rawRequest</span>
-        
-        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>)</span><span class="result">: <a name="cc.spray.RawRequest" class="extype" href="../RawRequest.html">RawRequest</a> { ... /* 2 definitions in type refinement */ }</span>
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#rawResponse" data-isabs="false">
-      <a id="rawResponse(HttpServletResponse):RawResponse { def outputStream: javax.servlet.ServletOutputStream }"></a>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#requestContext" data-isabs="false">
+      <a id="requestContext(HttpServletRequest,HttpServletResponse,(RoutingResult) ⇒ Unit):Option[RequestContext]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">rawResponse</span>
+        <span class="name">requestContext</span>
         
-        <span class="params">(<span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>)</span><span class="result">: <a name="cc.spray.RawResponse" class="extype" href="../RawResponse.html">RawResponse</a> { def outputStream: javax.servlet.ServletOutputStream }</span>
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>, <span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>, <span name="responder">responder: (<a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<a name="cc.spray.RequestContext" class="extype" href="../RequestContext.html">RequestContext</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#requestString" data-isabs="false">
+      <a id="requestString(HttpServletRequest):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">requestString</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#respond" data-isabs="false">
+      <a id="respond(HttpServletRequest,HttpServletResponse,HttpResponse):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">respond</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>, <span name="servletResponse">servletResponse: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>, <span name="response">response: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#responder" data-isabs="false">
+      <a id="responder(HttpServletRequest,HttpServletResponse):(RoutingResult) ⇒ Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responder</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>, <span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>)</span><span class="result">: (<a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#responderFor" data-isabs="false">
+      <a id="responderFor(HttpServletRequest)((HttpResponse) ⇒ Unit):(RoutingResult) ⇒ Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responderFor</span>
+        
+        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>)</span><span class="params">(<span name="f">f: (<span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: (<a name="cc.spray.RoutingResult" class="extype" href="../RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#rootService" data-isabs="false">
       <a id="rootService:ActorRef"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">lazy val</span>
       <span class="symbol"> 
         <span class="name">rootService</span>
         
@@ -643,17 +665,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.connectors.Servlet30ConnectorServlet#suspend" data-isabs="false">
-      <a id="suspend(HttpServletRequest,HttpServletResponse):((RawResponse) ⇒ Unit) ⇒ Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">suspend</span>
-        
-        <span class="params">(<span name="req">req: <span name="javax.servlet.http.HttpServletRequest" class="extype">HttpServletRequest</span></span>, <span name="resp">resp: <span name="javax.servlet.http.HttpServletResponse" class="extype">HttpServletResponse</span></span>)</span><span class="result">: ((<a name="cc.spray.RawResponse" class="extype" href="../RawResponse.html">RawResponse</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -673,6 +684,17 @@
         <span class="name">timeout</span>
         
         <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.connectors.ConnectorServlet#timeoutActor" data-isabs="false">
+      <a id="timeoutActor:ActorRef"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">timeoutActor</span>
+        
+        <span class="result">: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConnectorServlet</dd></dl></div>
@@ -732,14 +754,12 @@
     </li></ol>
             </div>
 
-        <div name="javax.servlet.AsyncListener" class="parent">
-              <h3>Inherited from <span name="javax.servlet.AsyncListener" class="extype">AsyncListener</span></h3>
-            </div><div name="java.util.EventListener" class="parent">
-              <h3>Inherited from <span name="java.util.EventListener" class="extype">EventListener</span></h3>
-            </div><div name="cc.spray.connectors.ConnectorServlet" class="parent">
+        
+
+        <div name="cc.spray.connectors.ConnectorServlet" class="parent">
               <h3>Inherited from <span name="cc.spray.connectors.ConnectorServlet" class="extype">ConnectorServlet</span></h3>
             </div><div name="cc.spray.utils.Logging" class="parent">
-              <h3>Inherited from <a name="cc.spray.utils.Logging" class="extype" href="../utils/Logging.html">Logging</a></h3>
+              <h3>Inherited from <span name="cc.spray.utils.Logging" class="extype">Logging</span></h3>
             </div><div name="javax.servlet.http.HttpServlet" class="parent">
               <h3>Inherited from <span name="javax.servlet.http.HttpServlet" class="extype">HttpServlet</span></h3>
             </div><div name="javax.servlet.GenericServlet" class="parent">

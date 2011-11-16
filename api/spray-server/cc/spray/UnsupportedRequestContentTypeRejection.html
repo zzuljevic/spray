@@ -24,7 +24,7 @@
       <span class="symbol"> 
         <span class="name">UnsupportedRequestContentTypeRejection</span>
         
-        <span class="params">(<span name="supported">supported: Seq[<span name="cc.spray.http.ContentTypeRange" class="extype">ContentTypeRange</span>]</span>)</span><span class="result"> extends <a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="params">(<span name="errorMsg">errorMsg: String</span>)</span><span class="result"> extends <a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
@@ -65,7 +65,7 @@ Signals that the request was rejected because the requests content-type is unsup
       <span class="symbol"> 
         <span class="name">UnsupportedRequestContentTypeRejection</span>
         
-        <span class="params">(<span name="supported">supported: Seq[<span name="cc.spray.http.ContentTypeRange" class="extype">ContentTypeRange</span>]</span>)</span>
+        <span class="params">(<span name="errorMsg">errorMsg: String</span>)</span>
       </span>
       </h4>
       
@@ -191,6 +191,17 @@ Signals that the request was rejected because the requests content-type is unsup
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.UnsupportedRequestContentTypeRejection" class="extype" href="">UnsupportedRequestContentTypeRejection</a> → Equals → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.UnsupportedRequestContentTypeRejection#errorMsg" data-isabs="false">
+      <a id="errorMsg:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">errorMsg</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -215,7 +226,7 @@ Signals that the request was rejected because the requests content-type is unsup
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.UnsupportedRequestContentTypeRejection#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -315,17 +326,6 @@ Signals that the request was rejected because the requests content-type is unsup
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.UnsupportedRequestContentTypeRejection" class="extype" href="">UnsupportedRequestContentTypeRejection</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.UnsupportedRequestContentTypeRejection#supported" data-isabs="false">
-      <a id="supported:Seq[ContentTypeRange]"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">supported</span>
-        
-        <span class="result">: Seq[<span name="cc.spray.http.ContentTypeRange" class="extype">ContentTypeRange</span>]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -390,7 +390,12 @@ Signals that the request was rejected because the requests content-type is unsup
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
       <a id="productElements:Iterator[Any]"></a>
       <h4 class="signature">
       <span class="kind">def</span>

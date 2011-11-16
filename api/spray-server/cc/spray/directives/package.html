@@ -47,36 +47,14 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="cc.spray.directives.Decoder" data-isabs="true">
-      <a id="Decoder:Decoder"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Decoder.html"><span class="name">Decoder</span></a>
-        
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.directives.Deflate" data-isabs="true">
-      <a id="Deflate:Deflate"></a>
+              <ol><li visbl="pub" name="cc.spray.directives.FieldMatcher" data-isabs="false">
+      <a id="FieldMatcher:FieldMatcher[A]"></a>
       <h4 class="signature">
       <span class="kind">class</span>
       <span class="symbol"> 
-        <a href="Deflate.html"><span class="name">Deflate</span></a>
-        
-        <span class="result"> extends Decoder with Encoder</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.directives.Encoder" data-isabs="true">
-      <a id="Encoder:Encoder"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Encoder.html"><span class="name">Encoder</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+        <a href="FieldMatcher.html"><span class="name">FieldMatcher</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends Unmarshaller[A]</span>
       </span>
       </h4>
       
@@ -91,17 +69,50 @@
       </span>
       </h4>
       <p class="comment cmt">A PathMatcher that matches the given regular expression and extracts the first match group.</p>
-    </li><li visbl="pub" name="cc.spray.directives.Gzip" data-isabs="true">
-      <a id="Gzip:Gzip"></a>
+    </li><li visbl="pub" name="cc.spray.directives.NameDefaultReceptacle" data-isabs="false">
+      <a id="NameDefaultReceptacle:NameDefaultReceptacle[A]"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
+      <span class="kind">case class</span>
       <span class="symbol"> 
-        <a href="Gzip.html"><span class="name">Gzip</span></a>
-        
-        <span class="result"> extends Decoder with Encoder</span>
+        <a href="NameDefaultReceptacle.html"><span class="name">NameDefaultReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="default">default: A</span>)</span><span class="result"> extends Product with Serializable</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+      
+    </li><li visbl="pub" name="cc.spray.directives.NameDeserializerDefaultReceptacle" data-isabs="false">
+      <a id="NameDeserializerDefaultReceptacle:NameDeserializerDefaultReceptacle[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="NameDeserializerDefaultReceptacle.html"><span class="name">NameDeserializerDefaultReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="deserializer">deserializer: FromStringOptionDeserializer[A]</span>, <span name="default">default: A</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.NameDeserializerReceptacle" data-isabs="false">
+      <a id="NameDeserializerReceptacle:NameDeserializerReceptacle[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="NameDeserializerReceptacle.html"><span class="name">NameDeserializerReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="deserializer">deserializer: FromStringOptionDeserializer[A]</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.NameReceptacle" data-isabs="false">
+      <a id="NameReceptacle:NameReceptacle[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="NameReceptacle.html"><span class="name">NameReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.directives.ParameterMatcher" data-isabs="false">
       <a id="ParameterMatcher:ParameterMatcher[A]"></a>
       <h4 class="signature">
@@ -109,7 +120,7 @@
       <span class="symbol"> 
         <a href="ParameterMatcher.html"><span class="name">ParameterMatcher</span></a>
         <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends Deserializer[Map[String, String], A]</span>
       </span>
       </h4>
       
@@ -212,6 +223,28 @@
       </span>
       </h4>
       <p class="comment cmt">A PathMatcher7 extends a function that takes the unmatched path part of the request URI and returns</p>
+    </li><li visbl="pub" name="cc.spray.directives.RequiredValueDeserializerReceptacle" data-isabs="false">
+      <a id="RequiredValueDeserializerReceptacle:RequiredValueDeserializerReceptacle[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="RequiredValueDeserializerReceptacle.html"><span class="name">RequiredValueDeserializerReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="deserializer">deserializer: FromStringOptionDeserializer[A]</span>, <span name="requiredValue">requiredValue: A</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.directives.RequiredValueReceptacle" data-isabs="false">
+      <a id="RequiredValueReceptacle:RequiredValueReceptacle[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="RequiredValueReceptacle.html"><span class="name">RequiredValueReceptacle</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="requiredValue">requiredValue: A</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.directives.SimpleRegexMatcher" data-isabs="false">
       <a id="SimpleRegexMatcher:SimpleRegexMatcher"></a>
       <h4 class="signature">
@@ -384,17 +417,6 @@
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.directives.Deflate" data-isabs="false">
-      <a id="Deflate:Deflate"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Deflate$.html"><span class="name">Deflate</span></a>
-        
-        <span class="result"> extends Deflate</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An encoder and decoder for the HTTP 'deflate' encoding.</p>
     </li><li visbl="pub" name="cc.spray.directives.DoubleNumber" data-isabs="false">
       <a id="DoubleNumber:DoubleNumber"></a>
       <h4 class="signature">
@@ -406,17 +428,6 @@
       </span>
       </h4>
       <p class="comment cmt">A PathMatcher that matches and extracts a Double value.</p>
-    </li><li visbl="pub" name="cc.spray.directives.Gzip" data-isabs="false">
-      <a id="Gzip:Gzip"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Gzip$.html"><span class="name">Gzip</span></a>
-        
-        <span class="result"> extends Gzip</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An encoder and decoder for the HTTP 'gzip' encoding.</p>
     </li><li visbl="pub" name="cc.spray.directives.HexIntNumber" data-isabs="false">
       <a id="HexIntNumber:HexIntNumber"></a>
       <h4 class="signature">
@@ -472,17 +483,6 @@
       </span>
       </h4>
       <p class="comment cmt">A PathMatcher that efficiently matches a number of digits and extracts their (non-negative) Long value.</p>
-    </li><li visbl="pub" name="cc.spray.directives.NoEncoding" data-isabs="false">
-      <a id="NoEncoding:NoEncoding"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="NoEncoding$.html"><span class="name">NoEncoding</span></a>
-        
-        <span class="result"> extends Decoder with Encoder</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An encoder and decoder for the HTTP 'identity' encoding.</p>
     </li><li visbl="pub" name="cc.spray.directives.PathEnd" data-isabs="false">
       <a id="PathEnd:PathEnd"></a>
       <h4 class="signature">
@@ -518,6 +518,8 @@
       <p class="comment cmt">A PathMatcher that matches a single slash character ('/').</p>
     </li></ol>
             </div>
+
+        
 
         
 

@@ -28,12 +28,12 @@
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Self Type</dt><dd><a name="cc.spray.ErrorHandling" class="extype" href="">ErrorHandling</a> with <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></dd></dl><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Self Type</dt><dd><a name="cc.spray.ErrorHandling" class="extype" href="">ErrorHandling</a> with <span name="cc.spray.utils.Logging" class="extype">Logging</span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>, <a name="cc.spray.HttpServiceActor" class="extype" href="HttpServiceActor.html">HttpServiceActor</a>, <a name="cc.spray.HttpServiceLogic" class="extype" href="HttpServiceLogic.html">HttpServiceLogic</a>, <a name="cc.spray.test.SprayTest.ServiceTest" class="extype" href="test/SprayTest$ServiceTest.html">ServiceTest</a></div>
+          <div class="subClasses hiddenContent"><a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>, <a name="cc.spray.HttpServiceActor" class="extype" href="HttpServiceActor.html">HttpServiceActor</a>, <a name="cc.spray.HttpServiceLogic" class="extype" href="HttpServiceLogic.html">HttpServiceLogic</a>, <a name="cc.spray.RootService" class="extype" href="RootService.html">RootService</a>, <a name="cc.spray.test.SprayTest.ServiceTest" class="extype" href="test/SprayTest$ServiceTest.html">ServiceTest</a>, <a name="cc.spray.SprayCanRootService" class="extype" href="SprayCanRootService.html">SprayCanRootService</a></div>
         </div></div>
         
 
@@ -191,7 +191,7 @@
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -248,13 +248,13 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="prt" name="cc.spray.ErrorHandling#responseForException" data-isabs="false">
-      <a id="responseForException(HttpRequest,Exception):HttpResponse"></a>
+      <a id="responseForException(Any,Exception):HttpResponse"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">responseForException</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+        <span class="params">(<span name="request">request: <span name="scala.Any" class="extype">Any</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd></dl></div>
@@ -324,6 +324,8 @@
         </dd></dl></div>
     </li></ol>
             </div>
+
+        
 
         <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>

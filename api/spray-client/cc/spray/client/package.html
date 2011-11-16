@@ -47,76 +47,236 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="cc.spray.client.ClientConfig" data-isabs="false">
-      <a id="ClientConfig:ClientConfig"></a>
+              <ol><li visbl="pub" name="cc.spray.client.ConduitConfig" data-isabs="false">
+      <a id="ConduitConfig:ConduitConfig"></a>
       <h4 class="signature">
       <span class="kind">case class</span>
       <span class="symbol"> 
-        <a href="ClientConfig.html"><span class="name">ClientConfig</span></a>
+        <a href="ConduitConfig.html"><span class="name">ConduitConfig</span></a>
         
-        <span class="params">(<span name="limits">limits: Limits</span>, <span name="connectionTimeOutInMs">connectionTimeOutInMs: Integer</span>, <span name="idleConnectionInPoolTimeoutInMs">idleConnectionInPoolTimeoutInMs: Integer</span>, <span name="requestTimeoutInMs">requestTimeoutInMs: Integer</span>, <span name="redirectEnabled">redirectEnabled: Boolean</span>, <span name="compressionEnabled">compressionEnabled: Boolean</span>, <span name="userAgent">userAgent: String</span>, <span name="allowConnectionPooling">allowConnectionPooling: Boolean</span>, <span name="reaper">reaper: ScheduledExecutorService</span>, <span name="applicationThreadPool">applicationThreadPool: ExecutorService</span>, <span name="proxyServer">proxyServer: ProxyServer</span>, <span name="sslConfig">sslConfig: SslConfig</span>, <span name="providerConfig">providerConfig: com.ning.http.client.AsyncHttpProviderConfig[_, _]</span>, <span name="connectionsPool">connectionsPool: com.ning.http.client.ConnectionsPool[_, _]</span>, <span name="realm">realm: Realm</span>, <span name="requestFilters">requestFilters: List[RequestFilter]</span>, <span name="responseFilters">responseFilters: List[ResponseFilter]</span>, <span name="ioExceptionFilters">ioExceptionFilters: List[IOExceptionFilter]</span>, <span name="requestCompressionLevel">requestCompressionLevel: Integer</span>, <span name="useRawUrl">useRawUrl: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+        <span class="params">(<span name="clientActorId">clientActorId: String</span>, <span name="maxConnections">maxConnections: Int</span>, <span name="dispatchStrategy">dispatchStrategy: DispatchStrategy</span>)</span><span class="result"> extends Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.client.HttpClient" data-isabs="false">
-      <a id="HttpClient:HttpClient"></a>
+    </li><li visbl="pub" name="cc.spray.client.Delete" data-isabs="false">
+      <a id="Delete:Delete[T]"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
+      <span class="kind">case class</span>
       <span class="symbol"> 
-        <a href="HttpClient.html"><span class="name">HttpClient</span></a>
+        <a href="Delete.html"><span class="name">Delete</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="uri">uri: String</span>, <span name="content">content: Option[T]</span>)</span><span class="result"> extends SimpleRequest[T] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.DispatchStrategy" data-isabs="true">
+      <a id="DispatchStrategy:DispatchStrategy"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="DispatchStrategy.html"><span class="name">DispatchStrategy</span></a>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <p class="comment cmt">The central class encapsulating the Ning <a href="https://github.com/sonatype/async-http-client">AsyncHttpClient</a> as a scala wrapper.</p>
-    </li><li visbl="pub" name="cc.spray.client.Limits" data-isabs="false">
-      <a id="Limits:Limits"></a>
+      <p class="comment cmt">Abstraction over the logic of how to dispatch outgoing requests to one of several connections.</p>
+    </li><li visbl="pub" name="cc.spray.client.Get" data-isabs="false">
+      <a id="Get:Get[T]"></a>
       <h4 class="signature">
       <span class="kind">case class</span>
       <span class="symbol"> 
-        <a href="Limits.html"><span class="name">Limits</span></a>
-        
-        <span class="params">(<span name="maxTotalConnections">maxTotalConnections: Integer</span>, <span name="maxConnectionsPerHost">maxConnectionsPerHost: Integer</span>, <span name="maxRedirects">maxRedirects: Integer</span>, <span name="maxRequestRetries">maxRequestRetries: Integer</span>)</span><span class="result"> extends Product with Serializable</span>
+        <a href="Get.html"><span class="name">Get</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="uri">uri: String</span>, <span name="content">content: Option[T]</span>)</span><span class="result"> extends SimpleRequest[T] with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.client.Realm" data-isabs="false">
-      <a id="Realm:Realm"></a>
+    </li><li visbl="pub" name="cc.spray.client.HttpConduit" data-isabs="false">
+      <a id="HttpConduit:HttpConduit"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
-        <a href="Realm.html"><span class="name">Realm</span></a>
+        <a href="HttpConduit.html"><span class="name">HttpConduit</span></a>
         
-        <span class="params">(<span name="principal">principal: String</span>, <span name="password">password: String</span>, <span name="scheme">scheme: AuthScheme</span>, <span name="realmName">realmName: String</span>, <span name="nonce">nonce: String</span>, <span name="algorithm">algorithm: String</span>, <span name="response">response: String</span>, <span name="qop">qop: String</span>, <span name="nc">nc: String</span>, <span name="uri">uri: String</span>, <span name="methodName">methodName: String</span>, <span name="usePreemptive">usePreemptive: Boolean</span>, <span name="ntlmDomain">ntlmDomain: String</span>, <span name="enc">enc: String</span>, <span name="ntlmHost">ntlmHost: String</span>, <span name="ntlmMessageType2Received">ntlmMessageType2Received: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+        <span class="result"> extends MessagePipelining with Logging with SprayCanConversions</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.client.RequestConfig" data-isabs="false">
-      <a id="RequestConfig:RequestConfig"></a>
+    </li><li visbl="pub" name="cc.spray.client.HttpConn" data-isabs="true">
+      <a id="HttpConn:HttpConn"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
+      <span class="kind">trait</span>
       <span class="symbol"> 
-        <a href="RequestConfig.html"><span class="name">RequestConfig</span></a>
+        <a href="HttpConn.html"><span class="name">HttpConn</span></a>
         
-        <span class="params">(<span name="proxyServer">proxyServer: ProxyServer</span>, <span name="requestTimeoutInMs">requestTimeoutInMs: Integer</span>, <span name="followRedirects">followRedirects: Boolean</span>, <span name="realm">realm: Realm</span>)</span><span class="result"> extends Product with Serializable</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Abstraction over HTTP connections in the context of a <a name="cc.spray.client.DispatchStrategy" class="extype" href="DispatchStrategy.html">DispatchStrategy</a>
+</p>
+    </li><li visbl="pub" name="cc.spray.client.HttpRequestContext" data-isabs="true">
+      <a id="HttpRequestContext:HttpRequestContext"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="HttpRequestContext.html"><span class="name">HttpRequestContext</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.client.SslConfig" data-isabs="false">
-      <a id="SslConfig:SslConfig"></a>
+    </li><li visbl="pub" name="cc.spray.client.MessagePipelining" data-isabs="true">
+      <a id="MessagePipelining:MessagePipelining"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="MessagePipelining.html"><span class="name">MessagePipelining</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.PipelineException" data-isabs="false">
+      <a id="PipelineException:PipelineException"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="PipelineException.html"><span class="name">PipelineException</span></a>
+        
+        <span class="result"> extends RuntimeException</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Post" data-isabs="false">
+      <a id="Post:Post[T]"></a>
       <h4 class="signature">
       <span class="kind">case class</span>
       <span class="symbol"> 
-        <a href="SslConfig.html"><span class="name">SslConfig</span></a>
+        <a href="Post.html"><span class="name">Post</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="uri">uri: String</span>, <span name="content">content: Option[T]</span>)</span><span class="result"> extends SimpleRequest[T] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Put" data-isabs="false">
+      <a id="Put:Put[T]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="Put.html"><span class="name">Put</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="uri">uri: String</span>, <span name="content">content: Option[T]</span>)</span><span class="result"> extends SimpleRequest[T] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.SimpleRequest" data-isabs="true">
+      <a id="SimpleRequest:SimpleRequest[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="SimpleRequest.html"><span class="name">SimpleRequest</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>sealed </dd></dl></div>
+    </li></ol>
+            </div>
         
-        <span class="params">(<span name="context">context: SSLContext</span>, <span name="engineFactory">engineFactory: SSLEngineFactory</span>, <span name="allowConnectionPooling">allowConnectionPooling: Boolean</span>)</span><span class="result"> extends Product with Serializable</span>
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.client.AkkaConfConduitConfig" data-isabs="false">
+      <a id="AkkaConfConduitConfig:AkkaConfConduitConfig"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="AkkaConfConduitConfig$.html"><span class="name">AkkaConfConduitConfig</span></a>
+        
+        <span class="result"> extends AkkaConfSettings</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.ConduitConfig" data-isabs="false">
+      <a id="ConduitConfig:ConduitConfig"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="ConduitConfig$.html"><span class="name">ConduitConfig</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Delete" data-isabs="false">
+      <a id="Delete:Delete"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Delete$.html"><span class="name">Delete</span></a>
+        
+        <span class="result"> extends SimpleRequestConstructors[Delete] with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.DispatchStrategies" data-isabs="false">
+      <a id="DispatchStrategies:DispatchStrategies"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DispatchStrategies$.html"><span class="name">DispatchStrategies</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Get" data-isabs="false">
+      <a id="Get:Get"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Get$.html"><span class="name">Get</span></a>
+        
+        <span class="result"> extends SimpleRequestConstructors[Get] with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.MessagePipelining" data-isabs="false">
+      <a id="MessagePipelining:MessagePipelining"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="MessagePipelining$.html"><span class="name">MessagePipelining</span></a>
+        
+        <span class="result"> extends MessagePipelining</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Post" data-isabs="false">
+      <a id="Post:Post"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Post$.html"><span class="name">Post</span></a>
+        
+        <span class="result"> extends SimpleRequestConstructors[Post] with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.client.Put" data-isabs="false">
+      <a id="Put:Put"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Put$.html"><span class="name">Put</span></a>
+        
+        <span class="result"> extends SimpleRequestConstructors[Put] with Serializable</span>
       </span>
       </h4>
       
     </li></ol>
             </div>
-        
-        
 
         
 

@@ -24,14 +24,14 @@
       <span class="symbol"> 
         <span class="name">HttpServiceActor</span>
         
-        <span class="result"> extends <span name="akka.actor.Actor" class="extype">Actor</span> with <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a> with <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a> with <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></span>
+        <span class="result"> extends <span name="akka.actor.Actor" class="extype">Actor</span> with <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a> with <span name="cc.spray.utils.Logging" class="extype">Logging</span> with <span name="cc.spray.utils.PostStart" class="extype">PostStart</span></span>
       </span>
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The actor part of the <a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>.
 </p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> with <a name="cc.spray.HttpServiceLogic" class="extype" href="HttpServiceLogic.html">HttpServiceLogic</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a>, <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a>, <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="cc.spray.utils.PostStart" class="extype">PostStart</span>, <span name="cc.spray.utils.Logging" class="extype">Logging</span>, <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a></div>
@@ -207,6 +207,20 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="akka.actor.Actor#freshInstance" data-isabs="false">
+      <a id="freshInstance():Option[Actor]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">freshInstance</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="akka.actor.Actor" class="extype">Actor</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
+                <span class="name">@experimental</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -217,7 +231,7 @@
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -258,10 +272,10 @@
       <span class="symbol"> 
         <span class="name">log</span>
         
-        <span class="result">: <a name="cc.spray.utils.Log" class="extype" href="utils/Log.html">Log</a></span>
+        <span class="result">: <span name="cc.spray.utils.Log" class="extype">Log</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -298,14 +312,14 @@
     </li><li visbl="pub" name="akka.actor.Actor#optionSelf" data-isabs="false">
       <a id="optionSelf:Option[ActorRef]"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
+      <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">optionSelf</span>
         
         <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="akka.actor.ActorRef" class="extype">ActorRef</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#postRestart" data-isabs="false">
       <a id="postRestart(Throwable):Unit"></a>
       <h4 class="signature">
@@ -327,7 +341,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → PostStart</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.HttpServiceActor#postStop" data-isabs="false">
       <a id="postStop():Unit"></a>
       <h4 class="signature">
@@ -350,6 +364,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → Actor</dd></dl></div>
+    </li><li visbl="pub" name="akka.actor.Actor#preRestart" data-isabs="false">
+      <a id="preRestart(Throwable,Option[Any]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">preRestart</span>
+        
+        <span class="params">(<span name="reason">reason: Throwable</span>, <span name="message">message: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.HttpServiceActor#preStart" data-isabs="false">
       <a id="preStart():Unit"></a>
       <h4 class="signature">
@@ -360,7 +385,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a> → Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → PostStart → Actor</dd></dl></div>
     </li><li visbl="prt" name="cc.spray.HttpServiceActor#receive" data-isabs="false">
       <a id="receive:PartialFunction[Any, Unit]"></a>
       <h4 class="signature">
@@ -372,61 +397,39 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.HttpServiceActor" class="extype" href="">HttpServiceActor</a> → Actor</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceActor#responderForRequest" data-isabs="false">
-      <a id="responderForRequest(HttpRequest):(RoutingResult) ⇒ Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">responderForRequest</span>
-        
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd></dl></div>
     </li><li visbl="prt" name="cc.spray.ErrorHandling#responseForException" data-isabs="false">
-      <a id="responseForException(HttpRequest,Exception):HttpResponse"></a>
+      <a id="responseForException(Any,Exception):HttpResponse"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">responseForException</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+        <span class="params">(<span name="request">request: <span name="scala.Any" class="extype">Any</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#self" data-isabs="false">
       <a id="self:ScalaActorRef"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">implicit val</span>
       <span class="symbol"> 
         <span class="name">self</span>
         
         <span class="result">: <span name="akka.actor.ScalaActorRef" class="extype">ScalaActorRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.HttpServiceActor#setDateHeader" data-isabs="false">
-      <a id="setDateHeader:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">setDateHeader</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#someSelf" data-isabs="false">
       <a id="someSelf:Some[ActorRef]"></a>
       <h4 class="signature">
-      <span class="kind">implicit val</span>
+      <span class="kind">val</span>
       <span class="symbol"> 
         <span class="name">someSelf</span>
         
         <span class="result">: <span name="scala.Some" class="extype">Some</span>[<span name="akka.actor.ActorRef" class="extype">ActorRef</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -516,10 +519,12 @@
     </li></ol>
             </div>
 
+        
+
         <div name="cc.spray.utils.PostStart" class="parent">
-              <h3>Inherited from <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></h3>
+              <h3>Inherited from <span name="cc.spray.utils.PostStart" class="extype">PostStart</span></h3>
             </div><div name="cc.spray.utils.Logging" class="parent">
-              <h3>Inherited from <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></h3>
+              <h3>Inherited from <span name="cc.spray.utils.Logging" class="extype">Logging</span></h3>
             </div><div name="cc.spray.ErrorHandling" class="parent">
               <h3>Inherited from <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></h3>
             </div><div name="akka.actor.Actor" class="parent">

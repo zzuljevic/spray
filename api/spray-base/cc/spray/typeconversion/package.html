@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>cc.spray.typeconversion</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a></p>
+        <h1>typeconversion</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol"> 
+        <span class="name">typeconversion</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="cc.spray.typeconversion.CantMarshal" data-isabs="false">
+      <a id="CantMarshal:CantMarshal"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="CantMarshal.html"><span class="name">CantMarshal</span></a>
+        
+        <span class="params">(<span name="onlyTo">onlyTo: List[ContentType]</span>)</span><span class="result"> extends Marshalling[Any] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.CaseClassDeserializers" data-isabs="true">
+      <a id="CaseClassDeserializers:CaseClassDeserializers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="CaseClassDeserializers.html"><span class="name">CaseClassDeserializers</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#ContentTypeSelector" data-isabs="false">
+      <a id="ContentTypeSelector:ContentTypeSelector"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">ContentTypeSelector</span>
+        
+        <span class="result"> = (<a name="cc.spray.http.ContentType" class="extype" href="../http/ContentType.html">ContentType</a>) ⇒ <span name="scala.Option" class="extype">Option</span>[<a name="cc.spray.http.ContentType" class="extype" href="../http/ContentType.html">ContentType</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.DefaultMarshallers" data-isabs="true">
+      <a id="DefaultMarshallers:DefaultMarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="DefaultMarshallers.html"><span class="name">DefaultMarshallers</span></a>
+        
+        <span class="result"> extends MultipartMarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.DefaultUnmarshallers" data-isabs="true">
+      <a id="DefaultUnmarshallers:DefaultUnmarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="DefaultUnmarshallers.html"><span class="name">DefaultUnmarshallers</span></a>
+        
+        <span class="result"> extends MultipartUnmarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.DeserializationError" data-isabs="true">
+      <a id="DeserializationError:DeserializationError"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="DeserializationError.html"><span class="name">DeserializationError</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>sealed </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.Deserializer" data-isabs="true">
+      <a id="Deserializer:Deserializer[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="Deserializer.html"><span class="name">Deserializer</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="result"> extends (A) ⇒ Either[DeserializationError, B]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.FormFieldConverter" data-isabs="true">
+      <a id="FormFieldConverter:FormFieldConverter[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="FormFieldConverter.html"><span class="name">FormFieldConverter</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.FromStringDeserializers" data-isabs="true">
+      <a id="FromStringDeserializers:FromStringDeserializers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="FromStringDeserializers.html"><span class="name">FromStringDeserializers</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#FromStringOptionDeserializer" data-isabs="false">
+      <a id="FromStringOptionDeserializer:FromStringOptionDeserializer[A]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">FromStringOptionDeserializer</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> = <a name="cc.spray.typeconversion.Deserializer" class="extype" href="Deserializer.html">Deserializer</a>[<span name="scala.Option" class="extype">Option</span>[String], A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.MalformedContent" data-isabs="false">
+      <a id="MalformedContent:MalformedContent"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="MalformedContent.html"><span class="name">MalformedContent</span></a>
+        
+        <span class="params">(<span name="errorMessage">errorMessage: String</span>)</span><span class="result"> extends DeserializationError with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.MarshalWith" data-isabs="false">
+      <a id="MarshalWith:MarshalWith[A]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="MarshalWith.html"><span class="name">MarshalWith</span></a>
+        <span class="tparams">[<span name="A">-A</span>]</span>
+        <span class="params">(<span name="f">f: (A) ⇒ HttpContent</span>)</span><span class="result"> extends Marshalling[A] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#Marshaller" data-isabs="false">
+      <a id="Marshaller:Marshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">Marshaller</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> = (ContentTypeSelector) ⇒ <a name="cc.spray.typeconversion.Marshalling" class="extype" href="Marshalling.html">Marshalling</a>[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.MarshallerBase" data-isabs="true">
+      <a id="MarshallerBase:MarshallerBase[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="MarshallerBase.html"><span class="name">MarshallerBase</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends Marshaller[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.Marshalling" data-isabs="true">
+      <a id="Marshalling:Marshalling[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="Marshalling.html"><span class="name">Marshalling</span></a>
+        <span class="tparams">[<span name="A">-A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>sealed </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.MultipartMarshallers" data-isabs="true">
+      <a id="MultipartMarshallers:MultipartMarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="MultipartMarshallers.html"><span class="name">MultipartMarshallers</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.MultipartUnmarshallers" data-isabs="true">
+      <a id="MultipartUnmarshallers:MultipartUnmarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="MultipartUnmarshallers.html"><span class="name">MultipartUnmarshallers</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.ProductDeserializer" data-isabs="true">
+      <a id="ProductDeserializer:ProductDeserializer[S, T]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="ProductDeserializer.html"><span class="name">ProductDeserializer</span></a>
+        <span class="tparams">[<span name="S">S</span>, <span name="T">T</span>]</span>
+        <span class="result"> extends Deserializer[S, T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.SprayJsonSupport" data-isabs="true">
+      <a id="SprayJsonSupport:SprayJsonSupport"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="SprayJsonSupport.html"><span class="name">SprayJsonSupport</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait providing automatic to and from JSON marshalling/unmarshalling using an in-scope *spray-json* protocol.</p>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package.ToHttpContentPimp" data-isabs="false">
+      <a id="ToHttpContentPimp:ToHttpContentPimp[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="package$$ToHttpContentPimp.html"><span class="name">ToHttpContentPimp</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#Unmarshaller" data-isabs="false">
+      <a id="Unmarshaller:Unmarshaller[A]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">Unmarshaller</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> = <a name="cc.spray.typeconversion.Deserializer" class="extype" href="Deserializer.html">Deserializer</a>[<span name="scala.Option" class="extype">Option</span>[<a name="cc.spray.http.HttpContent" class="extype" href="../http/HttpContent.html">HttpContent</a>], A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.UnmarshallerBase" data-isabs="true">
+      <a id="UnmarshallerBase:UnmarshallerBase[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="UnmarshallerBase.html"><span class="name">UnmarshallerBase</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends Deserializer[HttpContent, A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.UnsupportedContentType" data-isabs="false">
+      <a id="UnsupportedContentType:UnsupportedContentType"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="UnsupportedContentType.html"><span class="name">UnsupportedContentType</span></a>
+        
+        <span class="params">(<span name="errorMessage">errorMessage: String</span>)</span><span class="result"> extends DeserializationError with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+        
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.typeconversion.ContentExpected" data-isabs="false">
+      <a id="ContentExpected:ContentExpected"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="ContentExpected$.html"><span class="name">ContentExpected</span></a>
+        
+        <span class="result"> extends DeserializationError with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.DefaultMarshallers" data-isabs="false">
+      <a id="DefaultMarshallers:DefaultMarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DefaultMarshallers$.html"><span class="name">DefaultMarshallers</span></a>
+        
+        <span class="result"> extends DefaultMarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.DefaultUnmarshallers" data-isabs="false">
+      <a id="DefaultUnmarshallers:DefaultUnmarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="DefaultUnmarshallers$.html"><span class="name">DefaultUnmarshallers</span></a>
+        
+        <span class="result"> extends DefaultUnmarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.Deserializer" data-isabs="false">
+      <a id="Deserializer:Deserializer"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Deserializer$.html"><span class="name">Deserializer</span></a>
+        
+        <span class="result"> extends DeserializerLowerPriorityImplicits with CaseClassDeserializers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.FormFieldConverter" data-isabs="false">
+      <a id="FormFieldConverter:FormFieldConverter"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="FormFieldConverter$.html"><span class="name">FormFieldConverter</span></a>
+        
+        <span class="result"> extends FormFieldConverterLowerPriorityImplicits</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.FromStringDeserializers" data-isabs="false">
+      <a id="FromStringDeserializers:FromStringDeserializers"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="FromStringDeserializers$.html"><span class="name">FromStringDeserializers</span></a>
+        
+        <span class="result"> extends FromStringDeserializers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.MultipartMarshallers" data-isabs="false">
+      <a id="MultipartMarshallers:MultipartMarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="MultipartMarshallers$.html"><span class="name">MultipartMarshallers</span></a>
+        
+        <span class="result"> extends MultipartMarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.MultipartUnmarshallers" data-isabs="false">
+      <a id="MultipartUnmarshallers:MultipartUnmarshallers"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="MultipartUnmarshallers$.html"><span class="name">MultipartUnmarshallers</span></a>
+        
+        <span class="result"> extends MultipartUnmarshallers</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.SprayJsonSupport" data-isabs="false">
+      <a id="SprayJsonSupport:SprayJsonSupport"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="SprayJsonSupport$.html"><span class="name">SprayJsonSupport</span></a>
+        
+        <span class="result"> extends SprayJsonSupport</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#deserializer" data-isabs="false">
+      <a id="deserializer[A, B](Deserializer[A, B]):Deserializer[A, B]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">deserializer</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="ds">ds: <a name="cc.spray.typeconversion.Deserializer" class="extype" href="Deserializer.html">Deserializer</a>[A, B]</span>)</span><span class="result">: <a name="cc.spray.typeconversion.Deserializer" class="extype" href="Deserializer.html">Deserializer</a>[A, B]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#formFieldConverter" data-isabs="false">
+      <a id="formFieldConverter[T](FormFieldConverter[T]):FormFieldConverter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">formFieldConverter</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="ffc">ffc: <a name="cc.spray.typeconversion.FormFieldConverter" class="extype" href="FormFieldConverter.html">FormFieldConverter</a>[T]</span>)</span><span class="result">: <a name="cc.spray.typeconversion.FormFieldConverter" class="extype" href="FormFieldConverter.html">FormFieldConverter</a>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#fromStringOptionDeserializer" data-isabs="false">
+      <a id="fromStringOptionDeserializer[T](FromStringOptionDeserializer[T]):FromStringOptionDeserializer[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">fromStringOptionDeserializer</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="ds">ds: FromStringOptionDeserializer[T]</span>)</span><span class="result">: FromStringOptionDeserializer[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#marshaller" data-isabs="false">
+      <a id="marshaller[T](Marshaller[T]):Marshaller[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">marshaller</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="m">m: Marshaller[T]</span>)</span><span class="result">: Marshaller[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#pimpAnyWithToHttpContent" data-isabs="false">
+      <a id="pimpAnyWithToHttpContent[A](A)(Marshaller[A]):ToHttpContentPimp[A]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpAnyWithToHttpContent</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <a name="cc.spray.typeconversion.package.ToHttpContentPimp" class="extype" href="package$$ToHttpContentPimp.html">ToHttpContentPimp</a>[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.typeconversion.package#unmarshaller" data-isabs="false">
+      <a id="unmarshaller[T](Unmarshaller[T]):Unmarshaller[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">unmarshaller</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="um">um: Unmarshaller[T]</span>)</span><span class="result">: Unmarshaller[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.typeconversion.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

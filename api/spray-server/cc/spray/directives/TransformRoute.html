@@ -31,7 +31,7 @@
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A Route that transforms another route.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="cc.spray.directives.SprayRoute0" class="extype" href="SprayRoute0.html">SprayRoute0</a>, (Route) ⇒ Route, <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="cc.spray.directives.SprayRoute0" class="extype" href="SprayRoute0.html">SprayRoute0</a>, (Route) ⇒ Route, <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -311,6 +311,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.directives.SprayRoute#convert" data-isabs="false">
+      <a id="convert[P&lt;:Product](Deserializer[Product0, P]):SprayRoute1[P]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">convert</span>
+        <span class="tparams">[<span name="P">P &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="deserializer">deserializer: <span name="cc.spray.typeconversion.Deserializer" class="extype">Deserializer</span>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>, P]</span>)</span><span class="result">: <a name="cc.spray.directives.SprayRoute1" class="extype" href="SprayRoute1.html">SprayRoute1</a>[P]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -340,7 +351,7 @@
       <span class="symbol"> 
         <span class="name">filter</span>
         
-        <span class="result">: RouteFilter[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</span>
+        <span class="result">: RouteFilter[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a></dd></dl></div>
@@ -365,7 +376,7 @@
       <span class="symbol"> 
         <span class="name">fromRouting</span>
         
-        <span class="params">(<span name="f">f: (<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>) ⇒ Route</span>)</span><span class="result">: Route</span>
+        <span class="params">(<span name="f">f: (<span name="cc.spray.utils.Product0" class="extype">Product0</span>) ⇒ Route</span>)</span><span class="result">: Route</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a></dd></dl></div>
@@ -379,7 +390,7 @@
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -442,7 +453,7 @@
       <span class="symbol"> 
         <span class="name">or</span>
         
-        <span class="params">(<span name="other">other: <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</span>)</span><span class="result">: RouteFilter[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</span>
+        <span class="params">(<span name="other">other: <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</span>)</span><span class="result">: RouteFilter[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a></dd></dl></div>
@@ -539,12 +550,14 @@ and they do not create any specific rejection instances if they don't pass.
     </li></ol>
             </div>
 
+        
+
         <div name="cc.spray.directives.SprayRoute0" class="parent">
               <h3>Inherited from <a name="cc.spray.directives.SprayRoute0" class="extype" href="SprayRoute0.html">SprayRoute0</a></h3>
             </div><div name="scala.Function1" class="parent">
               <h3>Inherited from (Route) ⇒ Route</h3>
             </div><div name="cc.spray.directives.SprayRoute" class="parent">
-              <h3>Inherited from <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</h3>
+              <h3>Inherited from <a name="cc.spray.directives.SprayRoute" class="extype" href="SprayRoute.html">SprayRoute</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

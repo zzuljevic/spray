@@ -30,7 +30,7 @@
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The logic part of the <a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>. Contains the code for <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a> creation as well
 as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a>s and Exceptions to cc.spray.http.HttpResponses.
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a name="cc.spray.HttpServiceLogic" class="extype" href="">HttpServiceLogic</a> with <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a name="cc.spray.HttpServiceLogic" class="extype" href="">HttpServiceLogic</a> with <span name="cc.spray.utils.Logging" class="extype">Logging</span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
@@ -65,17 +65,19 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
         
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="prt" name="cc.spray.HttpServiceLogic#responderForRequest" data-isabs="true">
-      <a id="responderForRequest(HttpRequest):(RoutingResult) ⇒ Unit"></a>
+              <ol><li visbl="pub" name="cc.spray.HttpServiceLogic#customRejectionHandler" data-isabs="true">
+      <a id="customRejectionHandler:PartialFunction[List[Rejection], HttpResponse]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">responderForRequest</span>
+        <span class="name">customRejectionHandler</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[List[<a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a>], <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected abstract </dd></dl></div>
+      <p class="shortcomment cmt">A custom handler function for rejections.</p><div class="fullcomment"><div class="comment cmt"><p>A custom handler function for rejections.
+All rejections not handled by this PartialFunction will be responded to with the default logic.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.HttpServiceLogic#route" data-isabs="true">
       <a id="route:Route"></a>
       <h4 class="signature">
@@ -86,18 +88,9 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
         <span class="result">: Route</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.HttpServiceLogic#setDateHeader" data-isabs="true">
-      <a id="setDateHeader:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">setDateHeader</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+      <p class="shortcomment cmt">The route of this HttpService
+</p><div class="fullcomment"><div class="comment cmt"><p>The route of this HttpService
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
     </li></ol>
             </div>
 
@@ -183,17 +176,17 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#contextForRequest" data-isabs="false">
-      <a id="contextForRequest(HttpRequest):RequestContext"></a>
+    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#convertRejections" data-isabs="false">
+      <a id="convertRejections(RoutingResult):RoutingResult"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">contextForRequest</span>
+        <span class="name">convertRejections</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a></span>
+        <span class="params">(<span name="rr">rr: <a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a></span>)</span><span class="result">: <a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -230,17 +223,6 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#finalizeResponse" data-isabs="false">
-      <a id="finalizeResponse(HttpResponse):HttpResponse"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">finalizeResponse</span>
-        
-        <span class="params">(<span name="unverifiedResponse">unverifiedResponse: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -251,40 +233,18 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.HttpServiceLogic#handle" data-isabs="false">
-      <a id="handle(HttpRequest):Unit"></a>
+      <a id="handle(RequestContext):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">handle</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="context">context: <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#handleCustomRejections" data-isabs="false">
-      <a id="handleCustomRejections(List[Rejection]):HttpResponse"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">handleCustomRejections</span>
-        
-        <span class="params">(<span name="rejections">rejections: List[<a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a>]</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#handleRejections" data-isabs="false">
-      <a id="handleRejections(List[Rejection]):HttpResponse"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">handleRejections</span>
-        
-        <span class="params">(<span name="rejections">rejections: List[<a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a>]</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -296,17 +256,6 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#initialUnmatchedPath" data-isabs="false">
-      <a id="initialUnmatchedPath(HttpRequest):String"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">initialUnmatchedPath</span>
-        
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: String</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -352,13 +301,13 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="prt" name="cc.spray.ErrorHandling#responseForException" data-isabs="false">
-      <a id="responseForException(HttpRequest,Exception):HttpResponse"></a>
+      <a id="responseForException(Any,Exception):HttpResponse"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">responseForException</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+        <span class="params">(<span name="request">request: <span name="scala.Any" class="extype">Any</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></dd></dl></div>
@@ -370,17 +319,6 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
         <span class="name">responseForRejections</span>
         
         <span class="params">(<span name="rejections">rejections: List[<a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a>]</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#responseFromRoutingResult" data-isabs="false">
-      <a id="responseFromRoutingResult(RoutingResult):Option[HttpResponse]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">responseFromRoutingResult</span>
-        
-        <span class="params">(<span name="rr">rr: <a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd></dl></div>
@@ -406,17 +344,6 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#verified" data-isabs="false">
-      <a id="verified(HttpResponse):HttpResponse"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">verified</span>
-        
-        <span class="params">(<span name="response">response: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -459,8 +386,21 @@ as translation of <a name="cc.spray.Rejection" class="extype" href="Rejection.ht
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.HttpServiceLogic#withVerifiedResponse" data-isabs="false">
+      <a id="withVerifiedResponse[A](HttpResponse)((HttpResponse) ⇒ A):A"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">withVerifiedResponse</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="response">response: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="params">(<span name="f">f: (<span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span>) ⇒ A</span>)</span><span class="result">: A</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li></ol>
             </div>
+
+        
 
         <div name="cc.spray.ErrorHandling" class="parent">
               <h3>Inherited from <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></h3>

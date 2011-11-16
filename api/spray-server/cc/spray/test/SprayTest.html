@@ -14,9 +14,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../lib/trait_big.png" />
+        <a title="Go to companion" href="SprayTest$.html"><img src="../../../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a>.<a name="cc.spray.test" class="extype" href="package.html">test</a></p>
-        <h1>SprayTest</h1>
+        <h1><a title="Go to companion" href="SprayTest$.html">SprayTest</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -34,6 +34,9 @@ request examples.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="cc.spray.test.SprayTest" class="extype" href="SprayTest$.html">SprayTest</a></div>
         </div></div>
         
 
@@ -238,7 +241,7 @@ request examples.
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -306,24 +309,24 @@ request examples.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.test.SprayTest#test" data-isabs="false">
-      <a id="test(HttpRequest)(Route):RoutingResultWrapper"></a>
+      <a id="test(HttpRequest,Duration)(Route):RoutingResultWrapper"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">test</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="params">(<span name="route">route: Route</span>)</span><span class="result">: <a name="cc.spray.test.SprayTest.RoutingResultWrapper" class="extype" href="SprayTest$RoutingResultWrapper.html">RoutingResultWrapper</a></span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="timeout">timeout: <span name="akka.util.Duration" class="extype">Duration</span> = <span class="symbol"><span class="name"><a href="../../../akka/package.html">1000.millis</a></span></span></span>)</span><span class="params">(<span name="route">route: Route</span>)</span><span class="result">: <a name="cc.spray.test.SprayTest.RoutingResultWrapper" class="extype" href="SprayTest$RoutingResultWrapper.html">RoutingResultWrapper</a></span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.test.SprayTest#testService" data-isabs="false">
-      <a id="testService(HttpRequest)(ServiceTest):ServiceResultWrapper"></a>
+      <a id="testService(HttpRequest,Duration)(ServiceTest):ServiceResultWrapper"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">testService</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="params">(<span name="service">service: <a name="cc.spray.test.SprayTest.ServiceTest" class="extype" href="SprayTest$ServiceTest.html">ServiceTest</a></span>)</span><span class="result">: <a name="cc.spray.test.SprayTest.ServiceResultWrapper" class="extype" href="SprayTest$ServiceResultWrapper.html">ServiceResultWrapper</a></span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="timeout">timeout: <span name="akka.util.Duration" class="extype">Duration</span> = <span class="symbol"><span class="name"><a href="../../../akka/package.html">1000.millis</a></span></span></span>)</span><span class="params">(<span name="service">service: <a name="cc.spray.test.SprayTest.ServiceTest" class="extype" href="SprayTest$ServiceTest.html">ServiceTest</a></span>)</span><span class="result">: <a name="cc.spray.test.SprayTest.ServiceResultWrapper" class="extype" href="SprayTest$ServiceResultWrapper.html">ServiceResultWrapper</a></span>
       </span>
       </h4>
       
@@ -390,15 +393,17 @@ request examples.
         <span class="params">(<span name="rootRoute">rootRoute: Route</span>)</span><span class="result">: <a name="cc.spray.test.SprayTest.ServiceTest" class="extype" href="SprayTest$ServiceTest.html">ServiceTest</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The default HttpServiceLogic for testing.</p><div class="fullcomment"><div class="comment cmt"><p>The default HttpServiceLogic for testing.
+      <p class="shortcomment cmt">The default implicit service wrapper using the HttpServiceLogic for testing.</p><div class="fullcomment"><div class="comment cmt"><p>The default implicit service wrapper using the HttpServiceLogic for testing.
 If you have derived your own CustomHttpServiceLogic that you would like to test, create an implicit conversion
 similar to this:</p><pre>
 implicit def customWrapRootRoute(rootRoute: Route): ServiceTest = new CustomHttpServiceLogic with ServiceTest {
-  val route = routeRoute
+  val route = rootRoute
 }
 </pre></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li></ol>
             </div>
+
+        
 
         <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>

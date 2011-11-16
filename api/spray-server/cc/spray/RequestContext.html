@@ -24,7 +24,7 @@
       <span class="symbol"> 
         <span class="name">RequestContext</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="responder">responder: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span><span class="result"> extends <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="remoteHost">remoteHost: <span name="cc.spray.http.HttpIp" class="extype">HttpIp</span></span>, <span name="responder">responder: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span><span class="result"> extends <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
@@ -65,7 +65,7 @@ as it flows through a <i>spray</i> Route structure.
       <span class="symbol"> 
         <span class="name">RequestContext</span>
         
-        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="responder">responder: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>, <span name="remoteHost">remoteHost: <span name="cc.spray.http.HttpIp" class="extype">HttpIp</span></span>, <span name="responder">responder: (<a name="cc.spray.RoutingResult" class="extype" href="RoutingResult.html">RoutingResult</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span>
       </span>
       </h4>
       
@@ -167,12 +167,12 @@ as it flows through a <i>spray</i> Route structure.
       </h4>
       <p class="shortcomment cmt">Returns a copy of this context that cancels all rejections matching the given predicate with
 a <a name="cc.spray.RejectionRejection" class="extype" href="RejectionRejection.html">RejectionRejection</a>.</p>
-    </li><li visbl="pub" name="cc.spray.RequestContext#cancelRejections" data-isabs="false">
-      <a id="cancelRejections[R&lt;:Rejection](ClassManifest[R]):RequestContext"></a>
+    </li><li visbl="pub" name="cc.spray.RequestContext#cancelRejectionsOfType" data-isabs="false">
+      <a id="cancelRejectionsOfType[R&lt;:Rejection](ClassManifest[R]):RequestContext"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">cancelRejections</span>
+        <span class="name">cancelRejectionsOfType</span>
         <span class="tparams">[<span name="R">R &lt;: <a name="cc.spray.Rejection" class="extype" href="Rejection.html">Rejection</a></span>]</span>
         <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: ClassManifest[R]</span>)</span><span class="result">: <a name="cc.spray.RequestContext" class="extype" href="">RequestContext</a></span>
       </span>
@@ -205,16 +205,41 @@ a <a name="cc.spray.RejectionRejection" class="extype" href="RejectionRejection.
       </h4>
       <p class="shortcomment cmt">Completes the request with the given cc.spray.http.HttpResponse.</p>
     </li><li visbl="pub" name="cc.spray.RequestContext#complete" data-isabs="false">
-      <a id="complete(HttpContent):Unit"></a>
+      <a id="complete[A](Future[A])(Marshaller[A]):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">complete</span>
-        
-        <span class="params">(<span name="content">content: <span name="cc.spray.http.HttpContent" class="extype">HttpContent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="responseFuture">responseFuture: <span name="akka.dispatch.Future" class="extype">Future</span>[A]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Completes the request with status &quot;200 Ok&quot; and the given response content.</p>
+      <p class="shortcomment cmt">Schedules the completion of the request with status &quot;200 Ok&quot; and the response content created by marshalling the
+future result using the in-scope marshaller for A.</p>
+    </li><li visbl="pub" name="cc.spray.RequestContext#complete" data-isabs="false">
+      <a id="complete[A](StatusCode,List[HttpHeader],A)(Marshaller[A]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">complete</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="status">status: <span name="cc.spray.http.StatusCode" class="extype">StatusCode</span></span>, <span name="headers">headers: List[<span name="cc.spray.http.HttpHeader" class="extype">HttpHeader</span>]</span>, <span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Completes the request with the given status, headers and the response content created by marshalling the
+given object using the in-scope marshaller for the type.</p>
+    </li><li visbl="pub" name="cc.spray.RequestContext#complete" data-isabs="false">
+      <a id="complete[A](StatusCode,A)(Marshaller[A]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">complete</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="status">status: <span name="cc.spray.http.StatusCode" class="extype">StatusCode</span></span>, <span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Completes the request with the given status and the response content created by marshalling the given object using
+the in-scope marshaller for the type.</p>
     </li><li visbl="pub" name="cc.spray.RequestContext#complete" data-isabs="false">
       <a id="complete[A](A)(Marshaller[A]):Unit"></a>
       <h4 class="signature">
@@ -225,7 +250,7 @@ a <a name="cc.spray.RejectionRejection" class="extype" href="RejectionRejection.
         <span class="params">(<span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Completes the request with status &quot;200 Ok&quot; and response content created by marshalling the given object using
+      <p class="shortcomment cmt">Completes the request with status &quot;200 Ok&quot; and the response content created by marshalling the given object using
 the in-scope marshaller for the type.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
@@ -250,16 +275,29 @@ the in-scope marshaller for the type.</p>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RequestContext" class="extype" href="">RequestContext</a> → Equals → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.RequestContext#fail" data-isabs="false">
-      <a id="fail(HttpFailure,String):Unit"></a>
+      <a id="fail[A](HttpFailure,List[HttpHeader],A)(Marshaller[A]):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">fail</span>
-        
-        <span class="params">(<span name="failure">failure: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>, <span name="reason">reason: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="status">status: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>, <span name="headers">headers: List[<span name="cc.spray.http.HttpHeader" class="extype">HttpHeader</span>]</span>, <span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Completes the request with the given cc.spray.http.HttpFailure.</p>
+      <p class="shortcomment cmt">Completes the request with the given status, headers and the response content created by marshalling the
+given object using the in-scope marshaller for the type.</p>
+    </li><li visbl="pub" name="cc.spray.RequestContext#fail" data-isabs="false">
+      <a id="fail[A](HttpFailure,A)(Marshaller[A]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">fail</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="status">status: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>, <span name="obj">obj: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Marshaller[A]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Completes the request with the given status and the response content created by marshalling the given object using
+the in-scope marshaller for the type.</p>
     </li><li visbl="pub" name="cc.spray.RequestContext#fail" data-isabs="false">
       <a id="fail(HttpFailure):Unit"></a>
       <h4 class="signature">
@@ -267,7 +305,7 @@ the in-scope marshaller for the type.</p>
       <span class="symbol"> 
         <span class="name">fail</span>
         
-        <span class="params">(<span name="failure">failure: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="status">status: <span name="cc.spray.http.HttpFailure" class="extype">HttpFailure</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Completes the request with the given cc.spray.http.HttpFailure.</p>
@@ -295,7 +333,7 @@ the in-scope marshaller for the type.</p>
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.RequestContext#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -428,6 +466,17 @@ the in-scope marshaller for the type.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Rejects the request with the given rejections.</p>
+    </li><li visbl="pub" name="cc.spray.RequestContext#remoteHost" data-isabs="false">
+      <a id="remoteHost:HttpIp"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">remoteHost</span>
+        
+        <span class="result">: <span name="cc.spray.http.HttpIp" class="extype">HttpIp</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.RequestContext#request" data-isabs="false">
       <a id="request:HttpRequest"></a>
       <h4 class="signature">
@@ -569,7 +618,12 @@ the in-scope marshaller for the type.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a copy of this context with the the given RoutingResult transformation function chained into the responder.</p>
-    </li><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
       <a id="productElements:Iterator[Any]"></a>
       <h4 class="signature">
       <span class="kind">def</span>

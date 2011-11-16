@@ -24,14 +24,14 @@
       <span class="symbol"> 
         <span class="name">PathMatcher0</span>
         
-        <span class="result"> extends <a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</span>
+        <span class="result"> extends <a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A PathMatcher0 extends a function that takes the unmatched path part of the request URI and returns</p><ul><li>None if not matched</li><li>Some(remainingPath, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>) if matched (i.e. extracts nothing)
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A PathMatcher0 extends a function that takes the unmatched path part of the request URI and returns</p><ul><li>None if not matched</li><li>Some(remainingPath, cc.spray.utils.Product0) if matched (i.e. extracts nothing)
 </li></ul></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>], (String) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>)], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>], (String) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <span name="cc.spray.utils.Product0" class="extype">Product0</span>)], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="cc.spray.directives.PathEnd" class="extype" href="PathEnd$.html">PathEnd</a>, <a name="cc.spray.directives.Slash" class="extype" href="Slash$.html">Slash</a>, <a name="cc.spray.directives.StringMatcher" class="extype" href="StringMatcher.html">StringMatcher</a></div>
@@ -71,7 +71,7 @@
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="v1">v1: String</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(String, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>)]</span>
+        <span class="params">(<span name="v1">v1: String</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(String, <span name="cc.spray.utils.Product0" class="extype">Product0</span>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd>Function1</dd></dl></div>
@@ -175,7 +175,7 @@
       <span class="symbol"> 
         <span class="name">/</span>
         
-        <span class="params">(<span name="sub">sub: <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>)</span><span class="result">: <span name="cc.spray.directives.Combi" class="extype">Combi</span>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>] with <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>
+        <span class="params">(<span name="sub">sub: <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>)</span><span class="result">: <span name="cc.spray.directives.Combi" class="extype">Combi</span>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>] with <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>
       </span>
       </h4>
       
@@ -208,7 +208,7 @@
       <span class="symbol"> 
         <span class="name">andThen</span>
         <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="g">g: (<span name="scala.Option" class="extype">Option</span>[(String, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>)]) ⇒ A</span>)</span><span class="result">: (String) ⇒ A</span>
+        <span class="params">(<span name="g">g: (<span name="scala.Option" class="extype">Option</span>[(String, <span name="cc.spray.utils.Product0" class="extype">Product0</span>)]) ⇒ A</span>)</span><span class="result">: (String) ⇒ A</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd></dl></div>
@@ -244,7 +244,7 @@
       <span class="symbol"> 
         <span class="name">compose</span>
         <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="g">g: (A) ⇒ String</span>)</span><span class="result">: (A) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>)]</span>
+        <span class="params">(<span name="g">g: (A) ⇒ String</span>)</span><span class="result">: (A) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <span name="cc.spray.utils.Product0" class="extype">Product0</span>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd></dl></div>
@@ -294,7 +294,7 @@
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -498,17 +498,19 @@
       <span class="symbol"> 
         <span class="name">~</span>
         
-        <span class="params">(<span name="sub">sub: <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>)</span><span class="result">: <span name="cc.spray.directives.Combi" class="extype">Combi</span>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>] with <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>
+        <span class="params">(<span name="sub">sub: <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>)</span><span class="result">: <span name="cc.spray.directives.Combi" class="extype">Combi</span>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>] with <a name="cc.spray.directives.PathMatcher0" class="extype" href="">PathMatcher0</a></span>
       </span>
       </h4>
       
     </li></ol>
             </div>
 
+        
+
         <div name="cc.spray.directives.PathMatcher" class="parent">
-              <h3>Inherited from <a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>]</h3>
+              <h3>Inherited from <a name="cc.spray.directives.PathMatcher" class="extype" href="PathMatcher.html">PathMatcher</a>[<span name="cc.spray.utils.Product0" class="extype">Product0</span>]</h3>
             </div><div name="scala.Function1" class="parent">
-              <h3>Inherited from (String) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <a name="cc.spray.utils.Product0" class="extype" href="../utils/Product0.html">Product0</a>)]</h3>
+              <h3>Inherited from (String) ⇒ <span name="scala.Option" class="extype">Option</span>[(String, <span name="cc.spray.utils.Product0" class="extype">Product0</span>)]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

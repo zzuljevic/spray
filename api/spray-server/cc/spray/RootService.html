@@ -24,7 +24,7 @@
       <span class="symbol"> 
         <span class="name">RootService</span>
         
-        <span class="result"> extends <span name="akka.actor.Actor" class="extype">Actor</span> with <a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a> with <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a> with <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></span>
+        <span class="result"> extends <span name="akka.actor.Actor" class="extype">Actor</span> with <span name="cc.spray.utils.Logging" class="extype">Logging</span> with <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a> with <span name="cc.spray.utils.PostStart" class="extype">PostStart</span></span>
       </span>
       </h4>
       
@@ -33,7 +33,10 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
  cc.spray.http.HttpRequest object to all attached <a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>s.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a>, <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a>, <a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="cc.spray.utils.PostStart" class="extype">PostStart</span>, <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a>, <span name="cc.spray.utils.Logging" class="extype">Logging</span>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="cc.spray.SprayCanRootService" class="extype" href="SprayCanRootService.html">SprayCanRootService</a></div>
         </div></div>
         
 
@@ -49,7 +52,7 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="cc.spray.RootService" class="in"><span>RootService</span></li><li name="cc.spray.utils.PostStart" class="in"><span>PostStart</span></li><li name="cc.spray.utils.Logging" class="in"><span>Logging</span></li><li name="cc.spray.ToFromRawConverter" class="in"><span>ToFromRawConverter</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="cc.spray.RootService" class="in"><span>RootService</span></li><li name="cc.spray.utils.PostStart" class="in"><span>PostStart</span></li><li name="cc.spray.ErrorHandling" class="in"><span>ErrorHandling</span></li><li name="cc.spray.utils.Logging" class="in"><span>Logging</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -66,7 +69,7 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       <span class="symbol"> 
         <span class="name">RootService</span>
         
-        <span class="params">()</span>
+        <span class="params">(<span name="firstService">firstService: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>, <span name="moreServices">moreServices: <span name="akka.actor.ActorRef" class="extype">ActorRef</span>*</span>)</span>
       </span>
       </h4>
       
@@ -148,17 +151,6 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.RootService#addConnectionCloseResponseHeader" data-isabs="false">
-      <a id="addConnectionCloseResponseHeader:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">lazy val</span>
-      <span class="symbol"> 
-        <span class="name">addConnectionCloseResponseHeader</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → <a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -170,17 +162,6 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.RootService#attach" data-isabs="false">
-      <a id="attach(ActorRef):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">attach</span>
-        
-        <span class="params">(<span name="serviceActor">serviceActor: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#become" data-isabs="false">
       <a id="become(Receive,Boolean):Unit"></a>
       <h4 class="signature">
@@ -192,17 +173,6 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.ToFromRawConverter#buildHeaders" data-isabs="false">
-      <a id="buildHeaders(Map[String, String]):(Option[Content-Type], Option[Content-Length], List[HttpHeader])"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">buildHeaders</span>
-        
-        <span class="params">(<span name="headers">headers: <span name="scala.collection.Map" class="extype">Map</span>[String, String]</span>)</span><span class="result">: (<span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Type" class="extype">Content-Type</span>], <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Length" class="extype">Content-Length</span>], <span name="scala.collection.immutable.List" class="extype">List</span>[<span name="cc.spray.http.HttpHeader" class="extype">HttpHeader</span>])</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -217,17 +187,6 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.RootService#detach" data-isabs="false">
-      <a id="detach(ActorRef):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">detach</span>
-        
-        <span class="params">(<span name="serviceActor">serviceActor: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -264,17 +223,20 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.ToFromRawConverter#fromSprayResponse" data-isabs="false">
-      <a id="fromSprayResponse(HttpResponse):(RawResponse) ⇒ Unit"></a>
+    </li><li visbl="pub" name="akka.actor.Actor#freshInstance" data-isabs="false">
+      <a id="freshInstance():Option[Actor]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">fromSprayResponse</span>
+        <span class="name">freshInstance</span>
         
-        <span class="params">(<span name="response">response: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>)</span><span class="result">: (<a name="cc.spray.RawResponse" class="extype" href="RawResponse.html">RawResponse</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="akka.actor.Actor" class="extype">Actor</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
+                <span class="name">@experimental</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -285,26 +247,48 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
         <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.ToFromRawConverter#getRemoteHost" data-isabs="false">
-      <a id="getRemoteHost(String):Option[HttpIp]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.RootService#handleExceptions" data-isabs="false">
+      <a id="handleExceptions(RequestContext):PartialFunction[Throwable, Unit]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">getRemoteHost</span>
+        <span class="name">handleExceptions</span>
         
-        <span class="params">(<span name="remoteIP">remoteIP: String</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpIp" class="extype">HttpIp</span>]</span>
+        <span class="params">(<span name="context">context: <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a></span>)</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[Throwable, <span name="scala.Unit" class="extype">Unit</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.RootService#handleException" data-isabs="false">
-      <a id="handleException(Throwable,RawRequestContext):Unit"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.RootService#handleMultipleServices" data-isabs="false">
+      <a id="handleMultipleServices(List[ActorRef])(RequestContext):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">handleException</span>
+        <span class="name">handleMultipleServices</span>
         
-        <span class="params">(<span name="e">e: Throwable</span>, <span name="rawContext">rawContext: <a name="cc.spray.RawRequestContext" class="extype" href="RawRequestContext.html">RawRequestContext</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="services">services: List[<span name="akka.actor.ActorRef" class="extype">ActorRef</span>]</span>)</span><span class="params">(<span name="context">context: <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.RootService#handleOneService" data-isabs="false">
+      <a id="handleOneService(ActorRef)(RequestContext):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">handleOneService</span>
+        
+        <span class="params">(<span name="service">service: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>)</span><span class="params">(<span name="context">context: <a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.RootService#handler" data-isabs="false">
+      <a id="handler:(RequestContext) ⇒ Unit"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">handler</span>
+        
+        <span class="result">: (<a name="cc.spray.RequestContext" class="extype" href="RequestContext.html">RequestContext</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -319,6 +303,17 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.RootService#initialUnmatchedPath" data-isabs="false">
+      <a id="initialUnmatchedPath:(String) ⇒ String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">initialUnmatchedPath</span>
+        
+        <span class="result">: (String) ⇒ String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#isDefinedAt" data-isabs="false">
       <a id="isDefinedAt(Any):Boolean"></a>
       <h4 class="signature">
@@ -348,10 +343,10 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       <span class="symbol"> 
         <span class="name">log</span>
         
-        <span class="result">: <a name="cc.spray.utils.Log" class="extype" href="utils/Log.html">Log</a></span>
+        <span class="result">: <span name="cc.spray.utils.Log" class="extype">Log</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -363,14 +358,14 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.RootService#noService" data-isabs="false">
-      <a id="noService(String):HttpResponse"></a>
+    </li><li visbl="prt" name="cc.spray.RootService#noServiceResponse" data-isabs="false">
+      <a id="noServiceResponse(HttpRequest):HttpResponse"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">noService</span>
+        <span class="name">noServiceResponse</span>
         
-        <span class="params">(<span name="uri">uri: String</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -399,14 +394,14 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
     </li><li visbl="pub" name="akka.actor.Actor#optionSelf" data-isabs="false">
       <a id="optionSelf:Option[ActorRef]"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
+      <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">optionSelf</span>
         
         <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="akka.actor.ActorRef" class="extype">ActorRef</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.RootService#postRestart" data-isabs="false">
       <a id="postRestart(Throwable):Unit"></a>
       <h4 class="signature">
@@ -428,7 +423,7 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → PostStart</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.RootService#postStop" data-isabs="false">
       <a id="postStop():Unit"></a>
       <h4 class="signature">
@@ -451,6 +446,17 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → Actor</dd></dl></div>
+    </li><li visbl="pub" name="akka.actor.Actor#preRestart" data-isabs="false">
+      <a id="preRestart(Throwable,Option[Any]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">preRestart</span>
+        
+        <span class="params">(<span name="reason">reason: Throwable</span>, <span name="message">message: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.RootService#preStart" data-isabs="false">
       <a id="preStart():Unit"></a>
       <h4 class="signature">
@@ -461,18 +467,7 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a> → Actor</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.ToFromRawConverter#readContent" data-isabs="false">
-      <a id="readContent(RawRequest,Option[Content-Type],Option[Content-Length]):Option[HttpContent]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">readContent</span>
-        
-        <span class="params">(<span name="request">request: <a name="cc.spray.RawRequest" class="extype" href="RawRequest.html">RawRequest</a></span>, <span name="contentTypeHeader">contentTypeHeader: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Type" class="extype">Content-Type</span>]</span>, <span name="contentLengthHeader">contentLengthHeader: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpHeaders.Content-Length" class="extype">Content-Length</span>]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.HttpContent" class="extype">HttpContent</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → PostStart → Actor</dd></dl></div>
     </li><li visbl="prt" name="cc.spray.RootService#receive" data-isabs="false">
       <a id="receive:PartialFunction[Any, Unit]"></a>
       <h4 class="signature">
@@ -484,28 +479,39 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="cc.spray.RootService" class="extype" href="">RootService</a> → Actor</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.ErrorHandling#responseForException" data-isabs="false">
+      <a id="responseForException(Any,Exception):HttpResponse"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">responseForException</span>
+        
+        <span class="params">(<span name="request">request: <span name="scala.Any" class="extype">Any</span></span>, <span name="e">e: Exception</span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#self" data-isabs="false">
       <a id="self:ScalaActorRef"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">implicit val</span>
       <span class="symbol"> 
         <span class="name">self</span>
         
         <span class="result">: <span name="akka.actor.ScalaActorRef" class="extype">ScalaActorRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#someSelf" data-isabs="false">
       <a id="someSelf:Some[ActorRef]"></a>
       <h4 class="signature">
-      <span class="kind">implicit val</span>
+      <span class="kind">val</span>
       <span class="symbol"> 
         <span class="name">someSelf</span>
         
         <span class="result">: <span name="scala.Some" class="extype">Some</span>[<span name="akka.actor.ActorRef" class="extype">ActorRef</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -517,17 +523,17 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="prt" name="cc.spray.ToFromRawConverter#toSprayRequest" data-isabs="false">
-      <a id="toSprayRequest(RawRequest):HttpRequest"></a>
+    </li><li visbl="prt" name="cc.spray.RootService#timeoutResponse" data-isabs="false">
+      <a id="timeoutResponse(HttpRequest):HttpResponse"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">toSprayRequest</span>
+        <span class="name">timeoutResponse</span>
         
-        <span class="params">(<span name="request">request: <a name="cc.spray.RawRequest" class="extype" href="RawRequest.html">RawRequest</a></span>)</span><span class="result">: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>
+        <span class="params">(<span name="request">request: <span name="cc.spray.http.HttpRequest" class="extype">HttpRequest</span></span>)</span><span class="result">: <span name="cc.spray.http.HttpResponse" class="extype">HttpResponse</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="cc.spray" class="extype" href="package.html">spray</a>] </dd><dt>Definition Classes</dt><dd><a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -606,12 +612,14 @@ It is responsible for creating an cc.spray.http.HttpRequest object for the reque
     </li></ol>
             </div>
 
+        
+
         <div name="cc.spray.utils.PostStart" class="parent">
-              <h3>Inherited from <a name="cc.spray.utils.PostStart" class="extype" href="utils/PostStart.html">PostStart</a></h3>
+              <h3>Inherited from <span name="cc.spray.utils.PostStart" class="extype">PostStart</span></h3>
+            </div><div name="cc.spray.ErrorHandling" class="parent">
+              <h3>Inherited from <a name="cc.spray.ErrorHandling" class="extype" href="ErrorHandling.html">ErrorHandling</a></h3>
             </div><div name="cc.spray.utils.Logging" class="parent">
-              <h3>Inherited from <a name="cc.spray.utils.Logging" class="extype" href="utils/Logging.html">Logging</a></h3>
-            </div><div name="cc.spray.ToFromRawConverter" class="parent">
-              <h3>Inherited from <a name="cc.spray.ToFromRawConverter" class="extype" href="ToFromRawConverter.html">ToFromRawConverter</a></h3>
+              <h3>Inherited from <span name="cc.spray.utils.Logging" class="extype">Logging</span></h3>
             </div><div name="akka.actor.Actor" class="parent">
               <h3>Inherited from <span name="akka.actor.Actor" class="extype">Actor</span></h3>
             </div><div name="scala.AnyRef" class="parent">

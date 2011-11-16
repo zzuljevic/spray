@@ -47,18 +47,7 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="cc.spray.Attach" data-isabs="false">
-      <a id="Attach:Attach"></a>
-      <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Attach.html"><span class="name">Attach</span></a>
-        
-        <span class="params">(<span name="serviceActorRef">serviceActorRef: ActorRef</span>)</span><span class="result"> extends Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.AuthenticationFailedRejection" data-isabs="false">
+              <ol><li visbl="pub" name="cc.spray.AuthenticationFailedRejection" data-isabs="false">
       <a id="AuthenticationFailedRejection:AuthenticationFailedRejection"></a>
       <h4 class="signature">
       <span class="kind">case class</span>
@@ -135,17 +124,6 @@
       </span>
       </h4>
       <p class="comment cmt">Rejection created by decoding filters.</p>
-    </li><li visbl="pub" name="cc.spray.Detach" data-isabs="false">
-      <a id="Detach:Detach"></a>
-      <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Detach.html"><span class="name">Detach</span></a>
-        
-        <span class="params">(<span name="serviceActorRef">serviceActorRef: ActorRef</span>)</span><span class="result"> extends Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="cc.spray.Directives" data-isabs="true">
       <a id="Directives:Directives"></a>
       <h4 class="signature">
@@ -153,7 +131,7 @@
       <span class="symbol"> 
         <a href="Directives.html"><span class="name">Directives</span></a>
         
-        <span class="result"> extends BasicDirectives with CacheDirectives with CodecDirectives with DetachDirectives with FileAndResourceDirectives with MarshallingDirectives with MiscDirectives with ParameterDirectives with CaseClassExtractionDirectives with PathDirectives with SecurityDirectives with SimpleDirectives with SimpleParsers</span>
+        <span class="result"> extends BasicDirectives with CacheDirectives with CodecDirectives with DetachDirectives with FileAndResourceDirectives with FormFieldDirectives with MarshallingDirectives with MiscDirectives with ParameterDirectives with PathDirectives with SecurityDirectives with SimpleDirectives with FromStringDeserializers with ReceptaclePimps</span>
       </span>
       </h4>
       <p class="comment cmt">Directives is the central trait you should mix in to get access to <i>sprays</i> Route building directives.</p>
@@ -237,6 +215,17 @@ HTTP <code>Authorization</code> header to authenticate the user and extract a us
       </span>
       </h4>
       <p class="comment cmt">The logic part of the <a name="cc.spray.HttpService" class="extype" href="HttpService.html">HttpService</a>.</p>
+    </li><li visbl="pub" name="cc.spray.MalformedFormFieldRejection" data-isabs="false">
+      <a id="MalformedFormFieldRejection:MalformedFormFieldRejection"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="MalformedFormFieldRejection.html"><span class="name">MalformedFormFieldRejection</span></a>
+        
+        <span class="params">(<span name="errorMsg">errorMsg: String</span>, <span name="fieldName">fieldName: String</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Rejection created by form field filters.</p>
     </li><li visbl="pub" name="cc.spray.MalformedQueryParamRejection" data-isabs="false">
       <a id="MalformedQueryParamRejection:MalformedQueryParamRejection"></a>
       <h4 class="signature">
@@ -244,7 +233,7 @@ HTTP <code>Authorization</code> header to authenticate the user and extract a us
       <span class="symbol"> 
         <a href="MalformedQueryParamRejection.html"><span class="name">MalformedQueryParamRejection</span></a>
         
-        <span class="params">(<span name="errorMsg">errorMsg: String</span>, <span name="parameterName">parameterName: Option[String]</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
+        <span class="params">(<span name="errorMsg">errorMsg: String</span>, <span name="parameterName">parameterName: String</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Rejection created by parameter filters.</p>
@@ -259,17 +248,6 @@ HTTP <code>Authorization</code> header to authenticate the user and extract a us
       </span>
       </h4>
       <p class="comment cmt">Rejection created by unmarshallers.</p>
-    </li><li visbl="pub" name="cc.spray.package#Marshaller" data-isabs="false">
-      <a id="Marshaller:Marshaller[A]"></a>
-      <h4 class="signature">
-      <span class="kind">type</span>
-      <span class="symbol"> 
-        <span class="name">Marshaller</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="result"> = ((<span name="cc.spray.http.ContentType" class="extype">ContentType</span>) ⇒ <span name="scala.Option" class="extype">Option</span>[<span name="cc.spray.http.ContentType" class="extype">ContentType</span>]) ⇒ <a name="cc.spray.marshalling.Marshalling" class="extype" href="marshalling/Marshalling.html">Marshalling</a>[A]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="cc.spray.MethodRejection" data-isabs="false">
       <a id="MethodRejection:MethodRejection"></a>
       <h4 class="signature">
@@ -281,6 +259,17 @@ HTTP <code>Authorization</code> header to authenticate the user and extract a us
       </span>
       </h4>
       <p class="comment cmt">Rejection created by method filters.</p>
+    </li><li visbl="pub" name="cc.spray.MissingFormFieldRejection" data-isabs="false">
+      <a id="MissingFormFieldRejection:MissingFormFieldRejection"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="MissingFormFieldRejection.html"><span class="name">MissingFormFieldRejection</span></a>
+        
+        <span class="params">(<span name="fieldName">fieldName: String</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Rejection created by form field filters.</p>
     </li><li visbl="pub" name="cc.spray.MissingQueryParamRejection" data-isabs="false">
       <a id="MissingQueryParamRejection:MissingQueryParamRejection"></a>
       <h4 class="signature">
@@ -300,39 +289,6 @@ HTTP <code>Authorization</code> header to authenticate the user and extract a us
         <a href="Pass.html"><span class="name">Pass</span></a>
         <span class="tparams">[<span name="T">+T &lt;: Product</span>]</span>
         <span class="result"> extends FilterResult[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.RawRequest" data-isabs="true">
-      <a id="RawRequest:RawRequest"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="RawRequest.html"><span class="name">RawRequest</span></a>
-        
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.RawRequestContext" data-isabs="false">
-      <a id="RawRequestContext:RawRequestContext"></a>
-      <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="RawRequestContext.html"><span class="name">RawRequestContext</span></a>
-        
-        <span class="params">(<span name="request">request: RawRequest</span>, <span name="complete">complete: ((RawResponse) ⇒ Unit) ⇒ Unit</span>)</span><span class="result"> extends Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.RawResponse" data-isabs="true">
-      <a id="RawResponse:RawResponse"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="RawResponse.html"><span class="name">RawResponse</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -377,7 +333,7 @@ another Route of the same type has matched the request.</p>
       <span class="symbol"> 
         <a href="RequestContext.html"><span class="name">RequestContext</span></a>
         
-        <span class="params">(<span name="request">request: HttpRequest</span>, <span name="responder">responder: (RoutingResult) ⇒ Unit</span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span><span class="result"> extends Product with Serializable</span>
+        <span class="params">(<span name="request">request: HttpRequest</span>, <span name="remoteHost">remoteHost: HttpIp</span>, <span name="responder">responder: (RoutingResult) ⇒ Unit</span>, <span name="unmatchedPath">unmatchedPath: String</span>)</span><span class="result"> extends Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Immutable object encapsulating the context of an cc.spray.http.HttpRequest
@@ -411,7 +367,7 @@ as it flows through a <i>spray</i> Route structure.</p>
       <span class="symbol"> 
         <a href="RootService.html"><span class="name">RootService</span></a>
         
-        <span class="result"> extends Actor with ToFromRawConverter with Logging with PostStart</span>
+        <span class="result"> extends Actor with Logging with ErrorHandling with PostStart</span>
       </span>
       </h4>
       <p class="comment cmt">The RootService actor is the central entrypoint for HTTP requests entering the <i>spray</i> infrastructure.</p>
@@ -450,51 +406,39 @@ as it flows through a <i>spray</i> Route structure.</p>
       <p class="comment cmt">The RoutingResult represents the two different options for the way Routes
 can act upon a request <a name="cc.spray.Respond" class="extype" href="Respond.html">Respond</a> or <a name="cc.spray.Reject" class="extype" href="Reject.html">Reject</a>
 </p>
-    </li><li visbl="pub" name="cc.spray.SimpleConverter" data-isabs="true">
-      <a id="SimpleConverter:SimpleConverter[A, B]"></a>
+    </li><li visbl="pub" name="cc.spray.SprayCanRootService" data-isabs="false">
+      <a id="SprayCanRootService:SprayCanRootService"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
-        <a href="SimpleConverter.html"><span class="name">SimpleConverter</span></a>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="result"> extends (A) ⇒ Either[String, B]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.SimpleParser" data-isabs="true">
-      <a id="SimpleParser:SimpleParser[A]"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="SimpleParser.html"><span class="name">SimpleParser</span></a>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="result"> extends SimpleConverter[String, A]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.SimpleParsers" data-isabs="true">
-      <a id="SimpleParsers:SimpleParsers"></a>
-      <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="SimpleParsers.html"><span class="name">SimpleParsers</span></a>
+        <a href="SprayCanRootService.html"><span class="name">SprayCanRootService</span></a>
         
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends RootService with SprayCanSupport</span>
       </span>
       </h4>
-      
-    </li><li visbl="pub" name="cc.spray.ToFromRawConverter" data-isabs="true">
-      <a id="ToFromRawConverter:ToFromRawConverter"></a>
+      <p class="comment cmt">A specialized <a name="cc.spray.RootService" class="extype" href="RootService.html">RootService</a> for connector-less deployment on top of the <i>spray-can</i> <code>HttpServer</code>.</p>
+    </li><li visbl="pub" name="cc.spray.SprayCanSupport" data-isabs="true">
+      <a id="SprayCanSupport:SprayCanSupport"></a>
       <h4 class="signature">
       <span class="kind">trait</span>
       <span class="symbol"> 
-        <a href="ToFromRawConverter.html"><span class="name">ToFromRawConverter</span></a>
+        <a href="SprayCanSupport.html"><span class="name">SprayCanSupport</span></a>
         
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends SprayCanConversions</span>
       </span>
       </h4>
-      <p class="comment cmt">The logic for converting <a name="cc.spray.RawRequest" class="extype" href="RawRequest.html">RawRequest</a>s to cc.spray.http.HttpRequests and
-<a name="cc.spray.RawResponse" class="extype" href="RawResponse.html">RawResponse</a>s to cc.spray.http.HttpResponses.</p>
+      
+    </li><li visbl="pub" name="cc.spray.Timeout" data-isabs="false">
+      <a id="Timeout:Timeout"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="Timeout.html"><span class="name">Timeout</span></a>
+        
+        <span class="params">(<span name="context">context: RequestContext</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.UnacceptedResponseContentTypeRejection" data-isabs="false">
       <a id="UnacceptedResponseContentTypeRejection:UnacceptedResponseContentTypeRejection"></a>
       <h4 class="signature">
@@ -517,17 +461,6 @@ can act upon a request <a name="cc.spray.Respond" class="extype" href="Respond.h
       </span>
       </h4>
       <p class="comment cmt">Rejection created by encoding filters.</p>
-    </li><li visbl="pub" name="cc.spray.package#Unmarshaller" data-isabs="false">
-      <a id="Unmarshaller:Unmarshaller[A]"></a>
-      <h4 class="signature">
-      <span class="kind">type</span>
-      <span class="symbol"> 
-        <span class="name">Unmarshaller</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="result"> = (<span name="cc.spray.http.ContentType" class="extype">ContentType</span>) ⇒ <a name="cc.spray.marshalling.Unmarshalling" class="extype" href="marshalling/Unmarshalling.html">Unmarshalling</a>[A]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="cc.spray.UnsupportedRequestContentTypeRejection" data-isabs="false">
       <a id="UnsupportedRequestContentTypeRejection:UnsupportedRequestContentTypeRejection"></a>
       <h4 class="signature">
@@ -535,7 +468,7 @@ can act upon a request <a name="cc.spray.Respond" class="extype" href="Respond.h
       <span class="symbol"> 
         <a href="UnsupportedRequestContentTypeRejection.html"><span class="name">UnsupportedRequestContentTypeRejection</span></a>
         
-        <span class="params">(<span name="supported">supported: Seq[ContentTypeRange]</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
+        <span class="params">(<span name="errorMsg">errorMsg: String</span>)</span><span class="result"> extends Rejection with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Rejection created by unmarshallers.</p>
@@ -579,18 +512,7 @@ can act upon a request <a name="cc.spray.Respond" class="extype" href="Respond.h
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="cc.spray.Attach" data-isabs="false">
-      <a id="Attach:Attach"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Attach$.html"><span class="name">Attach</span></a>
-        
-        <span class="result"> extends Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.AuthorizationFailedRejection" data-isabs="false">
+              <ol><li visbl="pub" name="cc.spray.AuthorizationFailedRejection" data-isabs="false">
       <a id="AuthorizationFailedRejection:AuthorizationFailedRejection"></a>
       <h4 class="signature">
       <span class="kind">object</span>
@@ -624,17 +546,6 @@ can act upon a request <a name="cc.spray.Respond" class="extype" href="Respond.h
       </h4>
       <p class="comment cmt">A UserPassAuthenticator that uses plain-text username/password definitions from the spray/akka config file
 for authentication.</p>
-    </li><li visbl="pub" name="cc.spray.HttpService" data-isabs="false">
-      <a id="HttpService:HttpService"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="HttpService$.html"><span class="name">HttpService</span></a>
-        
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="cc.spray.Pass" data-isabs="false">
       <a id="Pass:Pass"></a>
       <h4 class="signature">
@@ -679,47 +590,14 @@ for authentication.</p>
       </span>
       </h4>
       <p class="comment cmt">Rejection created by unmarshallers.</p>
-    </li><li visbl="pub" name="cc.spray.SimpleConverter" data-isabs="false">
-      <a id="SimpleConverter:SimpleConverter"></a>
+    </li><li visbl="pub" name="cc.spray.SprayServerSettings" data-isabs="false">
+      <a id="SprayServerSettings:SprayServerSettings"></a>
       <h4 class="signature">
       <span class="kind">object</span>
       <span class="symbol"> 
-        <a href="SimpleConverter$.html"><span class="name">SimpleConverter</span></a>
+        <a href="SprayServerSettings$.html"><span class="name">SprayServerSettings</span></a>
         
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.SimpleParsers" data-isabs="false">
-      <a id="SimpleParsers:SimpleParsers"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SimpleParsers$.html"><span class="name">SimpleParsers</span></a>
-        
-        <span class="result"> extends SimpleParsers</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.SpraySettings" data-isabs="false">
-      <a id="SpraySettings:SpraySettings"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SpraySettings$.html"><span class="name">SpraySettings</span></a>
-        
-        <span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.TimeOutHandler" data-isabs="false">
-      <a id="TimeOutHandler:TimeOutHandler"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="TimeOutHandler$.html"><span class="name">TimeOutHandler</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends AkkaConfSettings</span>
       </span>
       </h4>
       
@@ -756,105 +634,6 @@ for authentication.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.package#make" data-isabs="false">
-      <a id="make[A, U](A)((A) ⇒ U):A"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">make</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span>
-        <span class="params">(<span name="a">a: A</span>)</span><span class="params">(<span name="f">f: (A) ⇒ U</span>)</span><span class="result">: A</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#marshaller" data-isabs="false">
-      <a id="marshaller[T](Marshaller[T]):Marshaller[T]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">marshaller</span>
-        <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="m">m: Marshaller[T]</span>)</span><span class="result">: Marshaller[T]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.marshalling" data-isabs="false">
-      <a id="marshalling:marshalling"></a>
-      <h4 class="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
-        <a href="marshalling/package.html"><span class="name">marshalling</span></a>
-        
-        
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.package#pimpClass" data-isabs="false">
-      <a id="pimpClass[A](Class[A]):PimpedClass[A]"></a>
-      <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">pimpClass</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="clazz">clazz: Class[A]</span>)</span><span class="result">: <a name="cc.spray.utils.PimpedClass" class="extype" href="utils/PimpedClass.html">PimpedClass</a>[A]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#pimpFuture" data-isabs="false">
-      <a id="pimpFuture[F&lt;:akka.dispatch.Future[_]](F):PimpedFuture[F]"></a>
-      <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">pimpFuture</span>
-        <span class="tparams">[<span name="F">F &lt;: akka.dispatch.Future[_]</span>]</span>
-        <span class="params">(<span name="future">future: F</span>)</span><span class="result">: <a name="cc.spray.utils.PimpedFuture" class="extype" href="utils/PimpedFuture.html">PimpedFuture</a>[F]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#pimpLinearSeq" data-isabs="false">
-      <a id="pimpLinearSeq[A](LinearSeq[A]):PimpedLinearSeq[A]"></a>
-      <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">pimpLinearSeq</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="seq">seq: <span name="scala.collection.immutable.LinearSeq" class="extype">LinearSeq</span>[A]</span>)</span><span class="result">: <a name="cc.spray.utils.PimpedLinearSeq" class="extype" href="utils/PimpedLinearSeq.html">PimpedLinearSeq</a>[A]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#pimpProduct" data-isabs="false">
-      <a id="pimpProduct(Product):PimpedProduct"></a>
-      <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">pimpProduct</span>
-        
-        <span class="params">(<span name="product">product: <span name="scala.Product" class="extype">Product</span></span>)</span><span class="result">: <a name="cc.spray.utils.PimpedProduct" class="extype" href="utils/PimpedProduct.html">PimpedProduct</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#pimpRegex" data-isabs="false">
-      <a id="pimpRegex(Regex):PimpedRegex"></a>
-      <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">pimpRegex</span>
-        
-        <span class="params">(<span name="regex">regex: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>)</span><span class="result">: <a name="cc.spray.utils.PimpedRegex" class="extype" href="utils/PimpedRegex.html">PimpedRegex</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.package#simpleParser" data-isabs="false">
-      <a id="simpleParser[T](SimpleParser[T]):SimpleParser[T]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">simpleParser</span>
-        <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="sp">sp: <a name="cc.spray.SimpleParser" class="extype" href="SimpleParser.html">SimpleParser</a>[T]</span>)</span><span class="result">: <a name="cc.spray.SimpleParser" class="extype" href="SimpleParser.html">SimpleParser</a>[T]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="cc.spray.test" data-isabs="false">
       <a id="test:test"></a>
       <h4 class="signature">
@@ -866,30 +645,10 @@ for authentication.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.package#unmarshaller" data-isabs="false">
-      <a id="unmarshaller[T](Unmarshaller[T]):Unmarshaller[T]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">unmarshaller</span>
-        <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="um">um: Unmarshaller[T]</span>)</span><span class="result">: Unmarshaller[T]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.utils" data-isabs="false">
-      <a id="utils:utils"></a>
-      <h4 class="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
-        <a href="utils/package.html"><span class="name">utils</span></a>
-        
-        
-      </span>
-      </h4>
-      
     </li></ol>
             </div>
+
+        
 
         
 
