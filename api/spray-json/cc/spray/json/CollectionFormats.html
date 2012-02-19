@@ -121,13 +121,13 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#arrayFormat" data-isabs="false">
-      <a id="arrayFormat[T](JsonFormat[T],ClassManifest[T]):JsonFormat[Array[T]] { def write(array: Array[T]): cc.spray.json.JsArray }"></a>
+      <a id="arrayFormat[T](JsonFormat[T],ClassManifest[T]):RootJsonFormat[Array[T]] { def write(array: Array[T]): cc.spray.json.JsArray }"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">arrayFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>, <span name="arg1">arg1: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.Array" class="extype">Array</span>[T]] { def write(array: Array[T]): cc.spray.json.JsArray }</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>, <span name="arg1">arg1: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.Array" class="extype">Array</span>[T]] { def write(array: Array[T]): cc.spray.json.JsArray }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Supplies the JsonFormat for Arrays.</p><div class="fullcomment"><div class="comment cmt"><p>Supplies the JsonFormat for Arrays.
@@ -216,68 +216,68 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#immIndexedSeqFormat" data-isabs="false">
-      <a id="immIndexedSeqFormat[T](JsonFormat[T]):JsonFormat[IndexedSeq[T]]"></a>
+      <a id="immIndexedSeqFormat[T](JsonFormat[T]):RootJsonFormat[IndexedSeq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">immIndexedSeqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.immutable.IndexedSeq" class="extype">IndexedSeq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.immutable.IndexedSeq" class="extype">IndexedSeq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#immIterableFormat" data-isabs="false">
-      <a id="immIterableFormat[T](JsonFormat[T]):JsonFormat[Iterable[T]]"></a>
+      <a id="immIterableFormat[T](JsonFormat[T]):RootJsonFormat[Iterable[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">immIterableFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.immutable.Iterable" class="extype">Iterable</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.immutable.Iterable" class="extype">Iterable</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#immLinearSeqFormat" data-isabs="false">
-      <a id="immLinearSeqFormat[T](JsonFormat[T]):JsonFormat[LinearSeq[T]]"></a>
+      <a id="immLinearSeqFormat[T](JsonFormat[T]):RootJsonFormat[LinearSeq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">immLinearSeqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.immutable.LinearSeq" class="extype">LinearSeq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.immutable.LinearSeq" class="extype">LinearSeq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#immSeqFormat" data-isabs="false">
-      <a id="immSeqFormat[T](JsonFormat[T]):JsonFormat[Seq[T]]"></a>
+      <a id="immSeqFormat[T](JsonFormat[T]):RootJsonFormat[Seq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">immSeqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.immutable.Seq" class="extype">Seq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.immutable.Seq" class="extype">Seq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#immSetFormat" data-isabs="false">
-      <a id="immSetFormat[T](JsonFormat[T]):JsonFormat[Set[T]]"></a>
+      <a id="immSetFormat[T](JsonFormat[T]):RootJsonFormat[Set[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">immSetFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.immutable.Set" class="extype">Set</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.immutable.Set" class="extype">Set</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#indexedSeqFormat" data-isabs="false">
-      <a id="indexedSeqFormat[T](JsonFormat[T]):JsonFormat[IndexedSeq[T]]"></a>
+      <a id="indexedSeqFormat[T](JsonFormat[T]):RootJsonFormat[IndexedSeq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">indexedSeqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.IndexedSeq" class="extype">IndexedSeq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.IndexedSeq" class="extype">IndexedSeq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
@@ -293,47 +293,47 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#iterableFormat" data-isabs="false">
-      <a id="iterableFormat[T](JsonFormat[T]):JsonFormat[Iterable[T]]"></a>
+      <a id="iterableFormat[T](JsonFormat[T]):RootJsonFormat[Iterable[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">iterableFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.Iterable" class="extype">Iterable</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.Iterable" class="extype">Iterable</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#linearSeqFormat" data-isabs="false">
-      <a id="linearSeqFormat[T](JsonFormat[T]):JsonFormat[LinearSeq[T]]"></a>
+      <a id="linearSeqFormat[T](JsonFormat[T]):RootJsonFormat[LinearSeq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">linearSeqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.LinearSeq" class="extype">LinearSeq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.LinearSeq" class="extype">LinearSeq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#listFormat" data-isabs="false">
-      <a id="listFormat[T](JsonFormat[T]):JsonFormat[List[T]] { def write(list: List[T]): cc.spray.json.JsArray }"></a>
+      <a id="listFormat[T](JsonFormat[T]):RootJsonFormat[List[T]] { def write(list: List[T]): cc.spray.json.JsArray }"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">listFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[List[T]] { def write(list: List[T]): cc.spray.json.JsArray }</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[List[T]] { def write(list: List[T]): cc.spray.json.JsArray }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Supplies the JsonFormat for Lists.</p><div class="fullcomment"><div class="comment cmt"><p>Supplies the JsonFormat for Lists.
 </p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#mapFormat" data-isabs="false">
-      <a id="mapFormat[K, V](JsonFormat[K],JsonFormat[V]):JsonFormat[Map[K, V]] { def write(m: Map[K,V]): cc.spray.json.JsObject }"></a>
+      <a id="mapFormat[K, V](JsonFormat[K],JsonFormat[V]):RootJsonFormat[Map[K, V]] { def write(m: Map[K,V]): cc.spray.json.JsObject }"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">mapFormat</span>
         <span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[K]</span>, <span name="arg1">arg1: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[V]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[Map[K, V]] { def write(m: Map[K,V]): cc.spray.json.JsObject }</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[K]</span>, <span name="arg1">arg1: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[V]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[Map[K, V]] { def write(m: Map[K,V]): cc.spray.json.JsObject }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Supplies the JsonFormat for Maps.</p><div class="fullcomment"><div class="comment cmt"><p>Supplies the JsonFormat for Maps. The implicitly available JsonFormat for the key type K must
@@ -373,24 +373,24 @@ always write JsStrings, otherwise a <a name="cc.spray.json.SerializationExceptio
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#seqFormat" data-isabs="false">
-      <a id="seqFormat[T](JsonFormat[T]):JsonFormat[Seq[T]]"></a>
+      <a id="seqFormat[T](JsonFormat[T]):RootJsonFormat[Seq[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">seqFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.Seq" class="extype">Seq</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.Seq" class="extype">Seq</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#setFormat" data-isabs="false">
-      <a id="setFormat[T](JsonFormat[T]):JsonFormat[Set[T]]"></a>
+      <a id="setFormat[T](JsonFormat[T]):RootJsonFormat[Set[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">setFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[<span name="scala.collection.Set" class="extype">Set</span>[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[<span name="scala.collection.Set" class="extype">Set</span>[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
@@ -417,24 +417,24 @@ always write JsStrings, otherwise a <a name="cc.spray.json.SerializationExceptio
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#vectorFormat" data-isabs="false">
-      <a id="vectorFormat[T](JsonFormat[T]):JsonFormat[Vector[T]]"></a>
+      <a id="vectorFormat[T](JsonFormat[T]):RootJsonFormat[Vector[T]]"></a>
       <h4 class="signature">
       <span class="kind">implicit def</span>
       <span class="symbol"> 
         <span class="name">vectorFormat</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[Vector[T]]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[Vector[T]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.CollectionFormats#viaList" data-isabs="false">
-      <a id="viaList[I&lt;:Iterable[T], T]((List[T]) ⇒ I)(JsonFormat[T]):JsonFormat[I]"></a>
+      <a id="viaList[I&lt;:Iterable[T], T]((List[T]) ⇒ I)(JsonFormat[T]):RootJsonFormat[I]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">viaList</span>
         <span class="tparams">[<span name="I">I &lt;: <span name="scala.collection.Iterable" class="extype">Iterable</span>[T]</span>, <span name="T">T</span>]</span>
-        <span class="params">(<span name="f">f: (List[T]) ⇒ I</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[I]</span>
+        <span class="params">(<span name="f">f: (List[T]) ⇒ I</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[I]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">A JsonFormat construction helper that creates a JsonFormat for an Iterable type I from a builder function

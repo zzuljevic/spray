@@ -169,6 +169,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.json.ProductFormats#extractFieldNames" data-isabs="false">
+      <a id="extractFieldNames(ClassManifest[_]):Array[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">extractFieldNames</span>
+        
+        <span class="params">(<span name="classManifest">classManifest: ClassManifest[_]</span>)</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[String]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -217,167 +228,332 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N],JF[O]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N],JF[O]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="N">N</span>, <span name="O">O</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>, <span name="n">n: String</span>, <span name="o">o: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>, <span name="arg14">arg14: JF[O]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>, <span name="n">n: String</span>, <span name="o">o: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>, <span name="arg14">arg14: JF[O]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, N, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, N, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="N">N</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>, <span name="n">n: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>, <span name="n">n: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, M, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>, <span name="m">m: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, L, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T,String,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>, <span name="l">l: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K) ⇒ T,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, K, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K) ⇒ T,String,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>, <span name="k">k: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J) ⇒ T,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, J, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J) ⇒ T,String,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>, <span name="j">j: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, T&lt;:Product]((A, B, C, D, E, F, G, H, I) ⇒ T,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, I, T&lt;:Product]((A, B, C, D, E, F, G, H, I) ⇒ T,String,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>, <span name="i">i: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, H, T&lt;:Product]((A, B, C, D, E, F, G, H) ⇒ T,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, H, T&lt;:Product]((A, B, C, D, E, F, G, H) ⇒ T,String,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>, <span name="h">h: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, G, T&lt;:Product]((A, B, C, D, E, F, G) ⇒ T,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, G, T&lt;:Product]((A, B, C, D, E, F, G) ⇒ T,String,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>, <span name="g">g: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, F, T&lt;:Product]((A, B, C, D, E, F) ⇒ T,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, F, T&lt;:Product]((A, B, C, D, E, F) ⇒ T,String,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>, <span name="f">f: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, E, T&lt;:Product]((A, B, C, D, E) ⇒ T,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, E, T&lt;:Product]((A, B, C, D, E) ⇒ T,String,String,String,String,String)(JF[A],JF[B],JF[C],JF[D],JF[E]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D, E) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>, <span name="e">e: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, D, T&lt;:Product]((A, B, C, D) ⇒ T,String,String,String,String)(JF[A],JF[B],JF[C],JF[D]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, D, T&lt;:Product]((A, B, C, D) ⇒ T,String,String,String,String)(JF[A],JF[B],JF[C],JF[D]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C, D) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>, <span name="d">d: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, C, T&lt;:Product]((A, B, C) ⇒ T,String,String,String)(JF[A],JF[B],JF[C]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, C, T&lt;:Product]((A, B, C) ⇒ T,String,String,String)(JF[A],JF[B],JF[C]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B, C) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B, C) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>, <span name="c">c: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, B, T&lt;:Product]((A, B) ⇒ T,String,String)(JF[A],JF[B]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, B, T&lt;:Product]((A, B) ⇒ T,String,String)(JF[A],JF[B]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A, B) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A, B) ⇒ T</span>, <span name="a">a: String</span>, <span name="b">b: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat" data-isabs="false">
-      <a id="jsonFormat[A, T&lt;:Product]((A) ⇒ T,String)(JF[A]):JF[T] { def write(p: T): cc.spray.json.JsObject }"></a>
+      <a id="jsonFormat[A, T&lt;:Product]((A) ⇒ T,String)(JF[A]):RootJsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">jsonFormat</span>
         <span class="tparams">[<span name="A">A</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
-        <span class="params">(<span name="construct">construct: (A) ⇒ T</span>, <span name="a">a: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>)</span><span class="result">: JF[T] { def write(p: T): cc.spray.json.JsObject }</span>
+        <span class="params">(<span name="construct">construct: (A) ⇒ T</span>, <span name="a">a: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat1" data-isabs="false">
+      <a id="jsonFormat1[A, T&lt;:Product]((A) ⇒ T)(JF[A],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat1</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat10" data-isabs="false">
+      <a id="jsonFormat10[A, B, C, D, E, F, G, H, I, J, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat10</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat11" data-isabs="false">
+      <a id="jsonFormat11[A, B, C, D, E, F, G, H, I, J, K, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat11</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat12" data-isabs="false">
+      <a id="jsonFormat12[A, B, C, D, E, F, G, H, I, J, K, L, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat12</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat13" data-isabs="false">
+      <a id="jsonFormat13[A, B, C, D, E, F, G, H, I, J, K, L, M, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat13</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat14" data-isabs="false">
+      <a id="jsonFormat14[A, B, C, D, E, F, G, H, I, J, K, L, M, N, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat14</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="N">N</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>, <span name="arg14">arg14: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat15" data-isabs="false">
+      <a id="jsonFormat15[A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, T&lt;:Product]((A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],JF[J],JF[K],JF[L],JF[M],JF[N],JF[O],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat15</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="J">J</span>, <span name="K">K</span>, <span name="L">L</span>, <span name="M">M</span>, <span name="N">N</span>, <span name="O">O</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: JF[J]</span>, <span name="arg10">arg10: JF[K]</span>, <span name="arg11">arg11: JF[L]</span>, <span name="arg12">arg12: JF[M]</span>, <span name="arg13">arg13: JF[N]</span>, <span name="arg14">arg14: JF[O]</span>, <span name="arg15">arg15: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat2" data-isabs="false">
+      <a id="jsonFormat2[A, B, T&lt;:Product]((A, B) ⇒ T)(JF[A],JF[B],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat2</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat3" data-isabs="false">
+      <a id="jsonFormat3[A, B, C, T&lt;:Product]((A, B, C) ⇒ T)(JF[A],JF[B],JF[C],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat3</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat4" data-isabs="false">
+      <a id="jsonFormat4[A, B, C, D, T&lt;:Product]((A, B, C, D) ⇒ T)(JF[A],JF[B],JF[C],JF[D],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat4</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat5" data-isabs="false">
+      <a id="jsonFormat5[A, B, C, D, E, T&lt;:Product]((A, B, C, D, E) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat5</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat6" data-isabs="false">
+      <a id="jsonFormat6[A, B, C, D, E, F, T&lt;:Product]((A, B, C, D, E, F) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat6</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat7" data-isabs="false">
+      <a id="jsonFormat7[A, B, C, D, E, F, G, T&lt;:Product]((A, B, C, D, E, F, G) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat7</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat8" data-isabs="false">
+      <a id="jsonFormat8[A, B, C, D, E, F, G, H, T&lt;:Product]((A, B, C, D, E, F, G, H) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat8</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="cc.spray.json.ProductFormats#jsonFormat9" data-isabs="false">
+      <a id="jsonFormat9[A, B, C, D, E, F, G, H, I, T&lt;:Product]((A, B, C, D, E, F, G, H, I) ⇒ T)(JF[A],JF[B],JF[C],JF[D],JF[E],JF[F],JF[G],JF[H],JF[I],ClassManifest[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">jsonFormat9</span>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="H">H</span>, <span name="I">I</span>, <span name="T">T &lt;: <span name="scala.Product" class="extype">Product</span></span>]</span>
+        <span class="params">(<span name="construct">construct: (A, B, C, D, E, F, G, H, I) ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: JF[A]</span>, <span name="arg1">arg1: JF[B]</span>, <span name="arg2">arg2: JF[C]</span>, <span name="arg3">arg3: JF[D]</span>, <span name="arg4">arg4: JF[E]</span>, <span name="arg5">arg5: JF[F]</span>, <span name="arg6">arg6: JF[G]</span>, <span name="arg7">arg7: JF[H]</span>, <span name="arg8">arg8: JF[I]</span>, <span name="arg9">arg9: ClassManifest[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
       </span>
       </h4>
       
@@ -415,13 +591,13 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="prt" name="cc.spray.json.ProductFormats#productElement2Field" data-isabs="false">
-      <a id="productElement2Field[T](String,Product,Int,List[JsField])(JsonWriter[T]):List[JsField]"></a>
+      <a id="productElement2Field[T](String,Product,Int,List[()])(JsonWriter[T]):List[()]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">productElement2Field</span>
         <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span name="fieldName">fieldName: String</span>, <span name="p">p: <span name="scala.Product" class="extype">Product</span></span>, <span name="ix">ix: <span name="scala.Int" class="extype">Int</span></span>, <span name="rest">rest: List[<a name="cc.spray.json.JsField" class="extype" href="JsField.html">JsField</a>] = <span class="symbol">Nil</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="writer">writer: <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</span>)</span><span class="result">: List[<a name="cc.spray.json.JsField" class="extype" href="JsField.html">JsField</a>]</span>
+        <span class="params">(<span name="fieldName">fieldName: String</span>, <span name="p">p: <span name="scala.Product" class="extype">Product</span></span>, <span name="ix">ix: <span name="scala.Int" class="extype">Int</span></span>, <span name="rest">rest: List[()] = <span class="symbol">Nil</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="writer">writer: <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</span>)</span><span class="result">: List[()]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>

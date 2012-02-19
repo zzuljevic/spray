@@ -250,6 +250,17 @@
       <p class="shortcomment cmt">Lazy wrapper around serialization.</p><div class="fullcomment"><div class="comment cmt"><p>Lazy wrapper around serialization. Useful when you want to serialize (mutually) recursive structures.
 </p></div></div>
     </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#lift" data-isabs="false">
+      <a id="lift[T&lt;:AnyRef](RootJsonReader[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">lift</span>
+        <span class="tparams">[<span name="T">T &lt;: AnyRef</span>]</span>
+        <span class="params">(<span name="reader">reader: <a name="cc.spray.json.RootJsonReader" class="extype" href="RootJsonReader.html">RootJsonReader</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Turns a RootJsonReader into a RootJsonFormat that throws an UnsupportedOperationException for writes.</p>
+    </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#lift" data-isabs="false">
       <a id="lift[T&lt;:AnyRef](JsonReader[T]):JsonFormat[T]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -260,6 +271,17 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Turns a JsonReader into a JsonFormat that throws an UnsupportedOperationException for writes.</p>
+    </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#lift" data-isabs="false">
+      <a id="lift[T](RootJsonWriter[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">lift</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="writer">writer: <a name="cc.spray.json.RootJsonWriter" class="extype" href="RootJsonWriter.html">RootJsonWriter</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Turns a RootJsonWriter into a RootJsonFormat that throws an UnsupportedOperationException for reads.</p>
     </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#lift" data-isabs="false">
       <a id="lift[T](JsonWriter[T]):JsonFormat[T] { def read(value: cc.spray.json.JsValue): Nothing }"></a>
       <h4 class="signature">
@@ -304,6 +326,28 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#rootFormat" data-isabs="false">
+      <a id="rootFormat[T](JsonFormat[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">rootFormat</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="format">format: <a name="cc.spray.json.JsonFormat" class="extype" href="JsonFormat.html">JsonFormat</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Explicitly turns a JsonFormat into a RootJsonFormat.</p>
+    </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#rootJsonFormat" data-isabs="false">
+      <a id="rootJsonFormat[T](RootJsonReader[T],RootJsonWriter[T]):RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">rootJsonFormat</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="reader">reader: <a name="cc.spray.json.RootJsonReader" class="extype" href="RootJsonReader.html">RootJsonReader</a>[T]</span>, <span name="writer">writer: <a name="cc.spray.json.RootJsonWriter" class="extype" href="RootJsonWriter.html">RootJsonWriter</a>[T]</span>)</span><span class="result">: <a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a RootJsonFormat from its two parts, RootJsonReader and RootJsonWriter.</p>
     </li><li visbl="pub" name="cc.spray.json.AdditionalFormats#safeReader" data-isabs="false">
       <a id="safeReader[A](JsonReader[A]):JsonReader[Either[Exception, A]]"></a>
       <h4 class="signature">

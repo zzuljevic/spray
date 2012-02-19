@@ -128,7 +128,7 @@
     </li><li visbl="pub" name="cc.spray.json.JsBoolean" data-isabs="true">
       <a id="JsBoolean:JsBoolean"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
         <a href="JsBoolean.html"><span class="name">JsBoolean</span></a>
         
@@ -136,17 +136,17 @@
       </span>
       </h4>
       <p class="comment cmt">JSON Booleans.</p>
-    </li><li visbl="pub" name="cc.spray.json.JsField" data-isabs="false">
-      <a id="JsField:JsField"></a>
+    </li><li visbl="pub" name="cc.spray.json.package#JsField" data-isabs="false">
+      <a id="JsField:()"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
+      <span class="kind">type</span>
       <span class="symbol"> 
-        <a href="JsField.html"><span class="name">JsField</span></a>
+        <span class="name">JsField</span>
         
-        <span class="params">(<span name="name">name: String</span>, <span name="value">value: JsValue</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+        <span class="result"> = (String, <a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a>)</span>
       </span>
       </h4>
-      <p class="comment cmt">The members/fields of a JSON object.</p>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.JsNumber" data-isabs="false">
       <a id="JsNumber:JsNumber"></a>
       <h4 class="signature">
@@ -165,7 +165,7 @@
       <span class="symbol"> 
         <a href="JsObject.html"><span class="name">JsObject</span></a>
         
-        <span class="params">(<span name="fields">fields: List[JsField]</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
+        <span class="params">(<span name="fields">fields: Map[String, JsValue]</span>)</span><span class="result"> extends JsValue with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A JSON object.</p>
@@ -183,7 +183,7 @@
     </li><li visbl="pub" name="cc.spray.json.JsValue" data-isabs="true">
       <a id="JsValue:JsValue"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
         <a href="JsValue.html"><span class="name">JsValue</span></a>
         
@@ -270,6 +270,39 @@
       <p class="comment cmt">Provides the helpers for constructing custom JsonFormat implementations for types implementing the Product trait
 (especially case classes)
 </p>
+    </li><li visbl="pub" name="cc.spray.json.RootJsonFormat" data-isabs="true">
+      <a id="RootJsonFormat:RootJsonFormat[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="RootJsonFormat.html"><span class="name">RootJsonFormat</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends JsonFormat[T] with RootJsonReader[T] with RootJsonWriter[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A special JsonFormat signaling that the format produces a legal JSON root object, i.</p>
+    </li><li visbl="pub" name="cc.spray.json.RootJsonReader" data-isabs="true">
+      <a id="RootJsonReader:RootJsonReader[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="RootJsonReader.html"><span class="name">RootJsonReader</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends JsonReader[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A special JsonReader capable of reading a legal JSON root object, i.</p>
+    </li><li visbl="pub" name="cc.spray.json.RootJsonWriter" data-isabs="true">
+      <a id="RootJsonWriter:RootJsonWriter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="RootJsonWriter.html"><span class="name">RootJsonWriter</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends JsonWriter[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A special JsonWriter capable of writing a legal JSON root object, i.</p>
     </li><li visbl="pub" name="cc.spray.json.SerializationException" data-isabs="false">
       <a id="SerializationException:SerializationException"></a>
       <h4 class="signature">
@@ -354,17 +387,6 @@
       </span>
       </h4>
       
-    </li><li visbl="pub" name="cc.spray.json.JsField" data-isabs="false">
-      <a id="JsField:JsField"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="JsField$.html"><span class="name">JsField</span></a>
-        
-        <span class="result"> extends Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="cc.spray.json.JsNull" data-isabs="false">
       <a id="JsNull:JsNull"></a>
       <h4 class="signature">
@@ -398,6 +420,17 @@
       </span>
       </h4>
       
+    </li><li visbl="pub" name="cc.spray.json.JsString" data-isabs="false">
+      <a id="JsString:JsString"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="JsString$.html"><span class="name">JsString</span></a>
+        
+        <span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="cc.spray.json.JsTrue" data-isabs="false">
       <a id="JsTrue:JsTrue"></a>
       <h4 class="signature">
@@ -406,17 +439,6 @@
         <a href="JsTrue$.html"><span class="name">JsTrue</span></a>
         
         <span class="result"> extends JsBoolean with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="cc.spray.json.JsValue" data-isabs="false">
-      <a id="JsValue:JsValue"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="JsValue$.html"><span class="name">JsValue</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -465,6 +487,17 @@ presented at http://www.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="cc.spray.json.package#deserializationError" data-isabs="false">
+      <a id="deserializationError(String,Throwable):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">deserializationError</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="cause">cause: Throwable = <span class="symbol">null</span></span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="cc.spray.json.package#jsonReader" data-isabs="false">
       <a id="jsonReader[T](JsonReader[T]):JsonReader[T]"></a>
       <h4 class="signature">
@@ -498,6 +531,28 @@ presented at http://www.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.package#pimpString" data-isabs="false">
+      <a id="pimpString(String):PimpedString"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">pimpString</span>
+        
+        <span class="params">(<span name="string">string: String</span>)</span><span class="result">: <span name="cc.spray.json.PimpedString" class="extype">PimpedString</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.package#serializationError" data-isabs="false">
+      <a id="serializationError(String):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">serializationError</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li></ol>
             </div>
 

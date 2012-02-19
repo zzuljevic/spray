@@ -14,13 +14,13 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a title="Go to companion" href="JsBoolean$.html"><img src="../../../lib/trait_to_object_big.png" /></a>
+        <a title="Go to companion" href="JsBoolean$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a>.<a name="cc.spray.json" class="extype" href="package.html">json</a></p>
         <h1><a title="Go to companion" href="JsBoolean$.html">JsBoolean</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">trait</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
         <span class="name">JsBoolean</span>
         
@@ -29,7 +29,7 @@
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>JSON Booleans.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>sealed </dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>sealed abstract </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
@@ -58,7 +58,21 @@
             </div>
         </div>
 
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="cc.spray.json.JsBoolean#this" data-isabs="false">
+      <a id="this:JsBoolean"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">JsBoolean</span>
         
+        <span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
         
@@ -146,6 +160,30 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.JsValue#asJsObject" data-isabs="false">
+      <a id="asJsObject:JsObject"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">asJsObject</span>
+        
+        <span class="result">: <a name="cc.spray.json.JsObject" class="extype" href="JsObject.html">JsObject</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns <code>this</code> if this JsValue is a JsObject, otherwise throws a DeserializationException.</p><div class="fullcomment"><div class="comment cmt"><p>Returns <code>this</code> if this JsValue is a JsObject, otherwise throws a DeserializationException.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.JsValue#asJsObject" data-isabs="false">
+      <a id="asJsObject(String):JsObject"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">asJsObject</span>
+        
+        <span class="params">(<span name="errorMsg">errorMsg: String = <span class="symbol">&quot;JSON object expected&quot;</span></span>)</span><span class="result">: <a name="cc.spray.json.JsObject" class="extype" href="JsObject.html">JsObject</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns <code>this</code> if this JsValue is a JsObject, otherwise throws a DeserializationException with the given error msg.</p><div class="fullcomment"><div class="comment cmt"><p>Returns <code>this</code> if this JsValue is a JsObject, otherwise throws a DeserializationException with the given error msg.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -160,6 +198,28 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.JsValue#compactPrint" data-isabs="false">
+      <a id="compactPrint:String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">compactPrint</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.JsValue#convertTo" data-isabs="false">
+      <a id="convertTo[T](JsonReader[T]):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">convertTo</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonReader" class="extype" href="JsonReader.html">JsonReader</a>[T]</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -196,17 +256,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.json.JsValue#fromJson" data-isabs="false">
-      <a id="fromJson[T](JsonReader[T]):T"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">fromJson</span>
-        <span class="tparams">[<span name="T">T</span>]</span>
-        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonReader" class="extype" href="JsonReader.html">JsonReader</a>[T]</span>)</span><span class="result">: T</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -273,6 +322,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="cc.spray.json.JsValue#prettyPrint" data-isabs="false">
+      <a id="prettyPrint:String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">prettyPrint</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -351,7 +411,24 @@
     </li></ol>
             </div>
 
-        
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.json.JsValue#fromJson" data-isabs="false">
+      <a id="fromJson[T](JsonReader[T]):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name deprecated">fromJson</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a name="cc.spray.json.JsonReader" class="extype" href="JsonReader.html">JsonReader</a>[T]</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>Superceded by 'convertTo'</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         <div name="cc.spray.json.JsValue" class="parent">
               <h3>Inherited from <a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></h3>

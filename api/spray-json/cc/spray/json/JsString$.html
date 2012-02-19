@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>cc.spray.json.JsValue</title>
+          <title>cc.spray.json.JsString</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,23 +14,23 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a title="Go to companion" href="JsValue.html"><img src="../../../lib/object_to_trait_big.png" /></a>
+        <a title="Go to companion" href="JsString.html"><img src="../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a>.<a name="cc.spray.json" class="extype" href="package.html">json</a></p>
-        <h1><a title="Go to companion" href="JsValue.html">JsValue</a></h1>
+        <h1><a title="Go to companion" href="JsString.html">JsString</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">object</span>
       <span class="symbol"> 
-        <span class="name">JsValue</span>
+        <span class="name">JsString</span>
         
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -46,7 +46,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="cc.spray.json.JsValue" class="in"><span>JsValue</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="cc.spray.json.JsString" class="in"><span>JsString</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -117,19 +117,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.json.JsValue#apply" data-isabs="false">
-      <a id="apply(Any):JsValue"></a>
+    </li><li visbl="pub" name="cc.spray.json.JsString#apply" data-isabs="false">
+      <a id="apply(Symbol):JsString"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="value">value: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></span>
+        <span class="params">(<span name="value">value: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="cc.spray.json.JsString" class="extype" href="JsString.html">JsString</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">General converter to a JsValue.</p><div class="fullcomment"><div class="comment cmt"><p>General converter to a JsValue.
-Throws an IllegalArgumentException if the given value cannot be converted.
-</p></div></div>
+      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -257,6 +255,17 @@ Throws an IllegalArgumentException if the given value cannot be converted.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="prt" name="cc.spray.json.JsString#readResolve" data-isabs="false">
+      <a id="readResolve():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">readResolve</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -326,7 +335,11 @@ Throws an IllegalArgumentException if the given value cannot be converted.
 
         
 
-        <div name="scala.AnyRef" class="parent">
+        <div name="scala.Serializable" class="parent">
+              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="java.io.Serializable" class="parent">
+              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

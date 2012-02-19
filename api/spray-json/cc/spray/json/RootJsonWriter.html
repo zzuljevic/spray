@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>cc.spray.json.JsBoolean</title>
+          <title>cc.spray.json.RootJsonWriter</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -12,25 +12,35 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <a title="Go to companion" href="JsBoolean.html"><img src="../../../lib/object_to_class_big.png" /></a>
+        <img src="../../../lib/trait_big.png" />
         <p id="owner"><a name="cc" class="extype" href="../../package.html">cc</a>.<a name="cc.spray" class="extype" href="../package.html">spray</a>.<a name="cc.spray.json" class="extype" href="package.html">json</a></p>
-        <h1><a title="Go to companion" href="JsBoolean.html">JsBoolean</a></h1>
+        <h1>RootJsonWriter</h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">object</span>
+      <span class="kind">trait</span>
       <span class="symbol"> 
-        <span class="name">JsBoolean</span>
-        
-        <span class="result"> extends AnyRef</span>
+        <span class="name">RootJsonWriter</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A special JsonWriter capable of writing a legal JSON root object, i.e. either a JSON array or a JSON object.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span name="&quot;Cannot find RootJsonWriter or RootJsonFormat type class for ${T}&quot;" class="defval">...</span>
+    </span>)</span>
+              
+        </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="cc.spray.json.RootJsonFormat" class="extype" href="RootJsonFormat.html">RootJsonFormat</a></div>
         </div></div>
         
 
@@ -46,7 +56,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="cc.spray.json.JsBoolean" class="in"><span>JsBoolean</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="cc.spray.json.RootJsonWriter" class="in"><span>RootJsonWriter</span></li><li name="cc.spray.json.JsonWriter" class="in"><span>JsonWriter</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -58,10 +68,24 @@
 
         
         
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="cc.spray.json.JsonWriter#write" data-isabs="true">
+      <a id="write(T):JsValue"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">write</span>
         
+        <span class="params">(<span name="obj">obj: T</span>)</span><span class="result">: <a name="cc.spray.json.JsValue" class="extype" href="JsValue.html">JsValue</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a></dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -117,17 +141,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.json.JsBoolean#apply" data-isabs="false">
-      <a id="apply(Boolean):JsBoolean"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">apply</span>
-        
-        <span class="params">(<span name="x">x: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="cc.spray.json.JsBoolean" class="extype" href="JsBoolean.html">JsBoolean</a></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -277,17 +290,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="cc.spray.json.JsBoolean#unapply" data-isabs="false">
-      <a id="unapply(JsBoolean):Option[Boolean]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">unapply</span>
-        
-        <span class="params">(<span name="x">x: <a name="cc.spray.json.JsBoolean" class="extype" href="JsBoolean.html">JsBoolean</a></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -335,7 +337,9 @@
 
         
 
-        <div name="scala.AnyRef" class="parent">
+        <div name="cc.spray.json.JsonWriter" class="parent">
+              <h3>Inherited from <a name="cc.spray.json.JsonWriter" class="extype" href="JsonWriter.html">JsonWriter</a>[T]</h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
