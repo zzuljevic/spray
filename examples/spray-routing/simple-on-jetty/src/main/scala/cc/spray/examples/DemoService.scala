@@ -5,7 +5,7 @@ import org.parboiled.common.FileUtils
 import akka.util.Duration
 import akka.util.duration._
 import akka.actor.{ActorLogging, Props, Actor}
-import cc.spray.routing.{HttpService, RequestContext}
+import cc.spray.routing.{RequestResult, HttpService, RequestContext}
 import cc.spray.routing.directives.CachingDirectives
 import cc.spray.util.model.{IOClosed, IOSent}
 import cc.spray.httpx.encoding.Gzip
@@ -43,24 +43,28 @@ trait DemoService extends HttpService {
         complete("PONG!")
       } ~
       path("stream") {
-        sendStreamingResponse
+        completeLater(sendStreamingResponse)
       } ~
       path("stream-large-file") {
         encodeResponse(Gzip) {
           getFromFile(largeTempFile)
         }
       } ~
-      path("timeout") { ctx =>
-        // we simply let the request drop to provoke a timeout
+      path("timeout") {
+        completeLater { ctx =>
+          // we simply let the request drop to provoke a timeout
+        }
       } ~
       path("cached") {
-        cache(simpleRouteCache) { ctx =>
-          in(1500.millis) {
-            ctx.complete("This resource is only slow the first time!\n" +
-              "It was produced on " + DateTime.now.toIsoDateTimeString + "\n\n" +
-              "(Note that your browser will likely enforce a cache invalidation with a\n" +
-              "`Cache-Control: max-age=0` header, so you might need to `curl` this\n" +
-              "resource in order to be able to see the cache effect!)")
+        cache(simpleRouteCache) {
+          completeLater { ctx =>
+            in(1500.millis) {
+              ctx.complete("This resource is only slow the first time!\n" +
+                "It was produced on " + DateTime.now.toIsoDateTimeString + "\n\n" +
+                "(Note that your browser will likely enforce a cache invalidation with a\n" +
+                "`Cache-Control: max-age=0` header, so you might need to `curl` this\n" +
+                "resource in order to be able to see the cache effect!)")
+            }
           }
         }
       }

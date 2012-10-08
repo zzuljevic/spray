@@ -29,7 +29,7 @@ trait RouteDirectives {
    * Rejects the request with the given rejections.
    */
   def reject(rejections: Rejection*): StandardRoute = new StandardRoute {
-    def apply(ctx: RequestContext) { ctx.reject(rejections: _*)}
+    def apply(ctx: RequestContext): RequestResult = { ctx.reject(rejections: _*) }
   }
 
   /**
@@ -37,7 +37,7 @@ trait RouteDirectives {
    * The default redirectionType is a temporary `302 Found`.
    */
   def redirect(uri: String, redirectionType: Redirection = Found): StandardRoute = new StandardRoute {
-    def apply(ctx: RequestContext) { ctx.redirect(uri, redirectionType) }
+    def apply(ctx: RequestContext): RequestResult = { ctx.redirect(uri, redirectionType) }
   }
 
   /**
@@ -58,14 +58,14 @@ trait RouteDirectives {
    */
   def complete[T :Marshaller](status: StatusCode, headers: List[HttpHeader], obj: T): StandardRoute =
     new StandardRoute {
-      def apply(ctx: RequestContext) { ctx.complete(status, headers, obj) }
+      def apply(ctx: RequestContext): RequestResult = { ctx.complete(status, headers, obj) }
     }
 
   /**
    * Completes the request with the given [[cc.spray.http.HttpResponse]].
    */
   def complete(response: HttpResponse): StandardRoute = new StandardRoute {
-    def apply(ctx: RequestContext) { ctx.complete(response) }
+    def apply(ctx: RequestContext): RequestResult = { ctx.complete(response) }
   }
 
   /**
@@ -73,9 +73,15 @@ trait RouteDirectives {
    * directive and its ExceptionHandler.
    */
   def failWith(error: Throwable): StandardRoute = new StandardRoute {
-    def apply(ctx: RequestContext) { ctx.failWith(error) }
+    def apply(ctx: RequestContext): RequestResult = { ctx.failWith(error) }
   }
 
+  def completeLater(completer: RequestContext => Unit): StandardRoute = new StandardRoute {
+    def apply(v1: RequestContext): RequestResult = {
+      completer(v1)
+      RequestResult.NotCompletedHere
+    }
+  }
 }
 
 object RouteDirectives extends RouteDirectives
@@ -91,7 +97,7 @@ trait StandardRoute extends Route {
 object StandardRoute {
   def apply(route: Route): StandardRoute = route match {
     case x: StandardRoute => x
-    case x => new StandardRoute { def apply(ctx: RequestContext) { x(ctx) } }
+    case x => new StandardRoute { def apply(ctx: RequestContext): RequestResult = { x(ctx) } }
   }
 
   /**

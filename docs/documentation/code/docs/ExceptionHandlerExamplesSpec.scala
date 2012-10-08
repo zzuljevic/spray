@@ -31,7 +31,7 @@ class ExceptionHandlerExamplesSpec extends Specification with Specs2RouteTest wi
   def `<my-route-definition>`: Route = null
 
   "example" in {
-    Get() ~> sealRoute(Route(ctx => 1 / 0)) ~> check {
+    Get() ~> sealRoute(completeLater(ctx => 1 / 0)) ~> check {
       entityAs[String] === "Bad numbers, bad result!!!"
     }
   }

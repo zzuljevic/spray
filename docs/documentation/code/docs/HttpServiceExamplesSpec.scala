@@ -98,8 +98,10 @@ class HttpServiceExamplesSpec extends Specification with Specs2RouteTest {
             // JSONP support
             jsonpWithParameter("callback") {
               // use in-scope marshaller to create completer function
-              produce(instanceOf[Order]) { complete => ctx =>
-                processOrderRequest(orderId, complete)
+              produce(instanceOf[Order]) { complete =>
+                completeLater { ctx =>
+                  processOrderRequest(orderId, complete)
+                }
               }
             }
           }

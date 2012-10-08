@@ -21,9 +21,7 @@ import cc.spray.routing.directives.PathMatchers
 
 
 package object routing extends PathMatchers {
-
-  type Route = RequestContext => Unit
+  type Route = RequestContext => RequestResult
   type RouteFilter[+T <: HList] = RequestContext => FilterResult[T]
   type Directive0 = Directive[HNil]
-
 }

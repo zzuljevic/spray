@@ -75,10 +75,11 @@ trait CachingDirectives {
                   promise.failure(RequestProcessingException(StatusCodes.InternalServerError))
               }
             }
-          } onComplete {
-            case Right(Right(response)) => ctx.complete(response)
-            case Right(Left(rejections)) => ctx.reject(rejections: _*)
-            case Left(error) => ctx.failWith(error)
+          } map {
+            case Right(response) => ctx.complete(response)
+            case Left(rejections) => ctx.reject(rejections: _*)
+          } recover {
+            case error => ctx.failWith(error)
           }
 
         case None => route(ctx)

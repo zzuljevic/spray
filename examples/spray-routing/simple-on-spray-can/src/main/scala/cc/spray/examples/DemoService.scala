@@ -6,7 +6,7 @@ import akka.util.Duration
 import akka.util.duration._
 import akka.actor.{ActorLogging, Props, Actor}
 import akka.pattern.ask
-import cc.spray.routing.{HttpService, RequestContext}
+import cc.spray.routing.{Route, HttpService, RequestContext}
 import cc.spray.routing.directives.CachingDirectives
 import cc.spray.can.server.HttpServer
 import cc.spray.httpx.encoding.Gzip
@@ -44,7 +44,9 @@ trait DemoService extends HttpService {
         complete("PONG!")
       } ~
       path("stream") {
-        sendStreamingResponse
+        completeLater {
+          sendStreamingResponse
+        }
       } ~
       path("stream-large-file") {
         encodeResponse(Gzip) {
@@ -54,17 +56,22 @@ trait DemoService extends HttpService {
       path("stats") {
         showServerStats
       } ~
-      path("timeout") { ctx =>
-        // we simply let the request drop to provoke a timeout
+      path("timeout") {
+        completeLater {
+          ctx =>
+            // we simply let the request drop to provoke a timeout
+        }
       } ~
       path("cached") {
-        cache(simpleRouteCache) { ctx =>
-          in(1500.millis) {
-            ctx.complete("This resource is only slow the first time!\n" +
-              "It was produced on " + DateTime.now.toIsoDateTimeString + "\n\n" +
-              "(Note that your browser will likely enforce a cache invalidation with a\n" +
-              "`Cache-Control: max-age=0` header when you click 'reload', so you might need to `curl` this\n" +
-              "resource in order to be able to see the cache effect!)")
+        cache(simpleRouteCache) {
+          completeLater { ctx =>
+            in(1500.millis) {
+              ctx.complete("This resource is only slow the first time!\n" +
+                "It was produced on " + DateTime.now.toIsoDateTimeString + "\n\n" +
+                "(Note that your browser will likely enforce a cache invalidation with a\n" +
+                "`Cache-Control: max-age=0` header when you click 'reload', so you might need to `curl` this\n" +
+                "resource in order to be able to see the cache effect!)")
+            }
           }
         }
       } ~
@@ -77,10 +84,10 @@ trait DemoService extends HttpService {
     } ~
     (post | parameter('method ! "post")) {
       path("stop") { ctx =>
-        ctx.complete("Shutting down in 1 second...")
         in(1000.millis) {
           actorSystem.shutdown()
         }
+        ctx.complete("Shutting down in 1 second...")
       }
     }
   }
@@ -106,7 +113,7 @@ trait DemoService extends HttpService {
       </body>
     </html>
 
-  def sendStreamingResponse(ctx: RequestContext) {
+  def sendStreamingResponse(ctx: RequestContext) = {
     actorRefFactory.actorOf(
       Props {
         new Actor with ActorLogging {
@@ -136,12 +143,12 @@ trait DemoService extends HttpService {
     )
   }
 
-  def showServerStats(ctx: RequestContext) {
+  def showServerStats(ctx: RequestContext) = {
     actorRefFactory.actorFor("../http-server")
       .ask(HttpServer.GetStats)(1.second)
       .mapTo[HttpServer.Stats]
-      .onComplete {
-      case Right(stats) => ctx.complete {
+      .map {
+      case stats => ctx.complete {
         "Uptime                : " + stats.uptime.printHMS + '\n' +
         "Total requests        : " + stats.totalRequests + '\n' +
         "Open requests         : " + stats.openRequests + '\n' +
@@ -152,11 +159,12 @@ trait DemoService extends HttpService {
         "Requests timed out    : " + stats.requestTimeouts + '\n' +
         "Connections timed out : " + stats.idleTimeouts + '\n'
       }
-      case Left(ex) => ctx.complete(500, "Couldn't get server stats due to " + ex.getMessage)
-    }
+      }.recover {
+      case ex => ctx.complete(500, "Couldn't get server stats due to " + ex.getMessage)
+      }
   }
 
-  def in[U](duration: Duration)(body: => U) {
+  def in[U](duration: Duration)(body: => U) = {
     actorSystem.scheduler.scheduleOnce(duration, new Runnable { def run() { body } })
   }
 

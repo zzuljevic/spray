@@ -51,9 +51,10 @@ trait MarshallingDirectives {
    * You can use it do decouple marshaller resolution from request completion.
    */
   def produce[T](marshaller: Marshaller[T], status: StatusCode = StatusCodes.OK,
-                 headers: List[HttpHeader] = Nil): Directive[(T => Unit) :: HNil] =
+                 headers: List[HttpHeader] = Nil): Directive[(T => RequestResult) :: HNil] =
     extract { ctx => (value: T) =>
       marshaller(value, ctx.marshallingContext(status, headers))
+      RequestResult.NotCompletedHere
     } & cancelAllRejections(ofType[UnacceptedResponseContentTypeRejection])
 
   /**

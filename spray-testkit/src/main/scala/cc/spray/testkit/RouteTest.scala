@@ -85,7 +85,7 @@ trait RouteTest extends RequestBuilding with RouteResultComponent {
       type Out = HttpRequest
       def apply(request: HttpRequest, f: HttpRequest => HttpRequest) = f(request)
     }
-    implicit def injectIntoRoute(implicit timeout: RouteTestTimeout) = new TildeArrow[RequestContext, Unit] {
+    implicit def injectIntoRoute(implicit timeout: RouteTestTimeout) = new TildeArrow[RequestContext, RequestResult] {
       type Out = RouteResult
       def apply(request: HttpRequest, route: Route) = {
         val routeResult = new RouteResult(timeout.duration)

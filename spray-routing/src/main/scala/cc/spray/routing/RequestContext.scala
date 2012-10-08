@@ -167,15 +167,16 @@ case class RequestContext(
   /**
    * Rejects the request with the given rejections.
    */
-  def reject(rejections: Rejection*) {
+  def reject(rejections: Rejection*): RequestResult = {
     responder ! Rejected(rejections.toList)
+    RequestResult.NotCompletedHere
   }
 
   /**
    * Completes the request with redirection response of the given type to the given URI.
    * The default redirectionType is a temporary `302 Found`.
    */
-  def redirect(uri: String, redirectionType: Redirection = Found) {
+  def redirect(uri: String, redirectionType: Redirection = Found) = {
     complete {
       HttpResponse(
         status = redirectionType,
@@ -189,7 +190,7 @@ case class RequestContext(
    * Completes the request with status "200 Ok" and the response entity created by marshalling the given object using
    * the in-scope marshaller for the type.
    */
-  def complete[T :Marshaller](obj: T) {
+  def complete[T :Marshaller](obj: T): RequestResult = {
     complete(OK, obj)
   }
 
@@ -197,7 +198,7 @@ case class RequestContext(
    * Completes the request with the given status and the response entity created by marshalling the given object using
    * the in-scope marshaller for the type.
    */
-  def complete[T :Marshaller](status: StatusCode, obj: T) {
+  def complete[T :Marshaller](status: StatusCode, obj: T): RequestResult = {
     complete(status, Nil, obj)
   }
 
@@ -205,23 +206,26 @@ case class RequestContext(
    * Completes the request with the given status, headers and the response entity created by marshalling the
    * given object using the in-scope marshaller for the type.
    */
-  def complete[T](status: StatusCode, headers: List[HttpHeader], obj: T)(implicit marshaller: Marshaller[T]) {
+  def complete[T](status: StatusCode, headers: List[HttpHeader], obj: T)(implicit marshaller: Marshaller[T]): RequestResult = {
     marshaller(obj, marshallingContext(status, headers))
+    RequestResult.NotCompletedHere
   }
 
   /**
    * Completes the request with the given [[cc.spray.http.HttpResponse]].
    */
-  def complete(response: HttpResponse) {
+  def complete(response: HttpResponse): RequestResult = {
     responder ! response
+    RequestResult.NotCompletedHere
   }
 
   /**
    * Bubbles the given error up the response chain, where it is dealt with by the closest `handleExceptions`
    * directive and its ExceptionHandler.
    */
-  def failWith(error: Throwable) {
+  def failWith(error: Throwable): RequestResult = {
     responder ! Status.Failure(error)
+    RequestResult.NotCompletedHere
   }
 
   /**

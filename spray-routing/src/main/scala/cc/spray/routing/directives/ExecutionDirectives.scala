@@ -24,6 +24,7 @@ import akka.util.NonFatal
 
 trait ExecutionDirectives {
   import BasicDirectives._
+  import RouteDirectives.completeLater
 
   /**
    * Transforms exceptions thrown during evaluation of its inner route using the given
@@ -74,7 +75,7 @@ trait ExecutionDirectives {
    * re-evaluated for every request anew.
    */
   def detachTo(serviceActor: Route => ActorRef): Directive0 =
-    mapInnerRoute { route => ctx => serviceActor(route) ! ctx }
+    mapInnerRoute { route => completeLater { ctx => serviceActor(route) ! ctx } }
 
   /**
    * Returns a function creating a new SingleRequestServiceActor for a given Route.
